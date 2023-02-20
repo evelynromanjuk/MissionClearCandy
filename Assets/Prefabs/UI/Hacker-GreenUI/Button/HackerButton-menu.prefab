@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1229504660629840267}
   - component: {fileID: 4030330284558595933}
   m_Layer: 5
-  m_Name: HackerButton-1
+  m_Name: HackerButton-menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70497a740f85bb141a72c397bd55c4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textColorHover: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4936952650381147804
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,4 +324,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70497a740f85bb141a72c397bd55c4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textColorHover: {r: 0, g: 0, b: 0, a: 0}
