@@ -34,7 +34,8 @@ public class PlayerInteract : MonoBehaviour
             if (hitInfo.collider.GetComponent<Interactable>() != null) //check if hit gameObject has interactable component
             {
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
-                robotHUD.UpdateScannedObjectName(interactable.promptMessage);
+                //robotHUD.UpdateScannedObjectName(interactable.promptMessage);
+                robotHUD.UpdateScannedObjectName(interactable.name);
                 //if (inputManager.onFoot.Interact.triggered)
                 //{
                 //    interactable.BaseInteract();

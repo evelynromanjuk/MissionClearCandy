@@ -6,11 +6,11 @@ using TMPro;
 public class RobotHUD : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI scannedObjectField;
+    private TextMeshProUGUI promptText;
 
     // Update is called once per frame
     public void UpdateScannedObjectName(string scannedObjectName)
     {
-        scannedObjectField.text = scannedObjectName;
+        promptText.text = scannedObjectName;
     }
 }
