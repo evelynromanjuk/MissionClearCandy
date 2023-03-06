@@ -36,10 +36,10 @@ public class PlayerInteract : MonoBehaviour
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
                 //robotHUD.UpdateScannedObjectName(interactable.promptMessage);
                 robotHUD.UpdateScannedObjectName(interactable.name);
-                //if (inputManager.onFoot.Interact.triggered)
-                //{
-                //    interactable.BaseInteract();
-                //}
+                if (inputManager.onFoot.Interact.triggered)
+                {
+                    interactable.BaseInteract();
+                }
             }
         }
     }
