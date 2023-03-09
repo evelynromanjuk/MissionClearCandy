@@ -12,17 +12,14 @@ public class Employee : ScannableData
     public string password;
     //public Sprite photo;
     
-
-    private string[] _cardData;
-    private string[,] _cardData2;
+    private string[,] _cardData;
 
     public override void CreateArray()
     {
-        _cardData = new string[] { objectType, name, position, birthday, password };
-        _cardData2 = new string[,] { { "objectType", objectType }, {"name", name}, {"position", position}, {"id", id}, {"birthday", birthday}, {"password", password} };
+        _cardData = new string[,] { { "objectType", objectType }, {"name", name}, {"position", position}, {"birthday", birthday}, {"password", password} };
     }
 
-    public override string[,] GetScanData { get => _cardData2; }
+    public override string[,] GetScanData { get => _cardData; }
 
     public override void Reset()
     {

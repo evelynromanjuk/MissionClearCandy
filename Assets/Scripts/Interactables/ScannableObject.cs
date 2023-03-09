@@ -29,4 +29,16 @@ public class ScannableObject : MonoBehaviour
             Debug.Log("No data could not be fetched.");
         }
     }
+
+    public string[,] Scan()
+    {
+        if(_scanData != null)
+        {
+            return _dataArray;
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

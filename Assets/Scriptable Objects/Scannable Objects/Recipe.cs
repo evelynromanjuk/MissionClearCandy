@@ -15,7 +15,7 @@ public class Recipe : ScannableData
     {
         _recipeData = new string[,] { {"objectType", objectType }, { "color", color }, {"goalPercentage", goalPercentage} };
 
-        Debug.Log("object: " + this.name + ", array size: " + _recipeData.Length);
+        Debug.Log("object: " + this.name + ", array size: " + _recipeData.GetLength(0));
     }
 
     public override string[,] GetScanData { get => _recipeData; }
