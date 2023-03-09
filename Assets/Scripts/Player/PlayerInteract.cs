@@ -29,16 +29,26 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * distance);
         RaycastHit hitInfo; //variable to store collision information
-        if (Physics.Raycast(ray, out hitInfo, distance, mask))
+        if (Physics.Raycast(ray, out hitInfo, distance, mask)) //aussortieren was nicht den layer hat
         {
-            if (hitInfo.collider.GetComponent<Interactable>() != null) //check if hit gameObject has interactable component
+            //if (hitInfo.collider.GetComponent<Interactable>() != null) //check if hit gameObject has interactable component
+            //{
+            //    Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
+            //    //robotHUD.UpdateScannedObjectName(interactable.promptMessage);
+            //    robotHUD.UpdateScannedObjectName(interactable.name);
+            //    if (inputManager.onFoot.Interact.triggered)
+            //    {
+            //        interactable.BaseInteract();
+            //    }
+            //}
+            if (hitInfo.collider.GetComponent<ScannableObject>() != null) //check if hit gameObject has interactable component
             {
-                Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
+                ScannableObject scannableObject = hitInfo.collider.GetComponent<ScannableObject>();
                 //robotHUD.UpdateScannedObjectName(interactable.promptMessage);
-                robotHUD.UpdateScannedObjectName(interactable.name);
+                robotHUD.UpdateScannedObjectName(scannableObject.name);
                 if (inputManager.onFoot.Interact.triggered)
                 {
-                    interactable.BaseInteract();
+                    scannableObject.Interact();
                 }
             }
         }
