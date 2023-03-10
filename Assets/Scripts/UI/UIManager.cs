@@ -2,55 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class UIManager : MonoBehaviour
 {
     public PlayerInteract Player;
+    public FrameScanInfo FrameScanInfo;
 
-    [SerializeField]
-    private GameObject FramePrefab;
-
-    [SerializeField]
-    private GameObject DataEntry;
-
-    private GameObject _frameScanInfo;
-
-    private bool isInstantiated = false;
+    Action<bool> ScanInfoInstantiatedEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player.Subscribe(OnScan);
+        Player.SubscribeObjectScanned(OnScan);
+        Player.SubscribeReturn(OnReturn);
+    }
+
+    public void Subscribe(Action<bool> method)
+    {
+        ScanInfoInstantiatedEvent += method;
+    }
+
+    private void OnReturn()
+    {
+        if (!FrameScanInfo) return;
+        FrameScanInfo.gameObject.SetActive(false);
     }
 
     private void OnScan(string[,] _scanData)
     {
-        if (!isInstantiated)
-        {
-            InstantiateScanInformationFrame();
-            PasteScanData(_scanData);
-        }
+        if (!FrameScanInfo) return;
+        FrameScanInfo.PasteScanData(_scanData);
+        FrameScanInfo.gameObject.SetActive(true);
     }
-
-    private void InstantiateScanInformationFrame()
-    {
-        GameObject parent = GameObject.Find("Canvas_RobotHUD");
-        _frameScanInfo = Instantiate(FramePrefab, parent.transform, false) as GameObject;
-    }
-
-    private void PasteScanData(string[,] _scanData)
-    {
-        GameObject parent = GameObject.Find("Canvas_RobotHUD");
-
-        for (int i = 0; i < _scanData.GetLength(0); i++)
-        {
-            GameObject Body = _frameScanInfo.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
-            GameObject NewEntry = Instantiate(DataEntry, Body.transform, false) as GameObject;
-
-            NewEntry.transform.GetChild(0).GetComponent<TMP_Text>().text = _scanData[i, 0];
-            NewEntry.transform.GetChild(1).GetComponent<TMP_Text>().text = _scanData[i, 1];
-        }
-    }
-    
-
 }

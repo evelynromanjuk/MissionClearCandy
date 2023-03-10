@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 7515859625860423259}
   - component: {fileID: 5346823096918973988}
   - component: {fileID: 4901719389516262949}
+  - component: {fileID: 8377079205611511782}
   m_Layer: 5
   m_Name: Data Entry
   m_TagString: Untagged
@@ -358,3 +359,17 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &8377079205611511782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9109740511083615138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f74819f30653a49b25c66fff2f9d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PropertyTitle: {fileID: 4354624589153367600}
+  PropertyValue: {fileID: 1063232215839534554}
