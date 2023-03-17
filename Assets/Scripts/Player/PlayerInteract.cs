@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public UIManager UIManager;
-
     private Camera _cam;
     [SerializeField] private float _distance = 3f;
     [SerializeField] private LayerMask _mask;
@@ -22,6 +20,7 @@ public class PlayerInteract : MonoBehaviour
     Action OnReturn;
 
     private ScannableObject _currentScannableObj;
+    private IInteractable _currentInteractableObj;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +46,10 @@ public class PlayerInteract : MonoBehaviour
                 ObjectScannedEvent.Invoke(_scanData);
             }
         }
+        if(_currentInteractableObj != null)
+        {
+            _currentInteractableObj.Interact();
+        }
     }
 
     private void OnReturnPressed(InputAction.CallbackContext Callback)
@@ -66,12 +69,21 @@ public class PlayerInteract : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, _distance, _mask)) //to sort out what is not on scannable layer
         {
+            string hitObjectName = hitInfo.collider.name;
+            _robotHUD.UpdateScannedObjectName(hitObjectName);
+
+            //SCANNABLE OBJECT
             ScannableObject scannableObject = hitInfo.collider.GetComponent<ScannableObject>();
             if (scannableObject != null) //check if hit gameObject has ScannableObject component
-            {
-                _robotHUD.UpdateScannedObjectName(scannableObject.name);
-            }
+            //{
+            //    _robotHUD.UpdateScannedObjectName(scannableObject.name);
+            //}
             _currentScannableObj = scannableObject;
+
+            //INTERACTABLE OBJECT
+            IInteractable interactableObject = hitInfo.collider.GetComponent<IInteractable>();
+            _currentInteractableObj = interactableObject;
+
         }
     }
 
