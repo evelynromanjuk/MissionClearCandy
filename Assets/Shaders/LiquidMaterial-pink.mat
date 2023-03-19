@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LiquidMaterial-orange
+  m_Name: LiquidMaterial-pink
   m_Shader: {fileID: -6465566751694194690, guid: a77872b96ebcfcb40a308e343a952871,
     type: 3}
   m_ValidKeywords: []
@@ -48,7 +48,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fill: 0.16
+    - _Fill: 0.19
     - _FresnelPower: 1.41
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -56,8 +56,8 @@ Material:
     - _multiplier: 1.82
     m_Colors:
     - _BottomColor: {r: 1, g: 0.5190993, b: 0.24056602, a: 0}
-    - _FresnelColor: {r: 1, g: 0.5979445, b: 0.27058828, a: 0}
-    - _LiquidColor: {r: 0.9811321, g: 0.5788417, b: 0.1064436, a: 0}
-    - _SurfaceColor: {r: 0.8773585, g: 0.42296898, b: 0.26072446, a: 1}
+    - _FresnelColor: {r: 1, g: 0.3537736, b: 0.51067907, a: 0}
+    - _LiquidColor: {r: 0.98039216, g: 0.10588233, b: 0.57278544, a: 0}
+    - _SurfaceColor: {r: 0.8584906, g: 0.07694017, b: 0.508365, a: 1}
     - _TopColor: {r: 0.78431374, g: 0.10166865, b: 0, a: 1}
   m_BuildTextureStacks: []
