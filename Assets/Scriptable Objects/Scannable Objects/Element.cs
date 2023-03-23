@@ -16,7 +16,10 @@ public class Element : ScannableData
 
     public override void CreateArray()
     {
-        _elementData = new string[,] { { "objectType", objectType }, { "element", name }, { "symbol", periodicSymbol }, { "ordinal number", ordinalNumber } };
+        if(_elementData == null)
+        {
+            _elementData = new string[,] { { "objectType", objectType }, { "element", name }, { "symbol", periodicSymbol }, { "ordinal number", ordinalNumber } };
+        }
     }
 
     public override void Reset()

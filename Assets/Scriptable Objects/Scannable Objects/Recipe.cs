@@ -13,7 +13,10 @@ public class Recipe : ScannableData
 
     public override void CreateArray()
     {
-        _recipeData = new string[,] { {"objectType", objectType }, { "color", color }, {"goalPercentage", goalPercentage} };
+        if(_recipeData == null)
+        {
+            _recipeData = new string[,] { { "objectType", objectType }, { "color", color }, { "goalPercentage", goalPercentage } };
+        }
     }
 
     public override string[,] GetScanData { get => _recipeData; }

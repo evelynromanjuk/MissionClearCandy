@@ -16,7 +16,10 @@ public class Employee : ScannableData
 
     public override void CreateArray()
     {
-        _cardData = new string[,] { { "objectType", objectType }, {"name", name}, {"position", position}, {"birthday", birthday}, {"password", password} };
+        if(_cardData == null)
+        {
+            _cardData = new string[,] { { "objectType", objectType }, { "name", name }, { "position", position }, { "birthday", birthday }, { "password", password } };
+        }   
     }
 
     public override string[,] GetScanData { get => _cardData; }
