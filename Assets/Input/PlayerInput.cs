@@ -71,6 +71,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyboardInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a94d09d-ec8d-43b6-a719-1cebb5f8e803"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -183,6 +192,127 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""Return"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5888f75a-aca6-47f1-af63-a0d40e033f55"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b03eee8a-05b6-4cdf-8503-7f45c818d78b"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""46308fec-f9b3-4763-867f-49269c8d0a21"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8054a68-2406-4ca5-b73c-b52ed2ccdf7b"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f25e5e42-d229-45bf-94f4-7caa9f0e6b34"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e39e136-85d8-435a-923e-b05f177f2112"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e80a75c3-8707-483f-9eca-80c719bd67c0"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c144c688-8660-4b9a-a28d-ff5c8d586235"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba6b51a4-f2f4-40e2-9f5e-5d4cdb3fe926"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5efeb545-f488-4f29-ac02-41582e7ea04a"",
+                    ""path"": ""<Keyboard>/0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a56e79f8-4bfa-4901-89bf-71993d9109f5"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -196,6 +326,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Look = m_OnFoot.FindAction("Look", throwIfNotFound: true);
         m_OnFoot_Interact = m_OnFoot.FindAction("Interact", throwIfNotFound: true);
         m_OnFoot_Return = m_OnFoot.FindAction("Return", throwIfNotFound: true);
+        m_OnFoot_KeyboardInput = m_OnFoot.FindAction("KeyboardInput", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -260,6 +391,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Look;
     private readonly InputAction m_OnFoot_Interact;
     private readonly InputAction m_OnFoot_Return;
+    private readonly InputAction m_OnFoot_KeyboardInput;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -269,6 +401,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_OnFoot_Look;
         public InputAction @Interact => m_Wrapper.m_OnFoot_Interact;
         public InputAction @Return => m_Wrapper.m_OnFoot_Return;
+        public InputAction @KeyboardInput => m_Wrapper.m_OnFoot_KeyboardInput;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -293,6 +426,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Return.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnReturn;
                 @Return.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnReturn;
                 @Return.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnReturn;
+                @KeyboardInput.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnKeyboardInput;
+                @KeyboardInput.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnKeyboardInput;
+                @KeyboardInput.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnKeyboardInput;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -312,6 +448,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Return.started += instance.OnReturn;
                 @Return.performed += instance.OnReturn;
                 @Return.canceled += instance.OnReturn;
+                @KeyboardInput.started += instance.OnKeyboardInput;
+                @KeyboardInput.performed += instance.OnKeyboardInput;
+                @KeyboardInput.canceled += instance.OnKeyboardInput;
             }
         }
     }
@@ -323,5 +462,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnReturn(InputAction.CallbackContext context);
+        void OnKeyboardInput(InputAction.CallbackContext context);
     }
 }

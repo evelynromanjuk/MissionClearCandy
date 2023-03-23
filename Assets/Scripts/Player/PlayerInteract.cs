@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerInteract : MonoBehaviour
 
     private ScannableObject _currentScannableObj;
     private IInteractable _currentInteractableObj;
+    private TMP_InputField _currentInputField;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class PlayerInteract : MonoBehaviour
         
         _inputManager.onFoot.Return.performed += OnReturnPressed;
         _inputManager.onFoot.Interact.performed += OnInteract;
+        _inputManager.onFoot.KeyboardInput.performed += OnKeyboardEnter;
     }
 
     private void OnInteract(InputAction.CallbackContext obj)
@@ -50,11 +53,35 @@ public class PlayerInteract : MonoBehaviour
         {
             _currentInteractableObj.Interact();
         }
+        if(_currentInputField != null)
+        {
+            _currentInputField.interactable = true;
+        }
+
+        
     }
 
     private void OnReturnPressed(InputAction.CallbackContext Callback)
     {
         OnReturn.Invoke();
+    }
+
+    private void OnKeyboardEnter(InputAction.CallbackContext obj)
+    {
+        if (_currentInputField != null && _currentInputField.interactable == true)
+        {
+            string keyValue = obj.control.name;
+            
+            if(!keyValue.Equals("enter"))
+            {
+                _currentInputField.text += keyValue;
+            }
+            else
+            {
+                Debug.Log("Your inserted password is: " + _currentInputField.text);
+            }
+  
+        }
     }
 
     // Update is called once per frame
@@ -84,6 +111,19 @@ public class PlayerInteract : MonoBehaviour
             IInteractable interactableObject = hitInfo.collider.GetComponent<IInteractable>();
             _currentInteractableObj = interactableObject;
 
+            TMP_InputField InputField = hitInfo.collider.GetComponent<TMP_InputField>();
+            _currentInputField = InputField;
+
+
+        }
+        else
+        {
+            if(_currentInputField != null)
+            {
+                _currentInputField.interactable = false;
+                _currentInputField = null;
+            }
+            
         }
     }
 
