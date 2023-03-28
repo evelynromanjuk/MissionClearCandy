@@ -19,12 +19,13 @@ public class PlayerInteract : MonoBehaviour
     Action<string[,]> ObjectScannedEvent;
     Action<bool> InfoFrameClosedEvent;
     Action OnReturn;
+    Action<string> PasswordEntered;
 
     private ScannableObject _currentScannableObj;
     private IInteractable _currentInteractableObj;
     private TMP_InputField _currentInputField;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -39,52 +40,6 @@ public class PlayerInteract : MonoBehaviour
         _inputManager.onFoot.KeyboardInput.performed += OnKeyboardEnter;
     }
 
-    private void OnInteract(InputAction.CallbackContext obj)
-    {
-        if(_currentScannableObj)
-        {
-            if (_currentScannableObj.Scan() != null) //if scan data exists, invoke event and send data
-            {
-                _scanData = _currentScannableObj.Scan();
-                ObjectScannedEvent.Invoke(_scanData);
-            }
-        }
-        if(_currentInteractableObj != null)
-        {
-            _currentInteractableObj.Interact();
-        }
-        if(_currentInputField != null)
-        {
-            _currentInputField.interactable = true;
-        }
-
-        
-    }
-
-    private void OnReturnPressed(InputAction.CallbackContext Callback)
-    {
-        OnReturn.Invoke();
-    }
-
-    private void OnKeyboardEnter(InputAction.CallbackContext obj)
-    {
-        if (_currentInputField != null && _currentInputField.interactable == true)
-        {
-            string keyValue = obj.control.name;
-            
-            if(!keyValue.Equals("enter"))
-            {
-                _currentInputField.text += keyValue;
-            }
-            else
-            {
-                Debug.Log("Your inserted password is: " + _currentInputField.text);
-            }
-  
-        }
-    }
-
-    // Update is called once per frame
     void Update()
     {
         _robotHUD.UpdateScannedObjectName(string.Empty);
@@ -102,31 +57,80 @@ public class PlayerInteract : MonoBehaviour
             //SCANNABLE OBJECT
             ScannableObject scannableObject = hitInfo.collider.GetComponent<ScannableObject>();
             if (scannableObject != null) //check if hit gameObject has ScannableObject component
-            //{
-            //    _robotHUD.UpdateScannedObjectName(scannableObject.name);
-            //}
-            _currentScannableObj = scannableObject;
+                _currentScannableObj = scannableObject;
 
             //INTERACTABLE OBJECT
             IInteractable interactableObject = hitInfo.collider.GetComponent<IInteractable>();
             _currentInteractableObj = interactableObject;
 
+            //INPUT FIELD
             TMP_InputField InputField = hitInfo.collider.GetComponent<TMP_InputField>();
             _currentInputField = InputField;
-
-
         }
         else
         {
-            if(_currentInputField != null)
+            if (_currentInputField != null)
             {
                 _currentInputField.interactable = false;
                 _currentInputField = null;
             }
-            
         }
     }
 
+    //handles interactions on button "E" pressed, depending on the object interacted with
+    private void OnInteract(InputAction.CallbackContext obj)
+    {
+        if(_currentScannableObj)
+        {
+            if (_currentScannableObj.Scan() != null) //if scan data exists, invoke event and send data
+            {
+                _scanData = _currentScannableObj.Scan();
+                ObjectScannedEvent.Invoke(_scanData);
+            }
+        }
+
+        if(_currentInteractableObj != null)
+        {
+            _currentInteractableObj.Interact();
+        }
+
+        if(_currentInputField != null)
+        {
+            _currentInputField.interactable = true;
+        }
+    }
+
+    //EVENT: ESC pressed
+    private void OnReturnPressed(InputAction.CallbackContext Callback)
+    {
+        OnReturn.Invoke();
+    }
+
+    //EVENT: keyboard key pressed, handles depending on key
+    private void OnKeyboardEnter(InputAction.CallbackContext obj)
+    {
+        if (_currentInputField != null && _currentInputField.interactable == true)
+        {
+            string keyValue = obj.control.name;
+            
+            if(keyValue.Equals("enter"))
+            {
+                Debug.Log("Your inserted password is: " + _currentInputField.text);
+                _currentInputField.interactable = false;
+                PasswordEntered.Invoke(_currentInputField.text);
+            }
+            else if(keyValue.Equals("backspace"))
+            {
+                _currentInputField.text = _currentInputField.text.Remove(_currentInputField.text.Length - 1);
+            }
+            else
+            {
+                _currentInputField.text += keyValue;
+            }
+        }
+    }
+
+    //EVENT SUBSCRIPTIONS
     public void SubscribeObjectScanned(Action<string[,]> method)
     {
         ObjectScannedEvent += method;
@@ -140,5 +144,10 @@ public class PlayerInteract : MonoBehaviour
     public void SubscribeReturn(Action method)
     {
         OnReturn += method;
+    }
+
+    public void SubscribePasswordEntered(Action<string> method)
+    {
+        PasswordEntered += method;
     }
 }

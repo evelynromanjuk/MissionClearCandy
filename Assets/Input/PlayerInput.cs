@@ -313,6 +313,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""KeyboardInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f73d02e-eac7-406d-a76a-a5f2a241c9e4"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
