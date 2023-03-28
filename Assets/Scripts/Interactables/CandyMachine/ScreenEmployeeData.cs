@@ -6,11 +6,15 @@ using UnityEngine;
 public class ScreenEmployeeData : MonoBehaviour
 {
     public TMP_Text EmployeeName;
-    public TMP_Text EmployeePassword;
+    public TMP_Text WrongPassword;
 
-    public void SetData(string name, string password)
+    public void SetData(string name)
     {
         EmployeeName.text = name;
-        EmployeePassword.text = password;
+    }
+
+    public void ShowPasswordError()
+    {
+        WrongPassword.gameObject.SetActive(true);
     }
 }

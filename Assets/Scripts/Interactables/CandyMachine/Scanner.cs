@@ -5,12 +5,18 @@ using System;
 
 public class Scanner : MonoBehaviour
 {
-    Action<EmployeeCard> ObjectScannedEvent;
+    Action<EmployeeCard> CardScanned;
+    Action CardRemoved;
 
-
-    public void Subscribe(Action<EmployeeCard> method)
+    //EVENT SUBSCRIPTIONS
+    public void SubscribeCardScanned(Action<EmployeeCard> method)
     {
-        ObjectScannedEvent += method;
+        CardScanned += method;
+    }
+
+    public void SubscribeCardRemoved(Action method)
+    {
+        CardRemoved += method;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -26,12 +32,17 @@ public class Scanner : MonoBehaviour
         Debug.Log("Employee Password: " + card.GetPassword());
         Debug.Log("Is valid: " + card.GetCardValidity());
 
-        ObjectScannedEvent.Invoke(card);
+        if(card.GetCardValidity())
+        {
+            CardScanned.Invoke(card);
+        }
+        
     }
 
     private void OnCollisionExit(Collision collision)
     {
         Debug.Log("No longer in contact with " + collision.transform.name);
+        CardRemoved.Invoke();
         // TODO: Change Screen text back to "Please put ID card on the scanner"
     }
 

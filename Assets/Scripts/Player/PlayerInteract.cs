@@ -66,6 +66,7 @@ public class PlayerInteract : MonoBehaviour
             //INPUT FIELD
             TMP_InputField InputField = hitInfo.collider.GetComponent<TMP_InputField>();
             _currentInputField = InputField;
+            //_currentInputField.interactable = true; //could be added later if "interactable" should be set automatically with raycast
         }
         else
         {
@@ -115,7 +116,6 @@ public class PlayerInteract : MonoBehaviour
             
             if(keyValue.Equals("enter"))
             {
-                Debug.Log("Your inserted password is: " + _currentInputField.text);
                 _currentInputField.interactable = false;
                 PasswordEntered.Invoke(_currentInputField.text);
             }
