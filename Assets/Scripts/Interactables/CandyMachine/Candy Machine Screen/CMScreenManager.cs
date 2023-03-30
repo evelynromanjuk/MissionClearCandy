@@ -6,6 +6,7 @@ public class CMScreenManager : MonoBehaviour
 {
     public Scanner Scanner;
     public CMScreen CMScreen;
+    public FrameFillMachine FrameFillMachine;
     public KeypadManager KeypadManager;
 
     // Start is called before the first frame update
@@ -50,5 +51,10 @@ public class CMScreenManager : MonoBehaviour
         {
             CMScreen.ShowCodeError();
         }
+        else
+        {
+            CMScreen.OpenFillMachineFrame();
+        }
     }
+
 }
