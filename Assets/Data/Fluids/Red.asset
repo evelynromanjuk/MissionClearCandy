@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: e28c26e55e4690349aeed5d325e11bab, type: 2}
   FluidName: RED_46221B
-  CurrentPercentage: 0
+  CurrentPercentage: 9
   GoalPercentage: 18
   ReachedGoal: 0

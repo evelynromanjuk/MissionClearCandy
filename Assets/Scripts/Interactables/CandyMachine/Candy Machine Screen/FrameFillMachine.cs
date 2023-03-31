@@ -6,6 +6,7 @@ public class FrameFillMachine : MonoBehaviour
 {
     public GameObject DataEntry;
     public GameObject Container;
+    private List<FluidEntry> _currentEntries = new List<FluidEntry>();
 
     public void PasteFluidData(List<Fluid> fluids)
     {
@@ -16,8 +17,29 @@ public class FrameFillMachine : MonoBehaviour
 
             if(FluidEntry)
             {
+                _currentEntries.Add(FluidEntry);
                 FluidEntry.SetEntryData(fluid.FluidName, fluid.CurrentPercentage, fluid.GoalPercentage);
             }
         }
     }
+
+    public void UpdateFluidData(Fluid fluid)
+    {
+        foreach(var fluidEntry in _currentEntries)
+        {
+            if(fluidEntry.GetFluidEntryName().Equals(fluid.FluidName))
+            {
+                fluidEntry.UpdateCurrentPercentage(fluid.CurrentPercentage);
+            }
+        }
+    }
+
+    //public void ClearData()
+    //{
+    //    foreach (var Entry in _currentEntries)
+    //    {
+    //        Destroy(Entry.gameObject);
+    //    }
+    //    _currentEntries.Clear();
+    //}
 }
