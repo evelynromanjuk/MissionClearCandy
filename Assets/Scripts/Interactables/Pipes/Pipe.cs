@@ -7,6 +7,7 @@ public class Pipe : MonoBehaviour
     public Fluid FluidData;
     public GameObject FluidObject;
     public FluidCompositionManager FluidCompositionManager;
+    public EmptyButton EmptyButton;
 
     private bool _isOpen = false;
 
@@ -16,6 +17,7 @@ public class Pipe : MonoBehaviour
         FluidData.CurrentPercentage = 0;
         FluidData.ReachedGoal = false;
         FluidCompositionManager.AddFluidToList(FluidData);
+        EmptyButton.AddFluidToList(FluidData);
     }
 
     // Start is called before the first frame update
@@ -59,7 +61,12 @@ public class Pipe : MonoBehaviour
 
     void IncreaseFluidAmount()
     {
-        FluidCompositionManager.AddFluid(FluidData, 1);
+        bool tankIsFull = FluidCompositionManager.AddFluid(FluidData, 1);
+
+        if(tankIsFull)
+        {
+            CancelInvoke("IncreaseFluidAmount");
+        }
     }
 }
 

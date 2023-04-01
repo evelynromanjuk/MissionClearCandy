@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FrameFillMachine : MonoBehaviour
 {
     public GameObject DataEntry;
     public GameObject Container;
+    public TMP_Text SuccessMessage;
     private List<FluidEntry> _currentEntries = new List<FluidEntry>();
 
     public void PasteFluidData(List<Fluid> fluids)
@@ -32,6 +34,12 @@ public class FrameFillMachine : MonoBehaviour
                 fluidEntry.UpdateCurrentPercentage(fluid.CurrentPercentage);
             }
         }
+    }
+
+    public void ShowSuccessMessage()
+    {
+        SuccessMessage.gameObject.SetActive(true);
+        Debug.Log("big success!");
     }
 
     //public void ClearData()

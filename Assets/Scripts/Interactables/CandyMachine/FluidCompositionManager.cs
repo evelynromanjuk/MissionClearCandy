@@ -35,18 +35,17 @@ public class FluidCompositionManager : MonoBehaviour
     {
         bool tankIsFull = false;
 
-        if((totalPercentage + percentage) <= 100)
+        if((totalPercentage + percentage) <= 100) //if tank will not be 100% full
         {
             fluid.CurrentPercentage += percentage;
             totalPercentage += percentage;
             FrameFillMachine.UpdateFluidData(fluid);
 
-            Debug.Log("FCM: Fluid percentage updated. Name: " + fluid.FluidName + ", " + fluid.CurrentPercentage + "%");
-
             if(fluid.CurrentPercentage == fluid.GoalPercentage)
             {
                 Debug.Log("Percentage goal reached.");
                 fluid.ReachedGoal = true;
+                CheckComposition();
             }
             if(fluid.CurrentPercentage > fluid.GoalPercentage)
             {
@@ -60,6 +59,31 @@ public class FluidCompositionManager : MonoBehaviour
             tankIsFull = true;
         }
         return tankIsFull;
+    }
+
+    void CheckComposition()
+    {
+        bool compositionCorrect = false;
+
+        foreach(var entry in _fluids)
+        {
+            if(entry.ReachedGoal == false)
+            {
+                compositionCorrect = false;
+                break;
+            }
+            else
+            {
+                compositionCorrect = true;
+                Debug.Log("Every color reached goal");
+            }
+        }
+
+        if(compositionCorrect)
+        {
+            FrameFillMachine.ShowSuccessMessage();
+            // TODO Activate lever
+        }
     }
 
     public void SubscribeFluidAmountChanged(Action<float> method)
