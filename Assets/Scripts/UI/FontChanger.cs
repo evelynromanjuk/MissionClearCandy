@@ -41,7 +41,6 @@ public class FontChanger : MonoBehaviour
         if (this.gameObject.GetComponent<Button>().interactable == true)
         {
             buttonText.color = textColorHover;
-            Debug.Log("mouse enter");
         }
     }
 
@@ -50,7 +49,6 @@ public class FontChanger : MonoBehaviour
         if (this.gameObject.GetComponent<Button>().interactable == true)
         {
             buttonText.color = defaultColor;
-            Debug.Log("mouse exit");
         }
     }
 }
