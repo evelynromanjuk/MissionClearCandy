@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class FontChanger : MonoBehaviour
 {
@@ -37,13 +38,19 @@ public class FontChanger : MonoBehaviour
 
     public void changeTextColorOnMouseEnter()
     {
-        buttonText.color = textColorHover;
-        Debug.Log("mouse enter");
+        if (this.gameObject.GetComponent<Button>().interactable == true)
+        {
+            buttonText.color = textColorHover;
+            Debug.Log("mouse enter");
+        }
     }
 
     public void changeTextColorOnMouseExit()
     {
-        buttonText.color = defaultColor;
-        Debug.Log("mouse exit");
+        if (this.gameObject.GetComponent<Button>().interactable == true)
+        {
+            buttonText.color = defaultColor;
+            Debug.Log("mouse exit");
+        }
     }
 }
