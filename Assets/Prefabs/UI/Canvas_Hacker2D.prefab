@@ -2372,7 +2372,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1551360630766222285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 874558540599297109}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &6665801197258732601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,6 +3087,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5688790429259462369, guid: 629b0c470b9c4094eb2ed1ca0d097e40,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688790429259462369, guid: 629b0c470b9c4094eb2ed1ca0d097e40,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688790429259462369, guid: 629b0c470b9c4094eb2ed1ca0d097e40,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688790429259462369, guid: 629b0c470b9c4094eb2ed1ca0d097e40,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6954090112848707068, guid: 629b0c470b9c4094eb2ed1ca0d097e40,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3272,6 +3304,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 629b0c470b9c4094eb2ed1ca0d097e40, type: 3}
+--- !u!1 &874558540599297109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1046380929518002633, guid: 629b0c470b9c4094eb2ed1ca0d097e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 190967245640131996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7863905103258827871 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8035626475350841795, guid: 629b0c470b9c4094eb2ed1ca0d097e40,

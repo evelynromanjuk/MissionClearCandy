@@ -15,6 +15,6 @@ MonoBehaviour:
   objectType: employee ID card
   name: Willy Wonka
   position: CEO
-  id: 123
+  id: 00001
   birthday: 30.06.1979
-  password: 123
+  password: 94552

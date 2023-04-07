@@ -9,6 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Door-Password
+  m_Script: {fileID: 11500000, guid: 5df47da007b98ac4982228cf551a4588, type: 3}
+  m_Name: Harold Fudge
   m_EditorClassIdentifier: 
+  objectType: employee ID card
+  name: Harold Fudge
+  position: Head of Candy Lab
+  id: 67890
+  birthday: 21.03.1959
+  password: 13579

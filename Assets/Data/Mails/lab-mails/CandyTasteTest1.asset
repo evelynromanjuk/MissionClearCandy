@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0ab768d4c36743a4f20c173c10baf, type: 3}
+  m_Name: CandyTasteTest1
+  m_EditorClassIdentifier: 
+  senderAdress: lila.kim@candylab.com
+  receiverAdress: mark.rodriguez@candylab.com
+  subject: Candy Taste Test
+  date: 25.01.2022
+  content: "Hey Mark, you know how we\u2019re always taste-testing new candy flavors?
+    Well, I think I\u2019ve found the ultimate winner \u2013 a marshall-mellow (get
+    it??)- peanut butter swirl that\u2019s out of this world! You have to try it!!
+    I left a few samples on your desk, let me know what you think. And don\u2019t
+    worry, I won\u2019t tell anyone if you sneak a few more ;-) Best, Lila"

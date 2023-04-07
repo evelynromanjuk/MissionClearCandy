@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: employee ID card
   name: Veruca Salt
-  position: Marketing Manager
-  id: 987
-  birthday: 14.05.1993
-  password: 456
+  position: Candy Marketing Manager
+  id: 48913
+  birthday: 02.05.1989
+  password: 27749
