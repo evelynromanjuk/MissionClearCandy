@@ -10,6 +10,8 @@ public class FluidEntry : MonoBehaviour
     public TMP_Text GoalPercentage;
 
     private string _fluidEntryName;
+    private int _robotFontSize = 6;
+    private int _desktopFontSize = 20;
 
     public void SetEntryData(string Name, float Current, float Goal)
     {
@@ -29,6 +31,26 @@ public class FluidEntry : MonoBehaviour
     {
         CurrentPercentage.text = Current + "%";
     }
+
+    public void SetFontSize(bool IsRobotScene)
+    {
+        int FontSize;
+        
+        if (IsRobotScene)
+        {
+            FontSize = _desktopFontSize;
+        }
+        else
+        {
+            FontSize = _robotFontSize;  
+        }
+        FluidName.fontSize = FontSize;
+        CurrentPercentage.fontSize = FontSize;
+        GoalPercentage.fontSize = FontSize;
+
+    }
+
+
 
 
 }
