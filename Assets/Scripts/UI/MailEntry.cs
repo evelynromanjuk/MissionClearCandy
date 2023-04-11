@@ -13,12 +13,13 @@ public class MailEntry : MonoBehaviour
 
     public void SetMailEntry(string subject, string date, string sender, string receiver, string mail)
     {
-        this.gameObject.SetActive(true);
 
         Subject.text = subject;
         Date.text = date;
         Sender.text = sender;
         Receiver.text = receiver;
         ContentMail.text = mail;
+
+        this.gameObject.SetActive(true);
     }
 }
