@@ -18,3 +18,4 @@ MonoBehaviour:
   id: 00001
   birthday: 30.06.1979
   password: 94552
+  photo: {fileID: 21300000, guid: fc31d8966020b5f41becbe3a698b80b5, type: 3}

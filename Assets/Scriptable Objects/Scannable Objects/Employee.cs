@@ -10,7 +10,7 @@ public class Employee : ScannableData
     public string id;
     public string birthday;
     public string password;
-    //public Sprite photo;
+    public Sprite photo;
     
     private string[,] _cardData;
 
