@@ -80,6 +80,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivatePipe"",
+                    ""type"": ""Button"",
+                    ""id"": ""a0806907-82b5-4bac-8eb5-1b16cc074bf3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -324,6 +333,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""KeyboardInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44c69175-cd2c-4aca-b894-edc09f38cbaa"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivatePipe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -338,6 +358,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Interact = m_OnFoot.FindAction("Interact", throwIfNotFound: true);
         m_OnFoot_Return = m_OnFoot.FindAction("Return", throwIfNotFound: true);
         m_OnFoot_KeyboardInput = m_OnFoot.FindAction("KeyboardInput", throwIfNotFound: true);
+        m_OnFoot_ActivatePipe = m_OnFoot.FindAction("ActivatePipe", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -403,6 +424,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Interact;
     private readonly InputAction m_OnFoot_Return;
     private readonly InputAction m_OnFoot_KeyboardInput;
+    private readonly InputAction m_OnFoot_ActivatePipe;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -413,6 +435,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_OnFoot_Interact;
         public InputAction @Return => m_Wrapper.m_OnFoot_Return;
         public InputAction @KeyboardInput => m_Wrapper.m_OnFoot_KeyboardInput;
+        public InputAction @ActivatePipe => m_Wrapper.m_OnFoot_ActivatePipe;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -440,6 +463,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @KeyboardInput.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnKeyboardInput;
                 @KeyboardInput.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnKeyboardInput;
                 @KeyboardInput.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnKeyboardInput;
+                @ActivatePipe.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnActivatePipe;
+                @ActivatePipe.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnActivatePipe;
+                @ActivatePipe.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnActivatePipe;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -462,6 +488,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @KeyboardInput.started += instance.OnKeyboardInput;
                 @KeyboardInput.performed += instance.OnKeyboardInput;
                 @KeyboardInput.canceled += instance.OnKeyboardInput;
+                @ActivatePipe.started += instance.OnActivatePipe;
+                @ActivatePipe.performed += instance.OnActivatePipe;
+                @ActivatePipe.canceled += instance.OnActivatePipe;
             }
         }
     }
@@ -474,5 +503,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnReturn(InputAction.CallbackContext context);
         void OnKeyboardInput(InputAction.CallbackContext context);
+        void OnActivatePipe(InputAction.CallbackContext context);
     }
 }

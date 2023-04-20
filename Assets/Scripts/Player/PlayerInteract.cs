@@ -38,6 +38,8 @@ public class PlayerInteract : MonoBehaviour
         _inputManager.onFoot.Return.performed += OnReturnPressed;
         _inputManager.onFoot.Interact.performed += OnInteract;
         _inputManager.onFoot.KeyboardInput.performed += OnKeyboardEnter;
+        _inputManager.onFoot.ActivatePipe.started += OnActivatePipe;
+        _inputManager.onFoot.ActivatePipe.canceled += OnDeactivatePipe;
     }
 
     void Update()
@@ -128,6 +130,20 @@ public class PlayerInteract : MonoBehaviour
                 _currentInputField.text += keyValue;
             }
         }
+    }
+
+    private void OnActivatePipe(InputAction.CallbackContext obj)
+    {
+        if(_currentInputField != null && _currentInputField.interactable == true)
+        {
+            Debug.Log("Something happened");
+        }
+
+    }
+
+    private void OnDeactivatePipe(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Something stopped happening");
     }
 
     //EVENT SUBSCRIPTIONS
