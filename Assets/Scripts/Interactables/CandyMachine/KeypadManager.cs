@@ -20,6 +20,8 @@ public class KeypadManager : MonoBehaviour
 
     private string _correctRecipeCode;
 
+    private string _currentKeypadValue;
+
    
     void Start()
     {
@@ -29,7 +31,7 @@ public class KeypadManager : MonoBehaviour
         _passwordFrameActive = false;
         _recipeCodeActive = false;
 
-        _correctRecipeCode = "230298";
+        _correctRecipeCode = "23298";
     }
 
     //EVENT SUBSCRIPTIONS
@@ -80,6 +82,7 @@ public class KeypadManager : MonoBehaviour
         }
 
         CorrectPasswordEntered.Invoke(isCorrect);
+        _currentKeypadValue = "";
     }
 
     private void CheckRecipeCode(string code)
@@ -97,6 +100,7 @@ public class KeypadManager : MonoBehaviour
         }
 
         CorrectRecipeEntered.Invoke(isCorrect);
+        _currentKeypadValue = "";
     }
 
     public void PasswordFrameActive(bool isActive)
@@ -107,6 +111,22 @@ public class KeypadManager : MonoBehaviour
     public void RecipeCodeFrameActive(bool isActive)
     {
         _recipeCodeActive = isActive;
+    }
+
+    public void UpdateKeypadValue(string value)
+    {
+        _currentKeypadValue += value;
+        Debug.Log("Current Value: " + _currentKeypadValue);
+    }
+
+    public void EnterKeypadValue()
+    {
+        CheckUserInput(_currentKeypadValue);
+    }
+
+    public void ResetKeypadValues()
+    {
+        _currentKeypadValue = "";
     }
 
 }

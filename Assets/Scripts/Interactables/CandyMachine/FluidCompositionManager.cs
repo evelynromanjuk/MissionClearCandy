@@ -9,6 +9,7 @@ public class FluidCompositionManager : MonoBehaviour
 
     private List<Fluid> _fluids = new List<Fluid>();
     Action<float> FluidAmountChanged;
+    Action CompositionCorrectEvent;
 
     private float totalPercentage = 0;
 
@@ -17,12 +18,6 @@ public class FluidCompositionManager : MonoBehaviour
     {
         Debug.Log("Paste Fluid Data!!");
         FrameFillMachine.PasteFluidData(_fluids);   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void AddFluidToList(Fluid fluid)
@@ -82,12 +77,18 @@ public class FluidCompositionManager : MonoBehaviour
         if(compositionCorrect)
         {
             FrameFillMachine.ShowSuccessMessage();
-            // TODO Activate lever
+            CompositionCorrectEvent.Invoke(); //Activates lever
         }
+
     }
 
     public void SubscribeFluidAmountChanged(Action<float> method)
     {
         FluidAmountChanged += method;
+    }
+
+    public void SubscribeCompositionCorrectEvent(Action method)
+    {
+        CompositionCorrectEvent += method;
     }
 }
