@@ -11,7 +11,7 @@ public class EmployeeCard : MonoBehaviour
     private string _employeeName;
     private string _password;
 
-    [SerializeField] private bool _isValid;
+    public bool _isValid = false;
 
     public void Start()
     {

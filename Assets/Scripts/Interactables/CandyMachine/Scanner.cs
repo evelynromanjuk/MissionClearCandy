@@ -26,7 +26,7 @@ public class Scanner : MonoBehaviour
         {
             return;
         }
-        
+
         Debug.Log("Collision with Employee Card detected");
         Debug.Log("Employee Name: " + card.GetEmployeeName());
         Debug.Log("Employee Password: " + card.GetPassword());
