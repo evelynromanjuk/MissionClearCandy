@@ -14,8 +14,6 @@ public class Lever : MonoBehaviour, IInteractable
     {
         simpleInteractable = gameObject.GetComponent<XRSimpleInteractable>();
         simpleInteractable.enabled = false;
-
-        Debug.Log("Awake method called");
     }
     // Start is called before the first frame update
     void Start()
@@ -25,7 +23,6 @@ public class Lever : MonoBehaviour, IInteractable
 
     private void OnCompositionCorrect()
     {
-        Debug.Log("i think we got a problem");
         simpleInteractable.enabled = true;
     }
 

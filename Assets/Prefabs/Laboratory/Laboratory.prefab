@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2216863229772388621}
   - component: {fileID: 762401136518414506}
   - component: {fileID: 6323056242603971810}
+  - component: {fileID: 3080314790009714433}
   m_Layer: 8
   m_Name: EnterRecipeCode
   m_TagString: Untagged
@@ -176,6 +177,19 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
+--- !u!65 &3080314790009714433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125331146369748452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 231.7, y: 26.7, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &653792384976330143
 GameObject:
   m_ObjectHideFlags: 0
@@ -16795,6 +16809,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8113536555721526746}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1786887941613549393
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522531146592978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!114 &3010711435625132492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16898,20 +16926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeypadManager: {fileID: 8113536556489894756}
---- !u!64 &1786887941613549393
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310522531146592978}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390830757440049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
@@ -19429,6 +19443,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8113536557066220414}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &2568897985251959631
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522532929277046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!114 &3199489051123796502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19532,20 +19560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeypadManager: {fileID: 8113536556489894756}
---- !u!64 &2568897985251959631
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310522532929277046}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390829371069589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
@@ -19949,6 +19963,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8113536557169983891}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &4681330229818668512
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522533169446555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!114 &2701150351141782984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20052,20 +20080,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeypadManager: {fileID: 8113536556489894756}
---- !u!64 &4681330229818668512
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310522533169446555}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390829275620984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,

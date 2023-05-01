@@ -17,7 +17,6 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Awake()
     {
-        Debug.Log("Is Robot? = " + IsRobotScene);
         FluidEntry.SetFontSize(IsRobotScene);
     }
 }

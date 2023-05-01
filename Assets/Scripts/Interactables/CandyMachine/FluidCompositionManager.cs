@@ -16,7 +16,6 @@ public class FluidCompositionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Paste Fluid Data!!");
         FrameFillMachine.PasteFluidData(_fluids);   
     }
 
