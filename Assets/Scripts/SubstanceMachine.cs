@@ -35,7 +35,6 @@ public class SubstanceMachine : MonoBehaviour
         {
             s.transform.localPosition = new Vector3(-1.351f, 0.99f, 0.1f);
         }
-        
 
         Scanner scanner = _scannerObject.GetComponent<Scanner>();
 

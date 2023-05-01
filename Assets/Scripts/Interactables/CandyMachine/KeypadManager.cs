@@ -29,6 +29,8 @@ public class KeypadManager : MonoBehaviour
         PlayerInteract.SubscribePasswordEntered(CheckUserInput);
         Scanner.SubscribeCardScanned(OnScan);
 
+        Debug.Log("ScannerName: " + Scanner.name);
+
         _passwordFrameActive = false;
         _recipeCodeActive = false;
 
@@ -61,6 +63,8 @@ public class KeypadManager : MonoBehaviour
         _currentEmployeeName = card.GetEmployeeName();
         _currentEmployeePassword = card.GetPassword();
         _currentCardIsValid = card.GetCardValidity();
+
+        Debug.Log("ON SCAN! " + _currentEmployeeName);
     }
 
     private void CheckUserInput(string input)
@@ -141,5 +145,4 @@ public class KeypadManager : MonoBehaviour
         _currentKeypadValue = "";
         UserInputChanged.Invoke(_currentKeypadValue, _isPasswordValue);
     }
-
 }

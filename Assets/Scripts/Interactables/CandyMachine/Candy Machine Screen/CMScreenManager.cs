@@ -11,8 +11,8 @@ public class CMScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Scanner.SubscribeCardScanned(OnScan);
-        Scanner.SubscribeCardRemoved(OnCardRemoved);
+        //Scanner.SubscribeCardScanned(OnScan);
+        //Scanner.SubscribeCardRemoved(OnCardRemoved);
         KeypadManager.SubscribeCorrectPasswordEntered(OnPasswordEntered);
         KeypadManager.SubscribeCorrectRecipeEntered(OnCodeEntered);
         KeypadManager.SubscribeUserInputChanged(OnInputChanged);
@@ -21,6 +21,8 @@ public class CMScreenManager : MonoBehaviour
     public void SetScanner(Scanner newScanner)
     {
         Scanner = newScanner;
+        //Scanner.SubscribeCardScanned(OnScan);
+        //Scanner.SubscribeCardRemoved(OnCardRemoved);
     }
 
     void OnScan(EmployeeCard card)
