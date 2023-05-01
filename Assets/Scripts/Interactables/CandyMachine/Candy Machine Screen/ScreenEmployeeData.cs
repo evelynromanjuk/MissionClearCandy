@@ -7,6 +7,7 @@ public class ScreenEmployeeData : MonoBehaviour
 {
     public TMP_Text EmployeeName;
     public TMP_Text WrongPassword;
+    public TMP_InputField EnterPassword;
 
     public void SetData(string name)
     {
@@ -17,4 +18,10 @@ public class ScreenEmployeeData : MonoBehaviour
     {
         WrongPassword.gameObject.SetActive(true);
     }
+
+    public void UpdateUserInput(string value)
+    {
+        EnterPassword.text = value;
+    }
+
 }

@@ -47,4 +47,16 @@ public class CMScreen : MonoBehaviour
     {
         _screenRecipeData.ShowCodeError();
     }
+
+    public void UpdateInputData(string value, bool isPassword)
+    {
+        if(isPassword)
+        {
+            _screenEmployeeData.UpdateUserInput(value);
+        }
+        else
+        {
+            _screenRecipeData.UpdateUserInput(value);
+        }
+    }
 }

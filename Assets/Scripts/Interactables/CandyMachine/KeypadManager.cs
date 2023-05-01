@@ -10,6 +10,7 @@ public class KeypadManager : MonoBehaviour
 
     Action<bool> CorrectPasswordEntered;
     Action<bool> CorrectRecipeEntered;
+    Action<string, bool> UserInputChanged;
 
     private string _currentEmployeeName;
     private string _currentEmployeePassword;
@@ -19,8 +20,8 @@ public class KeypadManager : MonoBehaviour
     private bool _recipeCodeActive;
 
     private string _correctRecipeCode;
-
     private string _currentKeypadValue;
+    private bool _isPasswordValue = true;
 
    
     void Start()
@@ -31,7 +32,7 @@ public class KeypadManager : MonoBehaviour
         _passwordFrameActive = false;
         _recipeCodeActive = false;
 
-        _correctRecipeCode = "23298";
+        _correctRecipeCode = "143126";
     }
 
     //EVENT SUBSCRIPTIONS
@@ -43,6 +44,11 @@ public class KeypadManager : MonoBehaviour
     public void SubscribeCorrectRecipeEntered(Action<bool> method)
     {
         CorrectRecipeEntered += method;
+    }
+
+    public void SubscribeUserInputChanged(Action<string, bool> method)
+    {
+        UserInputChanged += method;
     }
 
     private void OnScan(EmployeeCard card)
@@ -64,7 +70,6 @@ public class KeypadManager : MonoBehaviour
             Debug.Log("User input is a recipe code");
             CheckRecipeCode(input);
         }
-
     }
 
     private void CheckPassword(string password)
@@ -74,6 +79,7 @@ public class KeypadManager : MonoBehaviour
         if(password == _currentEmployeePassword & _currentCardIsValid)
         {
             isCorrect = true;
+            _isPasswordValue = false; //set to false because recipe code is next
             Debug.Log("WELCOME TO CANDY MACHINE APP");
         }
         else
@@ -116,6 +122,7 @@ public class KeypadManager : MonoBehaviour
     public void UpdateKeypadValue(string value)
     {
         _currentKeypadValue += value;
+        UserInputChanged.Invoke(_currentKeypadValue, _isPasswordValue);
         Debug.Log("Current Value: " + _currentKeypadValue);
     }
 
@@ -127,6 +134,7 @@ public class KeypadManager : MonoBehaviour
     public void ResetKeypadValues()
     {
         _currentKeypadValue = "";
+        UserInputChanged.Invoke(_currentKeypadValue, _isPasswordValue);
     }
 
 }

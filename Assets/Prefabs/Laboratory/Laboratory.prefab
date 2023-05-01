@@ -2379,6 +2379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmployeeName: {fileID: 6087646128046336533}
   WrongPassword: {fileID: 771003706054709439}
+  EnterPassword: {fileID: 5621760180802217701}
 --- !u!1 &3236313565492143374
 GameObject:
   m_ObjectHideFlags: 0
@@ -6394,7 +6395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8113536555958997096
 Transform:
   m_ObjectHideFlags: 0
@@ -8985,7 +8986,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scanner: {fileID: 8113536556975997027}
   CMScreen: {fileID: 8113536557352422718}
-  FrameFillMachine: {fileID: 0}
   KeypadManager: {fileID: 8113536556489894756}
 --- !u!1 &8113536556557628835
 GameObject:
@@ -10137,6 +10137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmployeeName: {fileID: 8113536557468762492}
   WrongPassword: {fileID: 8113536557127490486}
+  EnterPassword: {fileID: 0}
 --- !u!1 &8113536556853084505
 GameObject:
   m_ObjectHideFlags: 0
@@ -12277,6 +12278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WrongCode: {fileID: 8113536555966359740}
+  EnterRecipeCode: {fileID: 0}
 --- !u!1 &8113536557278579258
 GameObject:
   m_ObjectHideFlags: 0
@@ -12913,7 +12915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8113536557444987528
 Transform:
   m_ObjectHideFlags: 0
@@ -13226,7 +13228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8113536557499305884
 Transform:
   m_ObjectHideFlags: 0
@@ -13653,6 +13655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WrongCode: {fileID: 5044828419309074094}
+  EnterRecipeCode: {fileID: 6323056242603971810}
 --- !u!1 &8830937597851356190
 GameObject:
   m_ObjectHideFlags: 0
@@ -16718,6 +16721,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d7b0a2fc62f98c45b86c63bb2242dbb, type: 2}
     - target: {fileID: 831141749547213520, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_DirtyAABB
@@ -16746,7 +16754,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_Name
-      value: pipe (3)
+      value: PipeGreen
       objectReference: {fileID: 0}
     - target: {fileID: 6673285169233079415, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
@@ -16775,12 +16783,163 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
+--- !u!1 &2777058253109925791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6202306910474115653, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536555721526746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8310522531146592978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 274150805843672840, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536555721526746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3010711435625132492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522531146592978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 8560845065294828645}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5075534268835747392}
+        m_TargetAssemblyTypeName: Valve, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5075534268835747392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522531146592978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08c4fca357d538429020700e244fd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeypadManager: {fileID: 8113536556489894756}
+--- !u!64 &1786887941613549393
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522531146592978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390830757440049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
     type: 3}
   m_PrefabInstance: {fileID: 8113536555721526746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8960047057077317771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536555721526746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1611741814495362141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960047057077317771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FluidData: {fileID: 11400000, guid: 5e9139134c6191a43aea1d701d28729c, type: 2}
+  FluidObject: {fileID: 2777058253109925791}
+  FluidCompositionManager: {fileID: 8113536556018853651}
+  EmptyButton: {fileID: 8113536555693659249}
 --- !u!1001 &8113536555745147906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17503,7 +17662,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_Name
-      value: pipe
+      value: PipeYellow
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
@@ -19196,6 +19355,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d7b0a2fc62f98c45b86c63bb2242dbb, type: 2}
     - target: {fileID: 831141749547213520, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_DirtyAABB
@@ -19224,7 +19388,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_Name
-      value: pipe (2)
+      value: PipeRed
       objectReference: {fileID: 0}
     - target: {fileID: 6673285169233079415, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
@@ -19253,12 +19417,163 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
+--- !u!1 &2777058255083497787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6202306910474115653, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557066220414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8310522532929277046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 274150805843672840, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557066220414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3199489051123796502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522532929277046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 8560845065294828645}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8729025688026479074}
+        m_TargetAssemblyTypeName: Valve, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8729025688026479074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522532929277046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08c4fca357d538429020700e244fd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeypadManager: {fileID: 8113536556489894756}
+--- !u!64 &2568897985251959631
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522532929277046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390829371069589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
     type: 3}
   m_PrefabInstance: {fileID: 8113536557066220414}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8960047055068122671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557066220414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5629400810186694361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960047055068122671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FluidData: {fileID: 11400000, guid: d5362adcb1dc58940ae9e853b7573f66, type: 2}
+  FluidObject: {fileID: 2777058255083497787}
+  FluidCompositionManager: {fileID: 8113536556018853651}
+  EmptyButton: {fileID: 8113536555693659249}
 --- !u!1001 &8113536557077790272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19560,6 +19875,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d7b0a2fc62f98c45b86c63bb2242dbb, type: 2}
     - target: {fileID: 831141749547213520, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_DirtyAABB
@@ -19588,7 +19908,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
       propertyPath: m_Name
-      value: pipe (1)
+      value: PipeBlue
       objectReference: {fileID: 0}
     - target: {fileID: 6673285169233079415, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
         type: 3}
@@ -19617,12 +19937,163 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
+--- !u!1 &2777058254843403222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6202306910474115653, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557169983891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8310522533169446555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 274150805843672840, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557169983891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2701150351141782984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522533169446555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 8560845065294828645}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5006885796802383668}
+        m_TargetAssemblyTypeName: Valve, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5006885796802383668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522533169446555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08c4fca357d538429020700e244fd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeypadManager: {fileID: 8113536556489894756}
+--- !u!64 &4681330229818668512
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522533169446555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390829275620984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
     type: 3}
   m_PrefabInstance: {fileID: 8113536557169983891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8960047055306128578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557169983891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3696244088046343229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960047055306128578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FluidData: {fileID: 11400000, guid: 1e586371fc840034b9fa6cefecaeead4, type: 2}
+  FluidObject: {fileID: 2777058254843403222}
+  FluidCompositionManager: {fileID: 8113536556018853651}
+  EmptyButton: {fileID: 8113536555693659249}
 --- !u!1001 &8113536557193026419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21129,7 +21600,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scanner: {fileID: 718638591211759203}
   CMScreen: {fileID: 4730340264753839020}
-  FrameFillMachine: {fileID: 4858045875564038647}
   KeypadManager: {fileID: 8113536556489894756}
 --- !u!1 &6776363483496573007 stripped
 GameObject:
@@ -21396,7 +21866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac29b4c597a7dd4f862cfe0a3204187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FrameFillMachine: {fileID: 8113536557057513936}
+  FrameFillMachine: {fileID: 4858045875564038647}
 --- !u!1 &7714802977859559871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1984239070732729576, guid: e460ff5cc40c64a4c96096ad3293388e,

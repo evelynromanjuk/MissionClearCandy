@@ -30,7 +30,8 @@ public class FluidCompositionManager : MonoBehaviour
     {
         bool tankIsFull = false;
 
-        if((totalPercentage + percentage) <= 100) //if tank will not be 100% full
+        // TODO: Change back to 100%
+        if ((totalPercentage + percentage) <= 35) //if tank will not be 100% full
         {
             fluid.CurrentPercentage += percentage;
             totalPercentage += percentage;

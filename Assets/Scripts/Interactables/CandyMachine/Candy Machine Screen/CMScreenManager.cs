@@ -6,7 +6,6 @@ public class CMScreenManager : MonoBehaviour
 {
     public Scanner Scanner;
     public CMScreen CMScreen;
-    public FrameFillMachine FrameFillMachine;
     public KeypadManager KeypadManager;
 
     // Start is called before the first frame update
@@ -16,6 +15,7 @@ public class CMScreenManager : MonoBehaviour
         Scanner.SubscribeCardRemoved(OnCardRemoved);
         KeypadManager.SubscribeCorrectPasswordEntered(OnPasswordEntered);
         KeypadManager.SubscribeCorrectRecipeEntered(OnCodeEntered);
+        KeypadManager.SubscribeUserInputChanged(OnInputChanged);
     }
 
    void OnScan(EmployeeCard card)
@@ -55,6 +55,12 @@ public class CMScreenManager : MonoBehaviour
         {
             CMScreen.OpenFillMachineFrame();
         }
+    }
+
+    void OnInputChanged(string value, bool isPassword)
+    {
+        CMScreen.UpdateInputData(value, isPassword);
+        Debug.Log("CMScreenManager: This value is a password: " + isPassword);
     }
 
 }
