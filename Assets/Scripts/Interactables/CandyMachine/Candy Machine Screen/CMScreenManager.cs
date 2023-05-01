@@ -18,7 +18,12 @@ public class CMScreenManager : MonoBehaviour
         KeypadManager.SubscribeUserInputChanged(OnInputChanged);
     }
 
-   void OnScan(EmployeeCard card)
+    public void SetScanner(Scanner newScanner)
+    {
+        Scanner = newScanner;
+    }
+
+    void OnScan(EmployeeCard card)
     {
         string employeeName = card.GetEmployeeName();
         string employeePassword = card.GetPassword();

@@ -51,6 +51,11 @@ public class KeypadManager : MonoBehaviour
         UserInputChanged += method;
     }
 
+    public void SetScanner(Scanner newScanner)
+    {
+        Scanner = newScanner;
+    }
+
     private void OnScan(EmployeeCard card)
     {
         _currentEmployeeName = card.GetEmployeeName();
