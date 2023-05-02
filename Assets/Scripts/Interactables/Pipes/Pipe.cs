@@ -8,8 +8,11 @@ public class Pipe : MonoBehaviour
     public GameObject FluidObject;
     public FluidCompositionManager FluidCompositionManager;
     public EmptyButton EmptyButton;
+    public PlayerInteract PlayerInteract;
 
-    private bool _isOpen = false;
+    private bool _pipeOpen = false;
+    private bool _pipeActive;
+    private string _hackerKey;
 
 
     private void Awake()
@@ -23,39 +26,78 @@ public class Pipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerInteract.SubscribePipeActivated(ActivatePipe);
         FluidObject.GetComponent<Renderer>().material = FluidData.material;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ActivatePipe(string key, bool isActive)
     {
-        
+        if (!isActive)
+        {
+            _pipeActive = isActive;
+            Debug.Log("Pipe is deactivated");
+        }
+        else
+        {
+            _pipeActive = isActive;
+            _hackerKey = key;
+            Debug.Log("Pipe is activated. Key: " + key);
+        }
     }
 
     public void OpenClosePipe()
     {
-        if(_isOpen)
+        //if hacker presses right key -> pipe can be opened
+        //if hacker releases
+        if(_pipeActive)
         {
-            Debug.Log("Pipe was closed");
-            ClosePipe();
-            
+            if (_pipeOpen)
+            {
+                Debug.Log("Pipe was closed");
+                ClosePipe();
+
+            }
+            else
+            {
+                if(_hackerKey.Equals(FluidData.Key))
+                {
+                    Debug.Log("Pipe was opened");
+                    OpenPipe();
+                }
+                else
+                {
+                    Debug.Log("Hacker pressed the wrong key");
+                }
+                
+            }
         }
         else
         {
-            Debug.Log("Pipe was opened");
-            OpenPipe();
+            Debug.Log("Pipe couldn't be opened. Activate it first.");
         }
+
+        //if (_pipeOpen)
+        //{
+        //    Debug.Log("Pipe was closed");
+        //    ClosePipe();
+            
+        //}
+        //else
+        //{
+        //    Debug.Log("Pipe was opened");
+        //    OpenPipe();
+        //}
     }
 
     void OpenPipe()
     {
-        _isOpen = true;
+        _pipeOpen = true;
         InvokeRepeating("IncreaseFluidAmount", 0.0f, 1);
     }
 
     void ClosePipe()
     {
-        _isOpen = false;
+        _pipeOpen = false;
         CancelInvoke("IncreaseFluidAmount");
     }
 

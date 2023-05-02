@@ -28,6 +28,7 @@ public class FluidCompositionManager : MonoBehaviour
     public bool AddFluid(Fluid fluid, float percentage)
     {
         bool tankIsFull = false;
+        string agentKey = fluid.Key;
 
         // TODO: Change back to 100%
         if ((totalPercentage + percentage) <= 35) //if tank will not be 100% full
@@ -36,13 +37,13 @@ public class FluidCompositionManager : MonoBehaviour
             totalPercentage += percentage;
             FrameFillMachine.UpdateFluidData(fluid);
 
-            if(fluid.CurrentPercentage == fluid.GoalPercentage)
+            if (fluid.CurrentPercentage == fluid.GoalPercentage)
             {
                 Debug.Log("Percentage goal reached.");
                 fluid.ReachedGoal = true;
                 CheckComposition();
             }
-            if(fluid.CurrentPercentage > fluid.GoalPercentage)
+            if (fluid.CurrentPercentage > fluid.GoalPercentage)
             {
                 Debug.Log("Percentage goal was crossed.");
                 fluid.ReachedGoal = false;

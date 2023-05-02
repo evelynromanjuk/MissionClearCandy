@@ -20,6 +20,7 @@ public class PlayerInteract : MonoBehaviour
     Action<bool> InfoFrameClosedEvent;
     Action OnReturn;
     Action<string> PasswordEntered;
+    Action<string, bool> PipeActivated;
 
     private ScannableObject _currentScannableObj;
     private IInteractable _currentInteractableObj;
@@ -129,20 +130,21 @@ public class PlayerInteract : MonoBehaviour
             {
                 _currentInputField.text += keyValue;
             }
+            //Debug.Log("Pressed: " + keyValue);
         }
     }
 
     private void OnActivatePipe(InputAction.CallbackContext obj)
     {
-        if(_currentInputField != null && _currentInputField.interactable == true)
-        {
-            Debug.Log("Something happened");
-        }
-
+        string keyValue = obj.control.name;
+        PipeActivated(keyValue, true);
+        Debug.Log("Something happened");
     }
 
     private void OnDeactivatePipe(InputAction.CallbackContext obj)
     {
+        string keyValue = obj.control.name;
+        PipeActivated(keyValue, false);
         Debug.Log("Something stopped happening");
     }
 
@@ -165,5 +167,10 @@ public class PlayerInteract : MonoBehaviour
     public void SubscribePasswordEntered(Action<string> method)
     {
         PasswordEntered += method;
+    }
+
+    public void SubscribePipeActivated(Action<string, bool> method)
+    {
+        PipeActivated += method;
     }
 }

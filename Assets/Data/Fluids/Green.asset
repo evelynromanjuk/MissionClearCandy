@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9bc415de7b4f55b4e8f83ff5c444f610, type: 2}
   FluidName: GREEN_2A57C
+  Key: g
   CurrentPercentage: 0
   GoalPercentage: 5
   ReachedGoal: 0

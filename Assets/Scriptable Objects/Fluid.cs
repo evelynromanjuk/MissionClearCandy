@@ -8,6 +8,7 @@ public class Fluid : ScriptableObject
     public Material material;
 
     public string FluidName;
+    public string Key;
     public float CurrentPercentage;
     public float GoalPercentage;
     public bool ReachedGoal;

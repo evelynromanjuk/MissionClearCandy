@@ -8,36 +8,29 @@ public class Scanner : MonoBehaviour
     static Action<EmployeeCard> CardScanned;
     static Action CardRemoved;
 
-    private bool _isSubscribed = false;
-    private int _countbefore;
-    private static int _subscribercount;
+    //private bool _isSubscribed = false;
+    //private int _countbefore;
+    //private static int _subscribercount;
 
 
-    private void Awake()
-    {
-        _subscribercount = 0;
-    }
-
-    private void Update()
-    {
-        Debug.Log("_subscribercount: " + _subscribercount);
-    }
+    //private void Awake()
+    //{
+    //    _subscribercount = 0;
+    //}
 
     //EVENT SUBSCRIPTIONS
     public void SubscribeCardScanned(Action<EmployeeCard> method)
     {
         CardScanned += method;
-        _isSubscribed = true;
+        //_isSubscribed = true;
 
         int count = 0;
         foreach(Delegate d in CardScanned.GetInvocationList())
         {
             count++;
         }
-        _subscribercount = count;
+        //_subscribercount = count;
 
-        Debug.Log("Someone subscribed?" + _isSubscribed);
-        Debug.Log("Subscriber Count: " + _subscribercount);
     }
 
     public void SubscribeCardRemoved(Action method)
@@ -47,11 +40,9 @@ public class Scanner : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("000CardScanned is null? " + (CardScanned == null));
         EmployeeCard card = collision.gameObject.GetComponent<EmployeeCard>();
         if(card == null)
         {
-            Debug.Log("the card is null? " + (card == null));
             return;
         }
 
@@ -60,13 +51,8 @@ public class Scanner : MonoBehaviour
         //Debug.Log("Employee Password: " + card.GetPassword());
         //Debug.Log("Is valid: " + card.GetCardValidity());
 
-        Debug.Log("CardScanned is null? " + (CardScanned==null));
-        Debug.Log("Subscriber Count2: " + _subscribercount);
-        Debug.Log("Someone subscribed?" + _isSubscribed);
-
         if (card.GetCardValidity())
         {
-            Debug.Log("Number of methods subscribed to CardScanned: " + CardScanned.GetInvocationList());
             CardScanned?.Invoke(card);
         }
         
@@ -74,7 +60,6 @@ public class Scanner : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("No longer in contact with " + collision.transform.name);
         CardRemoved?.Invoke();
         // TODO: Change Screen text back to "Please put ID card on the scanner"
     }
@@ -82,13 +67,13 @@ public class Scanner : MonoBehaviour
     private void OnApplicationQuit()
     {
         Debug.Log(this.gameObject.name);
-        _subscribercount = 0;
+       // _subscribercount = 0;
         Destroy(this.gameObject);
     }
 
     private void OnDestroy()
     {
-        Debug.Log("The last subscriberCount: " + _subscribercount);
+        //Debug.Log("The last subscriberCount: " + _subscribercount);
     }
 
 }
