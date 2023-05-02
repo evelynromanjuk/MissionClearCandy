@@ -5,17 +5,22 @@ using System;
 
 public class Scanner : MonoBehaviour
 {
-    Action<EmployeeCard> CardScanned;
-    Action CardRemoved;
+    static Action<EmployeeCard> CardScanned;
+    static Action CardRemoved;
 
     private bool _isSubscribed = false;
     private int _countbefore;
-    private int _subscribercount;
+    private static int _subscribercount;
 
 
     private void Awake()
     {
         _subscribercount = 0;
+    }
+
+    private void Update()
+    {
+        Debug.Log("_subscribercount: " + _subscribercount);
     }
 
     //EVENT SUBSCRIPTIONS
@@ -55,7 +60,6 @@ public class Scanner : MonoBehaviour
         //Debug.Log("Employee Password: " + card.GetPassword());
         //Debug.Log("Is valid: " + card.GetCardValidity());
 
-        _subscribercount = 1;
         Debug.Log("CardScanned is null? " + (CardScanned==null));
         Debug.Log("Subscriber Count2: " + _subscribercount);
         Debug.Log("Someone subscribed?" + _isSubscribed);
@@ -71,7 +75,7 @@ public class Scanner : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         Debug.Log("No longer in contact with " + collision.transform.name);
-        CardRemoved.Invoke();
+        CardRemoved?.Invoke();
         // TODO: Change Screen text back to "Please put ID card on the scanner"
     }
 
