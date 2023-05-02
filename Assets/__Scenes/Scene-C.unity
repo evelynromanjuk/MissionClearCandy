@@ -347,6 +347,7 @@ MonoBehaviour:
   FluidEntry: {fileID: 612934718912416918, guid: 220822186b1fac64da7aa5f09f91ccde,
     type: 3}
   SubstanceMachine: {fileID: 8113536557507563001}
+  Pipe: {fileID: 1305797429}
   type: 2
 --- !u!1 &606482982 stripped
 GameObject:
@@ -477,6 +478,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305797429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5839825327282388988, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557507563000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1329418881
 GameObject:
   m_ObjectHideFlags: 0

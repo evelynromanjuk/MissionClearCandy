@@ -7,6 +7,7 @@ public class SceneManager : MonoBehaviour
     //public bool IsRobotScene;
     public FluidEntry FluidEntry;
     public SubstanceMachine SubstanceMachine;
+    public Pipe Pipe;
 
     private bool _isRobotScene = false;
     private bool _isVertical = false;
@@ -35,6 +36,7 @@ public class SceneManager : MonoBehaviour
             case Type.VersionD:
                 _isRobotScene = true;
                 _isVertical = true;
+                Pipe.SetHackerKeyUse();
                 Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _isVertical);
                 break;
 

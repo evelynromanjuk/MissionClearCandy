@@ -10,6 +10,8 @@ public class Pipe : MonoBehaviour
     public EmptyButton EmptyButton;
     public PlayerInteract PlayerInteract;
 
+    private static bool _usesHackerKey = false;
+
     private bool _pipeOpen = false;
     private bool _pipeActive;
     private string _hackerKey;
@@ -30,26 +32,68 @@ public class Pipe : MonoBehaviour
         FluidObject.GetComponent<Renderer>().material = FluidData.material;
     }
 
+    public void SetHackerKeyUse()
+    {
+        _usesHackerKey = true;
+        Debug.Log("Pipe " + FluidData.FluidName + ": Hacker Key Use set to true!");
+    }
+
     private void ActivatePipe(string key, bool isActive)
     {
-        if (!isActive)
+        if(_usesHackerKey)
         {
-            _pipeActive = isActive;
-            Debug.Log("Pipe is deactivated");
+            Debug.Log("This is version D. Hacker uses keys");
+            if (!isActive)
+            {
+                _pipeActive = isActive;
+                Debug.Log("Pipe is deactivated");
+            }
+            else
+            {
+                _pipeActive = isActive;
+                _hackerKey = key;
+                Debug.Log("Pipe is activated. Key: " + key);
+            }
         }
         else
         {
-            _pipeActive = isActive;
-            _hackerKey = key;
-            Debug.Log("Pipe is activated. Key: " + key);
+            Debug.Log("This is not version D. Hacker does not use keys");
+            _pipeActive = true;
         }
+       
     }
 
     public void OpenClosePipe()
     {
-        //if hacker presses right key -> pipe can be opened
-        //if hacker releases
-        if(_pipeActive)
+       if(_usesHackerKey)
+        {
+            if (_pipeActive)
+            {
+                if (_pipeOpen)
+                {
+                    Debug.Log("Pipe was closed");
+                    ClosePipe();
+
+                }
+                else
+                {
+                    if (_hackerKey.Equals(FluidData.Key))
+                    {
+                        Debug.Log("Pipe was opened");
+                        OpenPipe();
+                    }
+                    else
+                    {
+                        Debug.Log("Hacker pressed the wrong key");
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log("Pipe couldn't be opened. Activate it first.");
+            }
+        }
+        else
         {
             if (_pipeOpen)
             {
@@ -59,28 +103,17 @@ public class Pipe : MonoBehaviour
             }
             else
             {
-                if(_hackerKey.Equals(FluidData.Key))
-                {
-                    Debug.Log("Pipe was opened");
-                    OpenPipe();
-                }
-                else
-                {
-                    Debug.Log("Hacker pressed the wrong key");
-                }
-                
+                Debug.Log("Pipe was opened");
+                OpenPipe();
             }
         }
-        else
-        {
-            Debug.Log("Pipe couldn't be opened. Activate it first.");
-        }
+
 
         //if (_pipeOpen)
         //{
         //    Debug.Log("Pipe was closed");
         //    ClosePipe();
-            
+
         //}
         //else
         //{
