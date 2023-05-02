@@ -3805,6 +3805,7 @@ MonoBehaviour:
   FluidObject: {fileID: 8113536555651834577}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1 &8113536555966359738
 GameObject:
   m_ObjectHideFlags: 0
@@ -10325,6 +10326,7 @@ MonoBehaviour:
   FluidObject: {fileID: 8113536556255168675}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1 &8113536557463514591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10638,6 +10640,7 @@ MonoBehaviour:
   FluidObject: {fileID: 8113536557054212896}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1 &8593039163839607016
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,6 +12404,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2550237034902792211, guid: 59fedcb5136ce394588cc570eb007abb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3916967666585278954, guid: 59fedcb5136ce394588cc570eb007abb,
         type: 3}
       propertyPath: m_InteractionManager
@@ -12431,6 +12439,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8113536556489894756}
+    - target: {fileID: 5393896314899874855, guid: 59fedcb5136ce394588cc570eb007abb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5534480262672617755, guid: 59fedcb5136ce394588cc570eb007abb,
         type: 3}
       propertyPath: m_InteractionManager
@@ -13745,6 +13758,7 @@ MonoBehaviour:
   FluidObject: {fileID: 2777058253109925791}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1001 &8113536555745147906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14663,6 +14677,7 @@ MonoBehaviour:
   FluidObject: {fileID: 2777058253645222171}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1001 &8113536556271072280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16379,6 +16394,7 @@ MonoBehaviour:
   FluidObject: {fileID: 2777058255083497787}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1001 &8113536557077790272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16899,6 +16915,7 @@ MonoBehaviour:
   FluidObject: {fileID: 2777058254843403222}
   FluidCompositionManager: {fileID: 8113536556018853651}
   EmptyButton: {fileID: 8113536555693659249}
+  PlayerInteract: {fileID: 0}
 --- !u!1001 &8113536557193026419
 PrefabInstance:
   m_ObjectHideFlags: 0

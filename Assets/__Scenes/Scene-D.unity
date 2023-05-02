@@ -347,7 +347,7 @@ MonoBehaviour:
   FluidEntry: {fileID: 612934718912416918, guid: 220822186b1fac64da7aa5f09f91ccde,
     type: 3}
   SubstanceMachine: {fileID: 8113536557507563001}
-  Pipe: {fileID: 1304456025}
+  Pipe: {fileID: 647323770}
   type: 3
 --- !u!1 &606482982 stripped
 GameObject:
@@ -369,6 +369,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
+--- !u!114 &647323770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5629400810186694361, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557507563000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &887930975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8310522532929277046, guid: fbc84ac0d91dccd46bd74480d1700510,
@@ -478,18 +490,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1304456025 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5839825327282388988, guid: fbc84ac0d91dccd46bd74480d1700510,
-    type: 3}
-  m_PrefabInstance: {fileID: 8113536557507563000}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1329418881
 GameObject:
   m_ObjectHideFlags: 0
