@@ -13,10 +13,13 @@ public class SubstanceMachine : MonoBehaviour
     private GameObject _scannerObject;
 
     private bool _scannerIsVertical;
+    private bool _isRobotScene;
 
-   public void SetScreenOrientation(bool isVertical)
+   public void SetScreenOrientation(bool isVertical, bool isRobotScene)
     {
         _scannerIsVertical = isVertical;
+        _isRobotScene = isRobotScene;
+        Debug.Log("IsVertical? " + isVertical);
         InitializeScannerPrefab();
     }
 
@@ -38,7 +41,7 @@ public class SubstanceMachine : MonoBehaviour
 
         Scanner scanner = _scannerObject.GetComponent<Scanner>();
 
-        KeypadManager.SetScanner(scanner);
+        KeypadManager.SetSceneSpecifications(scanner, _isRobotScene);
         CMScreenManager.SetScanner(scanner);
 
     }

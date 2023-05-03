@@ -11,6 +11,7 @@ public class Pipe : MonoBehaviour
     public PlayerInteract PlayerInteract;
 
     private static bool _usesHackerKey = false;
+    private static bool _isRobotScene;
 
     private bool _pipeOpen = false;
     private bool _pipeActive;
@@ -28,7 +29,10 @@ public class Pipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerInteract.SubscribePipeActivated(ActivatePipe);
+        if(_isRobotScene)
+        {
+            PlayerInteract.SubscribePipeActivated(ActivatePipe);
+        }
         FluidObject.GetComponent<Renderer>().material = FluidData.material;
     }
 
@@ -36,6 +40,11 @@ public class Pipe : MonoBehaviour
     {
         _usesHackerKey = true;
         Debug.Log("Pipe " + FluidData.FluidName + ": Hacker Key Use set to true!");
+    }
+
+    public void SetRobotInteraction(bool isRobotScene)
+    {
+        _isRobotScene = isRobotScene;
     }
 
     private void ActivatePipe(string key, bool isActive)

@@ -567,6 +567,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448794646}
   m_CullTransparentMesh: 1
+--- !u!114 &515275294 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5839825327282388988, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e06c40f1e308be41861b89a315a3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &549966357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7910880420294225165, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ccd42904d98604abfb514099a3f0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &617580158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,9 +2449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab1788297e50da40a97b81682538811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRobotScene: 1
   FluidEntry: {fileID: 612934718912416918, guid: 220822186b1fac64da7aa5f09f91ccde,
     type: 3}
+  SubstanceMachine: {fileID: 549966357}
+  Pipe: {fileID: 515275294}
+  type: 0
 --- !u!4 &1645122117
 Transform:
   m_ObjectHideFlags: 0

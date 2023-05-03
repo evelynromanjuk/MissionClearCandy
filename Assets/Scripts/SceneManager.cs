@@ -9,6 +9,7 @@ public class SceneManager : MonoBehaviour
     public SubstanceMachine SubstanceMachine;
     public Pipe Pipe;
 
+
     private bool _isRobotScene = false;
     private bool _isVertical = false;
 
@@ -44,7 +45,8 @@ public class SceneManager : MonoBehaviour
                 break;
         }
 
-        SubstanceMachine.SetScreenOrientation(_isVertical);
+        SubstanceMachine.SetScreenOrientation(_isVertical, _isRobotScene);
         FluidEntry.SetFontSize(_isRobotScene);
+        Pipe.SetRobotInteraction(_isRobotScene);
     }
 }

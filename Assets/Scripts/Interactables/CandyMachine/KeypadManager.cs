@@ -23,10 +23,15 @@ public class KeypadManager : MonoBehaviour
     private string _currentKeypadValue;
     private bool _isPasswordValue = true;
 
+    private bool _isRobotScene;
+
    
     void Start()
     {
-        PlayerInteract.SubscribePasswordEntered(CheckUserInput);
+        if(_isRobotScene)
+        {
+            PlayerInteract.SubscribePasswordEntered(CheckUserInput);
+        }
         Scanner.SubscribeCardScanned(OnScan);
 
         Debug.Log("ScannerName: " + Scanner.name);
@@ -53,9 +58,10 @@ public class KeypadManager : MonoBehaviour
         UserInputChanged += method;
     }
 
-    public void SetScanner(Scanner newScanner)
+    public void SetSceneSpecifications(Scanner newScanner, bool isRobotScene)
     {
         Scanner = newScanner;
+        _isRobotScene = isRobotScene;
     }
 
     private void OnScan(EmployeeCard card)
