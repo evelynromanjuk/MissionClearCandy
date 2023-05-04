@@ -17,6 +17,8 @@ public class InputManager : MonoBehaviour
         playerInput = new PlayerInput();
         onFoot = playerInput.OnFoot;
 
+        onFoot.Enable();
+
         movement = GetComponent<PlayerMovement>();
         look = GetComponent<PlayerLook>();
 
@@ -37,11 +39,26 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        onFoot.Enable();
+        onFoot.Interact.Enable();
+        onFoot.InteractDoor.Disable();
     }
 
     private void OnDisable()
     {
-        onFoot.Disable();
+        onFoot.Interact.Disable();
+        onFoot.InteractDoor.Enable();
+    }
+
+
+    public void SwitchInteract(bool isHoldInteraction)
+    {
+        if(isHoldInteraction)
+        {
+            OnDisable();
+        }
+        else
+        {
+            OnEnable();
+        }
     }
 }

@@ -89,6 +89,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InteractDoor"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a7c2f8e-1961-479c-ba85-3af297bf050d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -388,6 +397,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""ActivatePipe"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9175409f-4cc3-4738-bcf7-83aa3bbe8736"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractDoor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -403,6 +423,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Return = m_OnFoot.FindAction("Return", throwIfNotFound: true);
         m_OnFoot_KeyboardInput = m_OnFoot.FindAction("KeyboardInput", throwIfNotFound: true);
         m_OnFoot_ActivatePipe = m_OnFoot.FindAction("ActivatePipe", throwIfNotFound: true);
+        m_OnFoot_InteractDoor = m_OnFoot.FindAction("InteractDoor", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -469,6 +490,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Return;
     private readonly InputAction m_OnFoot_KeyboardInput;
     private readonly InputAction m_OnFoot_ActivatePipe;
+    private readonly InputAction m_OnFoot_InteractDoor;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -480,6 +502,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Return => m_Wrapper.m_OnFoot_Return;
         public InputAction @KeyboardInput => m_Wrapper.m_OnFoot_KeyboardInput;
         public InputAction @ActivatePipe => m_Wrapper.m_OnFoot_ActivatePipe;
+        public InputAction @InteractDoor => m_Wrapper.m_OnFoot_InteractDoor;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -510,6 +533,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ActivatePipe.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnActivatePipe;
                 @ActivatePipe.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnActivatePipe;
                 @ActivatePipe.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnActivatePipe;
+                @InteractDoor.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInteractDoor;
+                @InteractDoor.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInteractDoor;
+                @InteractDoor.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnInteractDoor;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -535,6 +561,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ActivatePipe.started += instance.OnActivatePipe;
                 @ActivatePipe.performed += instance.OnActivatePipe;
                 @ActivatePipe.canceled += instance.OnActivatePipe;
+                @InteractDoor.started += instance.OnInteractDoor;
+                @InteractDoor.performed += instance.OnInteractDoor;
+                @InteractDoor.canceled += instance.OnInteractDoor;
             }
         }
     }
@@ -548,5 +577,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnReturn(InputAction.CallbackContext context);
         void OnKeyboardInput(InputAction.CallbackContext context);
         void OnActivatePipe(InputAction.CallbackContext context);
+        void OnInteractDoor(InputAction.CallbackContext context);
     }
 }

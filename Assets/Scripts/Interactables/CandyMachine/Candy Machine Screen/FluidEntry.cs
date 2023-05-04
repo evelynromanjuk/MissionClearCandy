@@ -41,7 +41,7 @@ public class FluidEntry : MonoBehaviour
         if (!IsRobotScene)
         {
             //FontSize = _desktopFontSize;
-            FontSize = 20.0f;
+            FontSize = _desktopFontSize;
             Debug.Log("this is not a robot scene! Font Size: " + FontSize);
         }
         else

@@ -21,10 +21,13 @@ public class PlayerInteract : MonoBehaviour
     Action OnReturn;
     Action<string> PasswordEntered;
     Action<string, bool> PipeActivated;
+    Action<bool> DoorActivated;
 
     private ScannableObject _currentScannableObj;
     private IInteractable _currentInteractableObj;
     private TMP_InputField _currentInputField;
+
+    private bool _doorButtonFocused = false;
 
 
     void Start()
@@ -41,6 +44,8 @@ public class PlayerInteract : MonoBehaviour
         _inputManager.onFoot.KeyboardInput.performed += OnKeyboardEnter;
         _inputManager.onFoot.ActivatePipe.started += OnActivatePipe;
         _inputManager.onFoot.ActivatePipe.canceled += OnDeactivatePipe;
+        _inputManager.onFoot.InteractDoor.started += OnActivateDoor;
+        _inputManager.onFoot.InteractDoor.canceled += OnDeactivateDoor;
     }
 
     void Update()
@@ -70,6 +75,15 @@ public class PlayerInteract : MonoBehaviour
             TMP_InputField InputField = hitInfo.collider.GetComponent<TMP_InputField>();
             _currentInputField = InputField;
             //_currentInputField.interactable = true; //could be added later if "interactable" should be set automatically with raycast
+
+            DoorButton DoorButton = hitInfo.collider.GetComponent<DoorButton>();
+
+            if (DoorButton != null & !_doorButtonFocused)
+            {
+                _doorButtonFocused = true;
+                _inputManager.SwitchInteract(true);
+            }
+
         }
         else
         {
@@ -77,6 +91,12 @@ public class PlayerInteract : MonoBehaviour
             {
                 _currentInputField.interactable = false;
                 _currentInputField = null;
+            }
+
+            if (_doorButtonFocused)
+            {
+                _doorButtonFocused = false;
+                _inputManager.SwitchInteract(false);
             }
         }
     }
@@ -102,6 +122,8 @@ public class PlayerInteract : MonoBehaviour
         {
             _currentInputField.interactable = true;
         }
+
+        Debug.Log("INTERACT");
     }
 
     //EVENT: ESC pressed
@@ -137,15 +159,29 @@ public class PlayerInteract : MonoBehaviour
     private void OnActivatePipe(InputAction.CallbackContext obj)
     {
         string keyValue = obj.control.name;
-        PipeActivated(keyValue, true);
-        Debug.Log("Something happened");
+        //PipeActivated(keyValue, true);
+        PipeActivated.Invoke(keyValue, true);
+        Debug.Log("Hacker pressed Key: " + keyValue);
     }
 
     private void OnDeactivatePipe(InputAction.CallbackContext obj)
     {
         string keyValue = obj.control.name;
-        PipeActivated(keyValue, false);
-        Debug.Log("Something stopped happening");
+        //PipeActivated(keyValue, false);
+        PipeActivated.Invoke(keyValue, false);
+        Debug.Log("Hacker released Key: " + keyValue);
+    }
+
+    private void OnActivateDoor(InputAction.CallbackContext obj)
+    {
+        DoorActivated.Invoke(true);
+        Debug.Log("Door was activated");
+    }
+
+    private void OnDeactivateDoor(InputAction.CallbackContext obj)
+    {
+        DoorActivated.Invoke(false);
+        Debug.Log("Door was deactivated");
     }
 
     //EVENT SUBSCRIPTIONS
@@ -172,5 +208,10 @@ public class PlayerInteract : MonoBehaviour
     public void SubscribePipeActivated(Action<string, bool> method)
     {
         PipeActivated += method;
+    }
+
+    public void SubscribeDoorActivated(Action<bool> method)
+    {
+        DoorActivated += method;
     }
 }

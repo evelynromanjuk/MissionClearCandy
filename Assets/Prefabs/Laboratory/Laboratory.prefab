@@ -10637,6 +10637,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 201844907776988357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012308321996761492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 41fa8b1e2ad577341ab9a03e67fc7b4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 201844907776988357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8366277669731297198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012308321996761492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22594626, y: 5, z: 1.5999999}
+  m_Center: {x: 0, y: 2.5, z: -0.000000029802322}
 --- !u!1001 &332062847646673541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10702,7 +10721,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b340604e3c47bc46aeeda2fffc0d82c,
         type: 3}
       propertyPath: m_Name
-      value: door
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b340604e3c47bc46aeeda2fffc0d82c, type: 3}
@@ -10712,6 +10731,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 332062847646673541}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &602022986368194516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9b340604e3c47bc46aeeda2fffc0d82c,
+    type: 3}
+  m_PrefabInstance: {fileID: 332062847646673541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4010536752095395162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602022986368194516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d7cb55747cb2740bdacc5897369205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerInteract: {fileID: 0}
+  _isActive: 0
 --- !u!1001 &425752698767133334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11770,6 +11809,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 408630940350231748, guid: bb450f9a2039afc4ca6c3d7b51fcc859,
+        type: 3}
+      propertyPath: m_Name
+      value: Electrical socket
+      objectReference: {fileID: 0}
+    - target: {fileID: 408630940350231748, guid: bb450f9a2039afc4ca6c3d7b51fcc859,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bb450f9a2039afc4ca6c3d7b51fcc859,
         type: 3}
       propertyPath: m_Name
@@ -11783,6 +11832,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5674387692652923387}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5410166919051492671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 408630940350231748, guid: bb450f9a2039afc4ca6c3d7b51fcc859,
+    type: 3}
+  m_PrefabInstance: {fileID: 5674387692652923387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &554587564340905379
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410166919051492671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.046212643, y: 0.12721595, z: 0.16308554}
+  m_Center: {x: -0.039029974, y: 0.20894049, z: 0}
+--- !u!114 &1764680840940694144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410166919051492671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff97e697bc52ffc4695d3292a888a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5849194830790789022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12005,8 +12085,122 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_DoorButtonAgent
       objectReference: {fileID: 0}
+    - target: {fileID: 8815239512159785256, guid: 430968b059d691f4e846fb40f82a5130,
+        type: 3}
+      propertyPath: m_Name
+      value: AgentButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 430968b059d691f4e846fb40f82a5130, type: 3}
+--- !u!1 &2463122001522791789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8815239512159785256, guid: 430968b059d691f4e846fb40f82a5130,
+    type: 3}
+  m_PrefabInstance: {fileID: 6375058339821421637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3164682554594109657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2463122001522791789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 8560845065294828645}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4010536752095395162}
+        m_TargetAssemblyTypeName: Door, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!135 &5534602815679043111
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2463122001522791789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07
+  m_Center: {x: -0.05291497, y: 1.0184857, z: -0.907313}
 --- !u!4 &6913721100674261934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 430968b059d691f4e846fb40f82a5130,
