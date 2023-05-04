@@ -10,9 +10,9 @@ public class FluidEntry : MonoBehaviour
     public TMP_Text GoalPercentage;
 
     private string _fluidEntryName;
-    private float _robotFontSize = 0.01f;
-    private float _desktopFontSize = 20f;
-    private float _currentFontSize;
+    private static float _robotFontSize = 0.01f;
+    private static float _desktopFontSize = 20.0f;
+    private static float _currentFontSize;
 
     public void SetEntryData(string Name, float Current, float Goal)
     {
@@ -40,7 +40,9 @@ public class FluidEntry : MonoBehaviour
         
         if (!IsRobotScene)
         {
-            FontSize = _desktopFontSize;
+            //FontSize = _desktopFontSize;
+            FontSize = 20.0f;
+            Debug.Log("this is not a robot scene! Font Size: " + FontSize);
         }
         else
         {
