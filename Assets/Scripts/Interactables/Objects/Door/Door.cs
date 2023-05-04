@@ -5,7 +5,10 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public PlayerInteract PlayerInteract;
-    private static bool _isActive = false;
+    public Animator _doorAnimator = null;
+
+    private bool _isActive = false;
+    private bool _isOpen = false;
 
     private void Start()
     {
@@ -17,10 +20,21 @@ public class Door : MonoBehaviour
         if(_isActive)
         {
             Debug.Log("OpenDoor");
+
+            if(!_isOpen)
+            {
+                _doorAnimator.Play("Open", 0, 0.0f);
+                _isOpen = true;
+            }
+            else
+            {
+                Debug.Log("Door is already open.");
+            }
         }
         else
         {
-            Debug.Log("Nothing happened.");
+            Debug.Log("Door cannot be opened.");
+            
         }
     }
 
