@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 1768
+  controlID: 10587
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -55,8 +55,10 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - E:\Unity\Projektarbeit\MCC\MissionClearCandy\Library\PlayModeViewStates\292c9b6d446e76c40bc607ea381ae47a
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -143,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1672
+  controlID: 10491
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1664
+  controlID: 10469
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,8 +190,8 @@ MonoBehaviour:
     y: 0
     width: 345
     height: 585
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -216,7 +218,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 73
     width: 344
     height: 564
@@ -226,10 +228,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 1}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6eebffff2afbffff2cfbffff
+      m_ExpandedIDs: 6eebffff12eeffff16eeffff24eeffff30eeffff2afbffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -245,7 +247,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 7}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -303,7 +305,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 345
+    x: 2265
     y: 73
     width: 919
     height: 564
@@ -541,9 +543,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 459.5, y: 258.5, z: 0}
+    m_Target: {x: 480.4418, y: 333.94193, z: 4.317541}
     speed: 2
-    m_Value: {x: 459.5, y: 258.5, z: 0}
+    m_Value: {x: 480.4418, y: 333.94193, z: 4.317541}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -594,9 +596,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 527.2215
+    m_Target: 95.46738
     speed: 2
-    m_Value: 527.2215
+    m_Value: 95.46738
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1017,8 +1019,8 @@ MonoBehaviour:
     y: 585
     width: 1266
     height: 362
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -1046,7 +1048,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 658
     width: 1265
     height: 341
@@ -1085,7 +1087,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25188
+  m_LastSelectedObjectID: -48286
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1133,7 +1135,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1266
+    x: 3186
     y: 73
     width: 371
     height: 926
@@ -1154,22 +1156,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Samples/XR Interaction Toolkit/2.0.4/Starter Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Samples/XR Interaction Toolkit/2.0.4/Starter Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Unity\Projektarbeit\MCC\MissionClearCandy
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 34850000
-    m_LastClickedID: 34100
-    m_ExpandedIDs: 000000003485000036850000388500003a8500003c8500003e85000040850000428500004485000046850000488500004a8500004c8500004e85000050850000528500005485000056850000588500005a8500005c85000000ca9a3b
+    m_SelectedIDs: cce90100
+    m_LastClickedID: 125388
+    m_ExpandedIDs: 000000003485000036850000388500003a8500003c8500003e85000040850000428500004485000046850000488500004a8500004c8500004e85000050850000528500005485000056850000588500005a8500005c850000c485000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1222,9 +1224,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 64620000
+    m_LastClickedInstanceID: 25188
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000786600007e680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1301,7 +1303,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1639
+    x: 3559
     y: 73
     width: 280
     height: 926
@@ -1315,7 +1317,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 25188
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
