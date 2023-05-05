@@ -23,9 +23,11 @@ public class SecurityElementDisplay : MonoBehaviour
 
     void ShowDetails()
     {
+        Debug.Log("RoomControl Button clicked");
         if(SecurityElement.IsActive)
         {
             _statusKnob.color = new Color32(0, 255, 0, 100);
+            Debug.Log("Changed knob color");
         }
         SecurityElementEntry.SetEntry(SecurityElement.ElementName, SecurityElement.Status, SecurityElement.InfoText);
     }

@@ -248,6 +248,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4001407394499860729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1359533790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4010536752095395162, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d7cb55747cb2740bdacc5897369205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1578856673
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1578856674
 AudioListener:
   m_ObjectHideFlags: 0
@@ -399,6 +411,7 @@ MonoBehaviour:
     type: 3}
   SubstanceMachine: {fileID: 549966357}
   Pipe: {fileID: 515275294}
+  Door: {fileID: 1359533790}
   type: 0
 --- !u!4 &1645122117
 Transform:
@@ -571,6 +584,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -42.35
       objectReference: {fileID: 0}
+    - target: {fileID: 75990585579383053, guid: 94cdb958f967a944bb731c112a8f3550,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1359533790}
     - target: {fileID: 166206895188800768, guid: 94cdb958f967a944bb731c112a8f3550,
         type: 3}
       propertyPath: m_RootOrder
@@ -2220,11 +2238,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7782605842574420894, guid: 94cdb958f967a944bb731c112a8f3550,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7784910946789970680, guid: 94cdb958f967a944bb731c112a8f3550,
         type: 3}

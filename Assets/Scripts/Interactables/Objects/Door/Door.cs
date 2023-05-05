@@ -12,14 +12,19 @@ public class Door : MonoBehaviour
 
     private bool _isActive = false;
     private bool _isOpen = false;
+    private bool _isRobotScene;
 
     private void Start()
     {
-        PlayerInteract.SubscribeDoorActivated(ActivateDoor);
+        if(_isRobotScene)
+        {
+            PlayerInteract.SubscribeDoorActivated(ActivateDoor);
+        }
     }
 
-    public void InitializeDoor(bool isActivatable, bool isOpenable)
+    public void InitializeDoor(bool isRobotScene, bool isActivatable, bool isOpenable)
     {
+        _isRobotScene = isRobotScene;
         _isActivatable = isActivatable;
         _isOpenable = isOpenable;
     }

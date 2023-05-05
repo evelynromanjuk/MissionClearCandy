@@ -60,6 +60,6 @@ public class SceneManager : MonoBehaviour
         SubstanceMachine.SetScreenOrientation(_scannerIsVertical, _isRobotScene);
         FluidEntry.SetFontSize(_isRobotScene);
         Pipe.SetRobotInteraction(_isRobotScene);
-        Door.InitializeDoor(_doorActivatable, _doorOpenable);
+        Door.InitializeDoor(_isRobotScene, _doorActivatable, _doorOpenable);
     }
 }
