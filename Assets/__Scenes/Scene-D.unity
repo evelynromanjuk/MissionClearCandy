@@ -348,6 +348,7 @@ MonoBehaviour:
     type: 3}
   SubstanceMachine: {fileID: 8113536557507563001}
   Pipe: {fileID: 647323770}
+  Door: {fileID: 1912616649}
   type: 3
 --- !u!1 &606482982 stripped
 GameObject:
@@ -818,6 +819,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &1912616649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4010536752095395162, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557507563000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d7cb55747cb2740bdacc5897369205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1985579494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8310522531146592978, guid: fbc84ac0d91dccd46bd74480d1700510,
@@ -2061,6 +2074,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4010536752095395162, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: PlayerInteract
+      value: 
+      objectReference: {fileID: 1414546166}
     - target: {fileID: 4078942081335553562, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_AnchorMax.y

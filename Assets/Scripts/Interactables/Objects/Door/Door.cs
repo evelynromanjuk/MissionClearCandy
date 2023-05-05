@@ -7,6 +7,9 @@ public class Door : MonoBehaviour
     public PlayerInteract PlayerInteract;
     public Animator _doorAnimator = null;
 
+    private bool _isActivatable;
+    private bool _isOpenable;
+
     private bool _isActive = false;
     private bool _isOpen = false;
 
@@ -15,26 +18,35 @@ public class Door : MonoBehaviour
         PlayerInteract.SubscribeDoorActivated(ActivateDoor);
     }
 
+    public void InitializeDoor(bool isActivatable, bool isOpenable)
+    {
+        _isActivatable = isActivatable;
+        _isOpenable = isOpenable;
+    }
+
     public void OpenDoor()
     {
-        if(_isActive)
+        if(_isOpenable)
         {
-            Debug.Log("OpenDoor");
-
-            if(!_isOpen)
+            if (!_isActivatable || (_isActivatable & _isActive))
             {
-                _doorAnimator.Play("Open", 0, 0.0f);
-                _isOpen = true;
+                Debug.Log("OpenDoor");
+
+                if (!_isOpen)
+                {
+                    _doorAnimator.Play("Open", 0, 0.0f);
+                    _isOpen = true;
+                }
+                else
+                {
+                    Debug.Log("Door is already open.");
+                }
             }
             else
             {
-                Debug.Log("Door is already open.");
+                Debug.Log("Door cannot be opened.");
+
             }
-        }
-        else
-        {
-            Debug.Log("Door cannot be opened.");
-            
         }
     }
 

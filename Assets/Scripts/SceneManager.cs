@@ -8,10 +8,13 @@ public class SceneManager : MonoBehaviour
     public FluidEntry FluidEntry;
     public SubstanceMachine SubstanceMachine;
     public Pipe Pipe;
+    public Door Door;
 
 
     private bool _isRobotScene = false;
-    private bool _isVertical = false;
+    private bool _scannerIsVertical = false;
+    private bool _doorActivatable = false;
+    private bool _doorOpenable = true;
 
     [SerializeField]
     Type type = new Type();
@@ -29,6 +32,14 @@ public class SceneManager : MonoBehaviour
     {
         switch (type)
         {
+            case Type.VersionA:
+                _doorActivatable = true;
+                break;
+
+            case Type.VersionB:
+                _doorOpenable = false;
+                break;
+
             case Type.VersionC:
                 _isRobotScene = true;
                 Debug.Log("Is Version C! _isRobotScene = " + _isRobotScene);
@@ -36,17 +47,19 @@ public class SceneManager : MonoBehaviour
 
             case Type.VersionD:
                 _isRobotScene = true;
-                _isVertical = true;
+                _scannerIsVertical = true;
+                _doorActivatable = true;
                 Pipe.SetHackerKeyUse();
-                Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _isVertical);
+                Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _scannerIsVertical);
                 break;
 
             default:
                 break;
         }
 
-        SubstanceMachine.SetScreenOrientation(_isVertical, _isRobotScene);
+        SubstanceMachine.SetScreenOrientation(_scannerIsVertical, _isRobotScene);
         FluidEntry.SetFontSize(_isRobotScene);
         Pipe.SetRobotInteraction(_isRobotScene);
+        Door.InitializeDoor(_doorActivatable, _doorOpenable);
     }
 }

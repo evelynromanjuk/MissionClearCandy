@@ -348,6 +348,7 @@ MonoBehaviour:
     type: 3}
   SubstanceMachine: {fileID: 8113536557507563001}
   Pipe: {fileID: 1305797429}
+  Door: {fileID: 8113536557507563002}
   type: 2
 --- !u!1 &606482982 stripped
 GameObject:
@@ -3073,5 +3074,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65ccd42904d98604abfb514099a3f0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8113536557507563002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4010536752095395162, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557507563000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d7cb55747cb2740bdacc5897369205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
