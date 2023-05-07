@@ -21,7 +21,7 @@ public class SecurityElementDisplay : MonoBehaviour
         _statusKnob = this.GetComponent<Image>();
     }
 
-    void ShowDetails()
+    public void ShowDetails()
     {
         Debug.Log("RoomControl Button clicked");
         if(SecurityElement.IsActive)

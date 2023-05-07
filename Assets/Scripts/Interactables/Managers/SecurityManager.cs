@@ -10,11 +10,20 @@ public class SecurityManager : MonoBehaviour
     public SecurityElement Door2;
 
     public KeypadManager KeypadManager;
+    public SecurityElementDisplay SecurityElementDisplay;
 
     // Start is called before the first frame update
-    void Start()
+    //void Start()
+    //{
+    //    KeypadManager.SubscribeCorrectPasswordEntered(ActivateDoor2);
+    //}
+
+    public void Initizalize(bool isRobotScene)
     {
-        KeypadManager.SubscribeCorrectPasswordEntered(ActivateDoor2);
+        if(!isRobotScene)
+        {
+            KeypadManager.SubscribeCorrectPasswordEntered(ActivateDoor2);
+        }
     }
 
    void ActivateDoor2(bool IsCorrect)
@@ -22,6 +31,7 @@ public class SecurityManager : MonoBehaviour
         if(IsCorrect)
         {
             Door2.SetActive(true);
+            SecurityElementDisplay.ShowDetails();
         }
     }
 }

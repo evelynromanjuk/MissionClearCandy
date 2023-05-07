@@ -2072,7 +2072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &625580034032763641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3913,7 +3913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5248532509408915385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3954,6 +3954,7 @@ MonoBehaviour:
     type: 3}
   Container: {fileID: 112633655825498850}
   SuccessMessage: {fileID: 1412958028411641415}
+  PlayerInteract: {fileID: 0}
 --- !u!1 &5847032578831391364
 GameObject:
   m_ObjectHideFlags: 0

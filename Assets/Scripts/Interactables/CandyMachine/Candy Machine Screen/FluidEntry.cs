@@ -57,6 +57,18 @@ public class FluidEntry : MonoBehaviour
 
     }
 
+    public void SetFontWeight(bool isActivated)
+    {
+        if(isActivated)
+        {
+            FluidName.fontStyle = FontStyles.Bold;
+        }
+        else
+        {
+            FluidName.fontStyle = FontStyles.Normal;
+        }
+    }
+
 
 
 
