@@ -14,8 +14,10 @@ public class FluidEntry : MonoBehaviour
     private static float _desktopFontSize = 20.0f;
     private static float _currentFontSize;
 
-    public void SetEntryData(string Name, float Current, float Goal)
+    public void SetEntryData(bool isDesktopApp, string Name, float Current, float Goal)
     {
+        SetFontSize(isDesktopApp);
+
         Debug.Log("Entry data set! Font size: " + _currentFontSize);
         FluidName.text = Name + ":";
         CurrentPercentage.text = Current + "%";
@@ -34,17 +36,17 @@ public class FluidEntry : MonoBehaviour
         CurrentPercentage.text = Current + "%";
     }
 
-    public void SetFontSize(bool IsRobotScene)
+    public void SetFontSize(bool isDesktopApp)
     {
         float FontSize;
         
-        if (!IsRobotScene)
+        if (isDesktopApp) // -> Hacker Screen
         {
             //FontSize = _desktopFontSize;
             FontSize = _desktopFontSize;
             Debug.Log("this is not a robot scene! Font Size: " + FontSize);
         }
-        else
+        else // -> Candy Machine Screen
         {
             FontSize = _robotFontSize;
             Debug.Log("THIS IS A ROBOT SCENE! Font Size is now: " + FontSize + ", check, " + _robotFontSize);

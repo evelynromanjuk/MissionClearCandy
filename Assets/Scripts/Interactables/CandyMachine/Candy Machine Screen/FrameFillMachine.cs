@@ -8,17 +8,29 @@ public class FrameFillMachine : MonoBehaviour
     public GameObject DataEntry;
     public GameObject Container;
     public TMP_Text SuccessMessage;
+    public TMP_Text Tip;
     public PlayerInteract PlayerInteract;
+    public bool IsDesktopApp = false;
+
     private List<FluidEntry> _currentEntries = new List<FluidEntry>();
     private List<Fluid> _fluids = new List<Fluid>();
+    private bool _usesTip;
 
     public void Initialize(bool IsRobotScene) //add to SceneManager
     {
         if (IsRobotScene)
         {
-            Debug.Log("FrameFillMachine subscribed to PlayerInteract method");
             PlayerInteract.SubscribePipeActivated(SetFontWeight);
+            if(_usesTip)
+            {
+                Tip.gameObject.SetActive(true);
+            }
         }
+    }
+
+    public void SetRobotTip(bool usesTip)
+    {
+        _usesTip = usesTip;
     }
 
     public void PasteFluidData(List<Fluid> fluids)
@@ -32,7 +44,7 @@ public class FrameFillMachine : MonoBehaviour
             if(FluidEntry)
             {
                 _currentEntries.Add(FluidEntry);
-                FluidEntry.SetEntryData(fluid.FluidName, fluid.CurrentPercentage, fluid.GoalPercentage);
+                FluidEntry.SetEntryData(IsDesktopApp, fluid.FluidName, fluid.CurrentPercentage, fluid.GoalPercentage);
             }
         }
     }
@@ -65,8 +77,6 @@ public class FrameFillMachine : MonoBehaviour
             else
             {
                 Debug.Log("Key not found: " + fluid.Key + ", " + key);
-                //current fluid in list is not equal to the key that was pressed
-                //the fluid entry needs to be font weight normal
                 fluidEntry.SetFontWeight(false);
             }
             

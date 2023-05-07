@@ -17,6 +17,7 @@ public class SceneManager : MonoBehaviour
     private bool _scannerIsVertical = false;
     private bool _doorActivatable = false;
     private bool _doorOpenable = true;
+    private bool _usesRobotTip = false;
 
     [SerializeField]
     Type type = new Type();
@@ -51,6 +52,7 @@ public class SceneManager : MonoBehaviour
                 _isRobotScene = true;
                 _scannerIsVertical = true;
                 _doorActivatable = true;
+                _usesRobotTip = true;
                 Pipe.SetHackerKeyUse();
                 Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _scannerIsVertical);
                 break;
@@ -63,6 +65,7 @@ public class SceneManager : MonoBehaviour
         FluidEntry.SetFontSize(_isRobotScene);
         Pipe.SetRobotInteraction(_isRobotScene);
         Door.InitializeDoor(_isRobotScene, _doorActivatable, _doorOpenable);
+        FrameFillMachine.SetRobotTip(_usesRobotTip);
         FrameFillMachine.Initialize(_isRobotScene);
         SecurityManager.Initizalize(_isRobotScene);
     }

@@ -19,6 +19,10 @@ public class SecurityElementDisplay : MonoBehaviour
         _elementButton.onClick.AddListener(ShowDetails);
 
         _statusKnob = this.GetComponent<Image>();
+        if(_statusKnob == null)
+        {
+            Debug.Log("statusknob is null");
+        }
     }
 
     public void ShowDetails()
@@ -26,7 +30,8 @@ public class SecurityElementDisplay : MonoBehaviour
         Debug.Log("RoomControl Button clicked");
         if(SecurityElement.IsActive)
         {
-            _statusKnob.color = new Color32(0, 255, 0, 100);
+            // TODO: Status knob color! Seems to be null right now
+            //_statusKnob.color = new Color32(0, 255, 0, 100);
             Debug.Log("Changed knob color");
         }
         SecurityElementEntry.SetEntry(SecurityElement.ElementName, SecurityElement.Status, SecurityElement.InfoText);
