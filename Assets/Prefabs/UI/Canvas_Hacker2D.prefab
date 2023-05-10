@@ -2815,7 +2815,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8856812768764893132}
-  - component: {fileID: 1810966077150098111}
   - component: {fileID: 5208924386563061359}
   m_Layer: 5
   m_Name: Frame_FillMachine
@@ -2844,22 +2843,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: -23.8}
   m_SizeDelta: {x: 525, y: 155}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1810966077150098111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884735652061878711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5689e1fb99ceaa04c8099fe1070376fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DataEntry: {fileID: 380738052655788521, guid: 220822186b1fac64da7aa5f09f91ccde,
-    type: 3}
-  Container: {fileID: 884735652061878711}
-  SuccessMessage: {fileID: 2341659687207814989}
 --- !u!114 &5208924386563061359
 MonoBehaviour:
   m_ObjectHideFlags: 0

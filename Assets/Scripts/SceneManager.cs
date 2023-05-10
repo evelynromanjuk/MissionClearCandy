@@ -7,7 +7,8 @@ public class SceneManager : MonoBehaviour
     //public bool IsRobotScene;
     public FluidEntry FluidEntry;
     public SubstanceMachine SubstanceMachine;
-    public FrameFillMachine FrameFillMachine;
+    public FrameFillMachine FrameFillMachineLab;
+    public FrameFillMachine FrameFillMachinePC;
     public SecurityManager SecurityManager;
     public Pipe Pipe;
     public Door Door;
@@ -65,8 +66,11 @@ public class SceneManager : MonoBehaviour
         FluidEntry.SetFontSize(_isRobotScene);
         Pipe.SetRobotInteraction(_isRobotScene);
         Door.InitializeDoor(_isRobotScene, _doorActivatable, _doorOpenable);
-        FrameFillMachine.SetRobotTip(_usesRobotTip);
-        FrameFillMachine.Initialize(_isRobotScene);
+        FrameFillMachineLab.SetRobotTip(_usesRobotTip);
+        FrameFillMachineLab.Initialize(_isRobotScene);
+        FrameFillMachinePC.Initialize(_isRobotScene);
         SecurityManager.Initizalize(_isRobotScene);
+
+        //FrameFillMachineManager --> isRobotScene
     }
 }

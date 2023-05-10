@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FrameFillMachine : MonoBehaviour
+public class FrameFillMachine2 : MonoBehaviour
 {
+    public FluidCompositionManager FluidCompositionManager;
     public GameObject DataEntry;
     public GameObject Container;
     public TMP_Text SuccessMessage;
@@ -16,8 +17,18 @@ public class FrameFillMachine : MonoBehaviour
     private List<Fluid> _fluids = new List<Fluid>();
     private bool _usesTip;
 
+    private void Awake()
+    {
+        FluidCompositionManager.SubscribeFluidAmountChanged(UpdateFluidData);
+        FluidCompositionManager.SubscribeFluidListReady(PasteFluidData);
+        FluidCompositionManager.SubscribeCompositionCorrectEvent(ShowSuccessMessage);
+
+        Debug.Log("FrameFillMachine subscribed to FluidComposition Manager methods");
+    }
+
     public void Initialize(bool IsRobotScene) //add to SceneManager
     {
+        Debug.Log(this.transform.parent.gameObject.name + " FRAME-FILLMACHINE: Initialize");
         if (IsRobotScene)
         {
             PlayerInteract.SubscribePipeActivated(SetFontWeight);
@@ -35,6 +46,7 @@ public class FrameFillMachine : MonoBehaviour
 
     public void PasteFluidData(List<Fluid> fluids)
     {
+        Debug.Log("FRAME-FILLMACHINE: Paste Fluid Data");
         _fluids = fluids;
         foreach(var fluid in fluids)
         {

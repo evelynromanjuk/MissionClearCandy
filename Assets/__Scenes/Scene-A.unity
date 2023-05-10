@@ -135,6 +135,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc24d62390eb08a4f90b99728e049779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &374463763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8113536556018853651, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b9d334ab5a7ad46a703ef9b53386d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &515275294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5839825327282388988, guid: fbc84ac0d91dccd46bd74480d1700510,
@@ -283,6 +295,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4001407394499860729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &706609214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706609210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881ddc0881e8ea949bbd3a02906a568a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FluidCompositionManager: {fileID: 374463763}
+  DataEntry: {fileID: 380738052655788521, guid: 220822186b1fac64da7aa5f09f91ccde,
+    type: 3}
+  Container: {fileID: 706609210}
+  SuccessMessage: {fileID: 2111932272}
+  Tip: {fileID: 0}
+  PlayerInteract: {fileID: 0}
+  IsDesktopApp: 1
 --- !u!1 &902189762
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,18 +390,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54d7cb55747cb2740bdacc5897369205, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1363598992 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4858045875564038647, guid: fbc84ac0d91dccd46bd74480d1700510,
-    type: 3}
-  m_PrefabInstance: {fileID: 1841676103}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5689e1fb99ceaa04c8099fe1070376fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1578856673
@@ -522,7 +542,8 @@ MonoBehaviour:
   FluidEntry: {fileID: 612934718912416918, guid: 220822186b1fac64da7aa5f09f91ccde,
     type: 3}
   SubstanceMachine: {fileID: 549966357}
-  FrameFillMachine: {fileID: 1363598992}
+  FrameFillMachineLab: {fileID: 1876256462}
+  FrameFillMachinePC: {fileID: 706609214}
   SecurityManager: {fileID: 1159591705}
   Pipe: {fileID: 515275294}
   Door: {fileID: 1359533790}
@@ -614,6 +635,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4858045875564038647, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: FluidCompositionManager
+      value: 
+      objectReference: {fileID: 374463763}
     - target: {fileID: 5922384644496162077, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_IsActive
@@ -636,12 +662,36 @@ PrefabInstance:
       objectReference: {fileID: 706609210}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbc84ac0d91dccd46bd74480d1700510, type: 3}
+--- !u!114 &1876256462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2694367230287795913, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881ddc0881e8ea949bbd3a02906a568a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2010328352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7782605842574420894, guid: 94cdb958f967a944bb731c112a8f3550,
     type: 3}
   m_PrefabInstance: {fileID: 4001407394499860729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2111932272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2341659687207814989, guid: 94cdb958f967a944bb731c112a8f3550,
+    type: 3}
+  m_PrefabInstance: {fileID: 4001407394499860729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4001407394499860729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1073,11 +1123,14 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1810966077150098111, guid: 94cdb958f967a944bb731c112a8f3550,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: IsDesktopApp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: FluidCompositionManager
+      value: 
+      objectReference: {fileID: 374463763}
     - target: {fileID: 1909617559897175263, guid: 94cdb958f967a944bb731c112a8f3550,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

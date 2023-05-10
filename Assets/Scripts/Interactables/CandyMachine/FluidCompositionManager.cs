@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class FluidCompositionManager : MonoBehaviour
 {
-    public FrameFillMachine FrameFillMachine;
+    //public FrameFillMachine FrameFillMachine;
 
-    private List<Fluid> _fluids = new List<Fluid>();
-    Action<float> FluidAmountChanged;
+    private static List<Fluid> _fluids = new List<Fluid>();
+    //Action<float> FluidAmountChanged;
+    Action<Fluid> FluidAmountChanged;
+    static Action<List<Fluid>> FluidListReady;
     Action CompositionCorrectEvent;
 
     private float totalPercentage = 0;
@@ -16,7 +18,16 @@ public class FluidCompositionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FrameFillMachine.PasteFluidData(_fluids);   
+        //FrameFillMachine.PasteFluidData(_fluids); 
+        if(_fluids == null)
+        {
+            Debug.Log("_fluids List is null");
+        }
+        if(FluidListReady == null)
+        {
+            Debug.Log("FluidListReady is null");
+        }
+        FluidListReady.Invoke(_fluids); // TODO: CONTINUE HERE
     }
 
     public void AddFluidToList(Fluid fluid)
@@ -35,7 +46,8 @@ public class FluidCompositionManager : MonoBehaviour
         {
             fluid.CurrentPercentage += percentage;
             totalPercentage += percentage;
-            FrameFillMachine.UpdateFluidData(fluid);
+            //FrameFillMachine.UpdateFluidData(fluid);
+            FluidAmountChanged.Invoke(fluid);
 
             if (fluid.CurrentPercentage == fluid.GoalPercentage)
             {
@@ -77,13 +89,18 @@ public class FluidCompositionManager : MonoBehaviour
 
         if(compositionCorrect)
         {
-            FrameFillMachine.ShowSuccessMessage();
+            //FrameFillMachine.ShowSuccessMessage();
             CompositionCorrectEvent.Invoke(); //Activates lever
         }
 
     }
 
-    public void SubscribeFluidAmountChanged(Action<float> method)
+    public void SubscribeFluidListReady(Action<List<Fluid>> method)
+    {
+        FluidListReady += method;
+    }
+
+    public void SubscribeFluidAmountChanged(Action<Fluid> method)
     {
         FluidAmountChanged += method;
     }
