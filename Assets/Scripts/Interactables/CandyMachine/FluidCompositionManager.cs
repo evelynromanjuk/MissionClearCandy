@@ -15,19 +15,9 @@ public class FluidCompositionManager : MonoBehaviour
 
     private float totalPercentage = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //FrameFillMachine.PasteFluidData(_fluids); 
-        if(_fluids == null)
-        {
-            Debug.Log("_fluids List is null");
-        }
-        if(FluidListReady == null)
-        {
-            Debug.Log("FluidListReady is null");
-        }
-        FluidListReady.Invoke(_fluids); // TODO: CONTINUE HERE
+        FluidListReady.Invoke(_fluids);
     }
 
     public void AddFluidToList(Fluid fluid)

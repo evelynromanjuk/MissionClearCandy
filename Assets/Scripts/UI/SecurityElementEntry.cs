@@ -10,6 +10,7 @@ public class SecurityElementEntry : MonoBehaviour
     public TMP_Text Status;
     public TMP_Text Info;
     public Button LockButton;
+    public TMP_Text LockButtonText;
 
     public void SetEntry(string ElementName, string ElementStatus, string ElementInfo)
     {
@@ -25,5 +26,10 @@ public class SecurityElementEntry : MonoBehaviour
         {
             LockButton.gameObject.SetActive(false);
         }
+    }
+
+    public void ActivateLockButton()
+    {
+        LockButton.interactable = true;
     }
 }

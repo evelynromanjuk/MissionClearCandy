@@ -36,4 +36,9 @@ public class SecurityElementDisplay : MonoBehaviour
         }
         SecurityElementEntry.SetEntry(SecurityElement.ElementName, SecurityElement.Status, SecurityElement.InfoText);
     }
+
+    public void ActivateLockButton()
+    {
+        SecurityElementEntry.ActivateLockButton();
+    }
 }

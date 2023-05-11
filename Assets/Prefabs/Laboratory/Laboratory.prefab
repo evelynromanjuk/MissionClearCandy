@@ -44,11 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde4996fb9dfeb1419446a78faeb5407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CandyMachine: {fileID: 11400000, guid: 8c128152457c4fe449377cdb6b578150, type: 2}
-  Analyzer: {fileID: 11400000, guid: c5671dcfecea10149bcfe7228c1f100f, type: 2}
-  Door1: {fileID: 11400000, guid: b64d2ecbb0916f247ac4956a13d49170, type: 2}
   Door2: {fileID: 11400000, guid: 31cc4ede399ce524281107e2ca652255, type: 2}
-  KeypadManager: {fileID: 8113536556489894756}
+  Lever: {fileID: 7664768216443175866}
   SecurityElementDisplay: {fileID: 0}
 --- !u!1 &734226030354858207
 GameObject:
@@ -13192,6 +13189,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7664768216443175866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 142137714834678052, guid: 59fedcb5136ce394588cc570eb007abb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7756961534682915486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a12262aee6eafb44b7196b5d4f1a2e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8113536555693659249 stripped

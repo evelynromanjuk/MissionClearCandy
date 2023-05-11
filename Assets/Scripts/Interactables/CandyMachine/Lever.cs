@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 public class Lever : MonoBehaviour, IInteractable
 {
     public FluidCompositionManager FluidCompositionManager;
     public SpawnBall SpawnBall;
+    Action SubstanceEjected;
 
     private XRSimpleInteractable simpleInteractable;
 
@@ -15,7 +17,6 @@ public class Lever : MonoBehaviour, IInteractable
         simpleInteractable = gameObject.GetComponent<XRSimpleInteractable>();
         simpleInteractable.enabled = false;
     }
-    // Start is called before the first frame update
     void Start()
     { 
         FluidCompositionManager.SubscribeCompositionCorrectEvent(OnCompositionCorrect);
@@ -31,6 +32,10 @@ public class Lever : MonoBehaviour, IInteractable
         //play lever animation
         SpawnBall.Spawn();
         simpleInteractable.enabled = false;
+
+        //Invoke event to activate door
+        SubstanceEjected.Invoke();
+
     }
 
     public void Interact()
@@ -39,5 +44,10 @@ public class Lever : MonoBehaviour, IInteractable
         {
             PullLever();
         }
+    }
+
+    public void SubscribeSubstanceEjected(Action method)
+    {
+        SubstanceEjected += method;
     }
 }
