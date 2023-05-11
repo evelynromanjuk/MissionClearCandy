@@ -38,6 +38,7 @@ public class SceneManager : MonoBehaviour
         {
             case Type.VersionA:
                 _doorActivatable = true;
+                FrameFillMachinePC.Initialize(_isRobotScene); // TODO: ADD FOR VERSION B TOO!
                 break;
 
             case Type.VersionB:
@@ -68,7 +69,6 @@ public class SceneManager : MonoBehaviour
         Door.InitializeDoor(_isRobotScene, _doorActivatable, _doorOpenable);
         FrameFillMachineLab.SetRobotTip(_usesRobotTip);
         FrameFillMachineLab.Initialize(_isRobotScene);
-        FrameFillMachinePC.Initialize(_isRobotScene);
         SecurityManager.Initizalize(_isRobotScene);
 
         //FrameFillMachineManager --> isRobotScene

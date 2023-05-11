@@ -6,7 +6,9 @@ public class Door : MonoBehaviour
 {
     public PlayerInteract PlayerInteract;
     public Animator _doorAnimator = null;
+    public Lever Lever;
 
+    private bool _substanceCreated = false;
     private bool _isActivatable;
     private bool _isOpenable;
 
@@ -16,6 +18,7 @@ public class Door : MonoBehaviour
 
     private void Start()
     {
+        Lever.SubscribeSubstanceEjected(SetDoorInteractable);
         if(_isRobotScene)
         {
             PlayerInteract.SubscribeDoorActivated(ActivateDoor);
@@ -29,9 +32,14 @@ public class Door : MonoBehaviour
         _isOpenable = isOpenable;
     }
 
+    private void SetDoorInteractable()
+    {
+        _substanceCreated = true;
+    }
+
     public void OpenDoor()
     {
-        if(_isOpenable)
+        if(_isOpenable & _substanceCreated)
         {
             if (!_isActivatable || (_isActivatable & _isActive))
             {

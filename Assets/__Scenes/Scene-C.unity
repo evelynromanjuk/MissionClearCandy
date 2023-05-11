@@ -347,6 +347,9 @@ MonoBehaviour:
   FluidEntry: {fileID: 612934718912416918, guid: 220822186b1fac64da7aa5f09f91ccde,
     type: 3}
   SubstanceMachine: {fileID: 8113536557507563001}
+  FrameFillMachineLab: {fileID: 8113536557507563004}
+  FrameFillMachinePC: {fileID: 0}
+  SecurityManager: {fileID: 8113536557507563003}
   Pipe: {fileID: 1305797429}
   Door: {fileID: 8113536557507563002}
   type: 2
@@ -1757,6 +1760,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2694367230287795913, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: PlayerInteract
+      value: 
+      objectReference: {fileID: 1414546166}
     - target: {fileID: 2808967420998657959, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3086,5 +3094,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54d7cb55747cb2740bdacc5897369205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8113536557507563003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7892533351700902670, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557507563000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde4996fb9dfeb1419446a78faeb5407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8113536557507563004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2694367230287795913, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 8113536557507563000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881ddc0881e8ea949bbd3a02906a568a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
