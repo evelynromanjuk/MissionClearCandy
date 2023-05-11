@@ -11,6 +11,7 @@ public class Lever : MonoBehaviour, IInteractable
     Action SubstanceEjected;
 
     private XRSimpleInteractable simpleInteractable;
+    private bool _isInteractable = true; //is false in Version B, because only hacker can eject substance
 
     private void Awake()
     {
@@ -22,9 +23,17 @@ public class Lever : MonoBehaviour, IInteractable
         FluidCompositionManager.SubscribeCompositionCorrectEvent(OnCompositionCorrect);
     }
 
+    public void DeactivateSimpleInteractable()
+    {
+        _isInteractable = false;
+    }
+
     private void OnCompositionCorrect()
     {
-        simpleInteractable.enabled = true;
+        if(_isInteractable)
+        {
+            simpleInteractable.enabled = true;
+        }
     }
 
     public void PullLever()

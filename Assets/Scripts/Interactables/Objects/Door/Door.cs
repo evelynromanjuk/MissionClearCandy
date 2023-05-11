@@ -68,4 +68,13 @@ public class Door : MonoBehaviour
         _isActive = isActivated;
         Debug.Log("Is it activated? : " + _isActive + ", " + isActivated);
     }
+
+    public void OpenDoorHacker()
+    {
+        if(_substanceCreated)
+        {
+            _doorAnimator.Play("Open", 0, 0.0f);
+            _isOpen = true;
+        }
+    }
 }

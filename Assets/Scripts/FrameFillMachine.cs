@@ -6,6 +6,7 @@ using TMPro;
 public class FrameFillMachine : MonoBehaviour
 {
     public FluidCompositionManager FluidCompositionManager;
+    public EmptyButton EmptyButton;
     public GameObject DataEntry;
     public GameObject Container;
     public TMP_Text SuccessMessage;
@@ -28,6 +29,7 @@ public class FrameFillMachine : MonoBehaviour
 
     public void Initialize(bool IsRobotScene) //add to SceneManager
     {
+        EmptyButton.SubscribeMachineEmptied(UpdateFluidData);
         FluidCompositionManager.SubscribeFluidAmountChanged(UpdateFluidData);
         FluidCompositionManager.SubscribeFluidListReady(PasteFluidData);
         FluidCompositionManager.SubscribeCompositionCorrectEvent(ShowSuccessMessage);

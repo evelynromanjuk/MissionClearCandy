@@ -12,6 +12,7 @@ public class SceneManager : MonoBehaviour
     public SecurityManager SecurityManager;
     public Pipe Pipe;
     public Door Door;
+    public Lever Lever;
 
 
     private bool _isRobotScene = false;
@@ -43,6 +44,8 @@ public class SceneManager : MonoBehaviour
 
             case Type.VersionB:
                 _doorOpenable = false;
+                FrameFillMachinePC.Initialize(_isRobotScene);
+                Lever.DeactivateSimpleInteractable();
                 break;
 
             case Type.VersionC:
