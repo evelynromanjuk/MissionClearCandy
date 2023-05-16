@@ -15,6 +15,7 @@ public class LightManager : MonoBehaviour
     public void AddTubeLight(TubeLight TubeLight)
     {
         _tubeLights.Add(TubeLight);
+        Debug.Log("Added to _tubeLights");
     }
 
     public void TurnOffOtherLights(TubeLight Caller)
@@ -23,6 +24,10 @@ public class LightManager : MonoBehaviour
         {
             if (Entry != Caller)
             {
+                if(Entry == null)
+                {
+                    Debug.Log("Entry is null");
+                }
                 Entry.TurnOff();
             }
         }

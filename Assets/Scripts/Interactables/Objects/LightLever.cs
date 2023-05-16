@@ -16,22 +16,9 @@ public class LightLever : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        //if(lightActive)
-        //{
-        //    lightActive = false;
-        //}
-        //else
-        //{
-        //    lightActive = true;
-        //}
         TubeLight.LightSwitching();
         LightManager.TurnOffOtherLights(TubeLight);
 
         Debug.Log("Lights, something happened");
-
     }
-
-    
-
-
 }
