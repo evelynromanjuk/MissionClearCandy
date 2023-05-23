@@ -8,8 +8,8 @@ public class AnalyzerManager : MonoBehaviour
     [SerializeField] private CheckSocket _socketChip;
     [SerializeField] private CheckSocket _socketKabel1;
     [SerializeField] private CheckSocket _socketKabel2;
-    [SerializeField] private CheckSocket _socketZahnrad;
     [SerializeField] private CheckSocket _socketKolben;
+    [SerializeField] private CheckSocket _socketZahnrad;
 
     Dictionary<int, bool> Sockets;
 
@@ -26,16 +26,16 @@ public class AnalyzerManager : MonoBehaviour
 
         Sockets = new Dictionary<int, bool>();
         Sockets.Add(1, false);
-        //Sockets.Add(2, false);
-        //Sockets.Add(3, false);
-        //Sockets.Add(4, false);
-        //Sockets.Add(5, false);
+        Sockets.Add(2, false);
+        Sockets.Add(3, false);
+        Sockets.Add(4, false);
+        Sockets.Add(5, false);
 
         _socketChip.SubscribePartInsertedEvent(LogInsertedPart);
-        //_socketKabel1.SubscribePartInsertedEvent(LogInsertedPart);
-        //_socketKabel2.SubscribePartInsertedEvent(LogInsertedPart);
-        //_socketZahnrad.SubscribePartInsertedEvent(LogInsertedPart);
-        //_socketKolben.SubscribePartInsertedEvent(LogInsertedPart);
+        _socketKabel1.SubscribePartInsertedEvent(LogInsertedPart);
+        _socketKabel2.SubscribePartInsertedEvent(LogInsertedPart);
+        _socketKolben.SubscribePartInsertedEvent(LogInsertedPart);
+        _socketZahnrad.SubscribePartInsertedEvent(LogInsertedPart);
     }
 
     public void SubscribeSubstanceAnalyzedEvent(Action method)
