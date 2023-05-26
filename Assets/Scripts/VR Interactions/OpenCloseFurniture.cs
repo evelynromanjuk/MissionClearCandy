@@ -11,6 +11,7 @@ public class OpenCloseFurniture : MonoBehaviour
 
     public void SetActive()
     {
+        Debug.Log("Interacted with furniture");
         if (!isOpen)
         {
             _interactableObject.Play("Open", 0, 0.0f);

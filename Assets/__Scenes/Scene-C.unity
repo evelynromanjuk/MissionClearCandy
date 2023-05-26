@@ -352,6 +352,7 @@ MonoBehaviour:
   SecurityManager: {fileID: 8113536557507563003}
   Pipe: {fileID: 1305797429}
   Door: {fileID: 8113536557507563002}
+  Lever: {fileID: 0}
   type: 2
 --- !u!1 &606482982 stripped
 GameObject:
