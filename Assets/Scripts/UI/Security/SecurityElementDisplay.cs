@@ -18,6 +18,7 @@ public class SecurityElementDisplay : MonoBehaviour
         _elementButton = this.GetComponent<Button>();
         _elementButton.onClick.AddListener(ShowDetails);
 
+
         _statusKnob = this.GetComponent<Image>();
         if(_statusKnob == null)
         {

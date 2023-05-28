@@ -33,10 +33,12 @@ public class SecurityElement : ScriptableObject
         if(_isActive)
         {
             _infoText = _activeInfoText;
+            _status = _activeStatus;
         }
         else
         {
             _infoText = _inactiveInfoText;
+            _status = _inactiveStatus;
         }
     }
 
