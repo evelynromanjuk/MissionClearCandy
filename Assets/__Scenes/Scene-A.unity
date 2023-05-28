@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FluidCompositionManager: {fileID: 374463763}
+  EmptyButton: {fileID: 1169284585}
   DataEntry: {fileID: 380738052655788521, guid: 220822186b1fac64da7aa5f09f91ccde,
     type: 3}
   Container: {fileID: 706609210}
@@ -390,6 +391,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fde4996fb9dfeb1419446a78faeb5407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1169284585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8113536555693659249, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac29b4c597a7dd4f862cfe0a3204187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1359533790 stripped
@@ -559,6 +572,7 @@ MonoBehaviour:
   SecurityManager: {fileID: 1159591705}
   Pipe: {fileID: 515275294}
   Door: {fileID: 1359533790}
+  Lever: {fileID: 0}
   type: 0
 --- !u!4 &1645122117
 Transform:
@@ -647,6 +661,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2694367230287795913, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: EmptyButton
+      value: 
+      objectReference: {fileID: 1169284585}
     - target: {fileID: 4858045875564038647, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: FluidCompositionManager

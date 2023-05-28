@@ -148,11 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13ed73b7951d6143a094d342d9ea97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _socketChip: {fileID: 7645294647251155424}
-  _socketKabel1: {fileID: 4124900448190508176}
-  _socketKabel2: {fileID: 7508433590239396740}
-  _socketKolben: {fileID: 9113410285968714109}
-  _socketZahnrad: {fileID: 7204652093945149351}
 --- !u!1 &646138829668977094
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b432782585d804e8099f18b358708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnalyzerPart: {fileID: 6541150824645402709}
+  MachinePartReference: {fileID: 6541150824645402709}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1 &653792384976330143
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b432782585d804e8099f18b358708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnalyzerPart: {fileID: 4208305985091288353}
+  MachinePartReference: {fileID: 4208305985091288353}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1 &1230330898401095816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b432782585d804e8099f18b358708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnalyzerPart: {fileID: 905051120134176467}
+  MachinePartReference: {fileID: 905051120134176467}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1 &5657537079133771646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b432782585d804e8099f18b358708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnalyzerPart: {fileID: 3568241617610617441}
+  MachinePartReference: {fileID: 3568241617610617441}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1 &6654101903818487983
 GameObject:
   m_ObjectHideFlags: 0
@@ -7466,7 +7465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b432782585d804e8099f18b358708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnalyzerPart: {fileID: 3835594530198101416}
+  MachinePartReference: {fileID: 3835594530198101416}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &21967019115512706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7708,6 +7708,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8360553749766705816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905051120134176467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c3f87b3d1164cbbc7f16cda6e404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _machinePart: {fileID: 11400000, guid: 7bc7d5d32b363fd4c80232b651c90de2, type: 2}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &98547283755914137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8828,6 +8842,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8100445091618431011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4208305985091288353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c3f87b3d1164cbbc7f16cda6e404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _machinePart: {fileID: 11400000, guid: c77131a114836ed4eaa540b5040e11a5, type: 2}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &4178123529556762873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9063,6 +9091,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &2919423076351712428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835594530198101416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c3f87b3d1164cbbc7f16cda6e404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _machinePart: {fileID: 11400000, guid: 2996e1869cb22bc45a38f107a362352a, type: 2}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!4 &4499399818704307986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f1f0733fbbe4b544894835b12b5a842,
@@ -9288,6 +9330,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7596831222578025148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3568241617610617441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c3f87b3d1164cbbc7f16cda6e404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _machinePart: {fileID: 11400000, guid: 78aec75ca6f74a64bb374d3e48d2fefb, type: 2}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!4 &4237641457248397531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 321b11cb6b8dee240b82bd6a2fd6f952,
@@ -9891,6 +9947,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &7650669715279815303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541150824645402709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c3f87b3d1164cbbc7f16cda6e404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _machinePart: {fileID: 11400000, guid: 09fb1a2c1cfaa7f4da101769a220742d, type: 2}
+  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &6375058339821421637
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,20 +6,14 @@ using System;
 
 public class CheckSocket : MonoBehaviour
 {
-    public GameObject AnalyzerPart;
+    public GameObject MachinePartReference; //the correct, intended machine part for this socket, used for comparison
     private XRSocketInteractor _socket;
+    public AnalyzerManager AnalyzerManager;
 
-    Action<int, bool> PartInsertedEvent;
 
-    // Start is called before the first frame update
     void Start()
     {
         _socket = GetComponent<XRSocketInteractor>();
-    }
-
-    public void SubscribePartInsertedEvent(Action<int, bool> method)
-    {
-        PartInsertedEvent += method;
     }
 
     public void CheckPart(int socketID)
@@ -28,16 +22,16 @@ public class CheckSocket : MonoBehaviour
 
         IXRSelectInteractable insertedPart = _socket.GetOldestInteractableSelected();
 
-        if (insertedPart == null)
-        {
-            Debug.Log("Inserted Object is Null");
-        }
-        if (AnalyzerPart == null)
-        {
-            Debug.Log("Reference Object is Null");
-        }
+        //if (insertedPart == null)
+        //{
+        //    Debug.Log("Inserted Object is Null");
+        //}
+        //if (MachinePartReference == null)
+        //{
+        //    Debug.Log("Reference Object is Null");
+        //}
 
-        if (AnalyzerPart.transform.name == insertedPart.transform.name)
+        if (MachinePartReference.transform.name == insertedPart.transform.name)
         {
             partIsCorrect = true;
             Debug.Log("Correct part.");
@@ -47,6 +41,7 @@ public class CheckSocket : MonoBehaviour
             Debug.Log("Incorrect part.");
         }
 
-        PartInsertedEvent.Invoke(socketID, partIsCorrect);
+        MachinePartReference.GetComponent<MachinePart>().UpdateMachinePart(partIsCorrect);
+        AnalyzerManager.CheckAllSockets();
     }
 }

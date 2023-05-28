@@ -5,15 +5,7 @@ using System;
 
 public class AnalyzerManager : MonoBehaviour
 {
-    [SerializeField] private CheckSocket _socketChip;
-    [SerializeField] private CheckSocket _socketKabel1;
-    [SerializeField] private CheckSocket _socketKabel2;
-    [SerializeField] private CheckSocket _socketKolben;
-    [SerializeField] private CheckSocket _socketZahnrad;
-
-    Dictionary<int, bool> Sockets;
-
-    Action<Dictionary<int, bool>> SocketsCheckedEvent;
+    List<MachinePart> MachineParts = new List<MachinePart>();
     Action SubstanceAnalyzedEvent;
 
     private bool _allCorrect;
@@ -24,18 +16,6 @@ public class AnalyzerManager : MonoBehaviour
         _allCorrect = false;
         _substanceBallInserted = false;
 
-        Sockets = new Dictionary<int, bool>();
-        Sockets.Add(1, false);
-        Sockets.Add(2, false);
-        Sockets.Add(3, false);
-        Sockets.Add(4, false);
-        Sockets.Add(5, false);
-
-        _socketChip.SubscribePartInsertedEvent(LogInsertedPart);
-        _socketKabel1.SubscribePartInsertedEvent(LogInsertedPart);
-        _socketKabel2.SubscribePartInsertedEvent(LogInsertedPart);
-        _socketKolben.SubscribePartInsertedEvent(LogInsertedPart);
-        _socketZahnrad.SubscribePartInsertedEvent(LogInsertedPart);
     }
 
     public void SubscribeSubstanceAnalyzedEvent(Action method)
@@ -43,38 +23,30 @@ public class AnalyzerManager : MonoBehaviour
         SubstanceAnalyzedEvent += method;
     }
 
-    public void SubscribeSocketsCheckedEvent(Action<Dictionary<int, bool>> method)
+    public void AddToList(MachinePart part)
     {
-        SocketsCheckedEvent += method;
+        MachineParts.Add(part);
     }
 
-    void LogInsertedPart(int socketId, bool partIsCorrect)
+    public void CheckAllSockets()
     {
-        if (partIsCorrect)
+        bool isCorrect = true;
+        foreach(var part in MachineParts)
         {
-            Sockets[socketId] = true;
+            if(!part.IsActive())
+            {
+                isCorrect = false;
+                break;
+            }
+        }
+        _allCorrect = isCorrect;
+        if(_allCorrect)
+        {
+            Debug.Log("AnalyzerManager: All parts are correct");
         }
         else
         {
-            Sockets[socketId] = false;
-        }
-
-        CheckAllSockets();
-    }
-
-    void CheckAllSockets()
-    {
-        foreach (KeyValuePair<int, bool> entry in Sockets)
-        {
-            if (entry.Value == false)
-            {
-                _allCorrect = false;
-                break;
-            }
-            else
-            {
-                _allCorrect = true;
-            }
+            Debug.Log("AnalyzerManager: Not all parts are correct");
         }
     }
 
@@ -99,13 +71,4 @@ public class AnalyzerManager : MonoBehaviour
         }
     }
 
-    public void CheckSockets()
-    {
-        foreach (KeyValuePair<int, bool> entry in Sockets)
-        {
-            Debug.Log("Socket #" + entry.Key + ": " + entry.Value);
-        }
-
-        //SocketsCheckedEvent.Invoke(Sockets); // TODO: add back later
-    }
 }
