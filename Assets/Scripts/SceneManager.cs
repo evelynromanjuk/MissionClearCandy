@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SceneManager : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class SceneManager : MonoBehaviour
     public Pipe Pipe;
     public Door Door;
     public Lever Lever;
+    public Button AnalyzerStartButton2D;
+    public XRSimpleInteractable AnalyzerStartButton3D;
+    public GameObject Frame_Lab_Analyzer;
 
 
     private bool _isRobotScene = false;
@@ -39,13 +44,15 @@ public class SceneManager : MonoBehaviour
         {
             case Type.VersionA:
                 _doorActivatable = true;
-                FrameFillMachinePC.Initialize(_isRobotScene); // TODO: ADD FOR VERSION B TOO!
+                FrameFillMachinePC.Initialize(_isRobotScene);
+                AnalyzerStartButton2D.interactable = false;
                 break;
 
             case Type.VersionB:
                 _doorOpenable = false;
                 FrameFillMachinePC.Initialize(_isRobotScene);
                 Lever.DeactivateSimpleInteractable();
+                AnalyzerStartButton3D.enabled = false;
                 break;
 
             case Type.VersionC:
@@ -75,5 +82,13 @@ public class SceneManager : MonoBehaviour
         SecurityManager.Initizalize(_isRobotScene);
 
         //FrameFillMachineManager --> isRobotScene
+    }
+
+    private void Start()
+    {
+        if(!_isRobotScene)
+        {
+            Frame_Lab_Analyzer.SetActive(false);
+        }
     }
 }

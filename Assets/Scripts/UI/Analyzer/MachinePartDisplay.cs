@@ -12,7 +12,6 @@ public class MachinePartDisplay : MonoBehaviour
 
     private Button _partButton;
     private Image _statusKnob;
-    private bool _wasInitialized = false;
 
     void Awake()
     {
@@ -21,18 +20,8 @@ public class MachinePartDisplay : MonoBehaviour
         _partButton.onClick.AddListener(ShowDetails);
 
         AnalyzerManager.SubscribeCheckedAllParts(UpdateKnobColor);
-        _wasInitialized = true;
     }
 
-    private void Start()
-    {
-        //The laboratory panel is active in the beginning so all status knobs can subscribe to AnalyzerManager, is deactivated again afterwards
-        //if (LaboratoryPanel.activeInHierarchy)
-        //{
-        //    LaboratoryPanel.SetActive(false);
-        //    Debug.Log("LaboratoryPanel was set to inactive");
-        //}
-    }
 
     public void ShowDetails()
     {
