@@ -458,6 +458,9 @@ MonoBehaviour:
   Pipe: {fileID: 647323770}
   Door: {fileID: 1912616649}
   Lever: {fileID: 0}
+  AnalyzerStartButton2D: {fileID: 0}
+  AnalyzerStartButton3D: {fileID: 0}
+  Frame_Lab_Analyzer: {fileID: 0}
   type: 3
 --- !u!1001 &180616087
 PrefabInstance:
@@ -3073,7 +3076,7 @@ PrefabInstance:
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.216
+      value: -8.893
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
@@ -3083,12 +3086,12 @@ PrefabInstance:
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.822
+      value: 0.037
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.26220948
+      value: 0.99895495
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
@@ -3098,7 +3101,7 @@ PrefabInstance:
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.965011
+      value: 0.04570557
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
@@ -3113,7 +3116,7 @@ PrefabInstance:
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 149.598
+      value: 5.239
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}

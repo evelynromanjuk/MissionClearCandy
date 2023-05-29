@@ -162,8 +162,9 @@ GameObject:
   - component: {fileID: 7234223796685298182}
   - component: {fileID: 8387773823731147906}
   - component: {fileID: 9113410285968714109}
-  m_Layer: 0
-  m_Name: Dropzone_Kolben
+  - component: {fileID: 562716056876248466}
+  m_Layer: 8
+  m_Name: machine socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,6 +326,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MachinePartReference: {fileID: 6541150824645402709}
   AnalyzerManager: {fileID: 7599763331790741528}
+--- !u!114 &562716056876248466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646138829668977094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f93a4cadc262f4d8789f5ced048c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanData: {fileID: 11400000, guid: 43c88300c4fa4114886d1f0314b2a839, type: 2}
 --- !u!1 &653792384976330143
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,8 +623,9 @@ GameObject:
   - component: {fileID: 5309435799088373342}
   - component: {fileID: 2051336423630548943}
   - component: {fileID: 7204652093945149351}
-  m_Layer: 0
-  m_Name: Dropzone_Zahnrad
+  - component: {fileID: 535777604206983145}
+  m_Layer: 8
+  m_Name: machine socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,6 +787,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MachinePartReference: {fileID: 4208305985091288353}
   AnalyzerManager: {fileID: 7599763331790741528}
+--- !u!114 &535777604206983145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160841887157860900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f93a4cadc262f4d8789f5ced048c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanData: {fileID: 11400000, guid: 0e7d41d328e1de845ae1cc41bcde34ea, type: 2}
 --- !u!1 &1230330898401095816
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,8 +2973,9 @@ GameObject:
   - component: {fileID: 8046360211063692407}
   - component: {fileID: 7332637744925646406}
   - component: {fileID: 7508433590239396740}
-  m_Layer: 0
-  m_Name: Dropzone_Kabel2
+  - component: {fileID: 8820676249885736373}
+  m_Layer: 8
+  m_Name: machine socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3108,6 +3137,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MachinePartReference: {fileID: 905051120134176467}
   AnalyzerManager: {fileID: 7599763331790741528}
+--- !u!114 &8820676249885736373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536755591905641557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f93a4cadc262f4d8789f5ced048c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanData: {fileID: 11400000, guid: d3c04aac9789df340a7bd5125ad02154, type: 2}
 --- !u!1 &5657537079133771646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,8 +3425,9 @@ GameObject:
   - component: {fileID: 785713390892905466}
   - component: {fileID: 5746830109329109922}
   - component: {fileID: 7645294647251155424}
-  m_Layer: 0
-  m_Name: Dropzone_Chip
+  - component: {fileID: 5486535564442767338}
+  m_Layer: 8
+  m_Name: machine socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3546,6 +3589,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MachinePartReference: {fileID: 3568241617610617441}
   AnalyzerManager: {fileID: 7599763331790741528}
+--- !u!114 &5486535564442767338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548695474666464905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f93a4cadc262f4d8789f5ced048c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanData: {fileID: 11400000, guid: 2dd10c931af0e464bbf6e76bcee9849e, type: 2}
 --- !u!1 &6654101903818487983
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,8 +7360,9 @@ GameObject:
   - component: {fileID: 4696663218539133428}
   - component: {fileID: 6907386741931371725}
   - component: {fileID: 4124900448190508176}
-  m_Layer: 0
-  m_Name: Dropzone_Kabel1
+  - component: {fileID: 943075091910178051}
+  m_Layer: 8
+  m_Name: machine socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7467,6 +7524,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MachinePartReference: {fileID: 3835594530198101416}
   AnalyzerManager: {fileID: 7599763331790741528}
+--- !u!114 &943075091910178051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928118169478144217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f93a4cadc262f4d8789f5ced048c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanData: {fileID: 11400000, guid: 6f1828794f4e40d47802faf27a6a7e21, type: 2}
 --- !u!1001 &21967019115512706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11037,6 +11107,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5925635448550065941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873652285672070861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019009694, y: 0.020000007, z: 0.019498557}
+  m_Center: {x: -0.0004953942, y: 0.0100000035, z: 0}
 --- !u!114 &5943365895869478728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11127,19 +11210,6 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!65 &5925635448550065941
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873652285672070861}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019009694, y: 0.020000007, z: 0.019498557}
-  m_Center: {x: -0.0004953942, y: 0.0100000035, z: 0}
 --- !u!4 &7622755341124578047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3ed7b40dadfc9f44fbdcab1811171d55,
