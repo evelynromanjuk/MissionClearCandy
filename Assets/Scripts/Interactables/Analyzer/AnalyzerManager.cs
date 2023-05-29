@@ -5,7 +5,9 @@ using System;
 
 public class AnalyzerManager : MonoBehaviour
 {
+    // TODO: if not needed, remove machine part list
     List<MachinePart> MachineParts = new List<MachinePart>();
+    List<Socket> Sockets = new List<Socket>();
     Action SubstanceAnalyzedEvent;
 
     private bool _allCorrect;
@@ -23,24 +25,31 @@ public class AnalyzerManager : MonoBehaviour
         SubstanceAnalyzedEvent += method;
     }
 
-    public void AddToList(MachinePart part)
+    public void AddToPartList(MachinePart part)
     {
         MachineParts.Add(part);
     }
 
-    public void CheckAllSockets()
+    public void AddToSocketList(Socket socket)
+    {
+        Sockets.Add(socket);
+    }
+
+    //for all machine parts, "isActive" will be updated
+    public void CheckAllParts()
     {
         bool isCorrect = true;
-        foreach(var part in MachineParts)
+
+        foreach(var socket in Sockets)
         {
-            if(!part.IsActive())
+            if(!socket.CheckPart()) //if one part is inactive
             {
                 isCorrect = false;
                 break;
             }
         }
         _allCorrect = isCorrect;
-        if(_allCorrect)
+        if (_allCorrect)
         {
             Debug.Log("AnalyzerManager: All parts are correct");
         }
@@ -49,6 +58,30 @@ public class AnalyzerManager : MonoBehaviour
             Debug.Log("AnalyzerManager: Not all parts are correct");
         }
     }
+
+    //checks if all machine parts are active
+    //if so, _allCorrect will be set to true
+    //public void CheckOverallStatus()
+    //{
+    //    bool isCorrect = true;
+    //    foreach (var part in MachineParts)
+    //    {
+    //        if (!part.IsActive())
+    //        {
+    //            isCorrect = false;
+    //            break;
+    //        }
+    //    }
+    //    _allCorrect = isCorrect;
+    //    if (_allCorrect)
+    //    {
+    //        Debug.Log("AnalyzerManager: All parts are correct");
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("AnalyzerManager: Not all parts are correct");
+    //    }
+    //}
 
     public void InsertSubstanceBall()
     {

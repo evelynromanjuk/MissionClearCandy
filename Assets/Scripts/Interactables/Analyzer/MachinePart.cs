@@ -9,7 +9,7 @@ public class MachinePart : MonoBehaviour
 
     private void Start()
     {
-        AnalyzerManager.AddToList(this);
+        AnalyzerManager.AddToPartList(this);
     }
 
     public void UpdateMachinePart(bool isActive)
