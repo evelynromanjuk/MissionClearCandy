@@ -8,6 +8,8 @@ public class AnalyzerManager : MonoBehaviour
     // TODO: if not needed, remove machine part list
     List<MachinePart> MachineParts = new List<MachinePart>();
     List<Socket> Sockets = new List<Socket>();
+
+    static Action CheckedAllParts;
     Action SubstanceAnalyzedEvent;
 
     private bool _allCorrect;
@@ -17,12 +19,17 @@ public class AnalyzerManager : MonoBehaviour
     {
         _allCorrect = false;
         _substanceBallInserted = false;
-
     }
 
     public void SubscribeSubstanceAnalyzedEvent(Action method)
     {
         SubstanceAnalyzedEvent += method;
+    }
+
+    public void SubscribeCheckedAllParts(Action method)
+    {
+        CheckedAllParts += method;
+        Debug.Log("Someone subscribed");
     }
 
     public void AddToPartList(MachinePart part)
@@ -45,7 +52,6 @@ public class AnalyzerManager : MonoBehaviour
             if(!socket.CheckPart()) //if one part is inactive
             {
                 isCorrect = false;
-                break;
             }
         }
         _allCorrect = isCorrect;
@@ -57,31 +63,8 @@ public class AnalyzerManager : MonoBehaviour
         {
             Debug.Log("AnalyzerManager: Not all parts are correct");
         }
+        CheckedAllParts.Invoke();
     }
-
-    //checks if all machine parts are active
-    //if so, _allCorrect will be set to true
-    //public void CheckOverallStatus()
-    //{
-    //    bool isCorrect = true;
-    //    foreach (var part in MachineParts)
-    //    {
-    //        if (!part.IsActive())
-    //        {
-    //            isCorrect = false;
-    //            break;
-    //        }
-    //    }
-    //    _allCorrect = isCorrect;
-    //    if (_allCorrect)
-    //    {
-    //        Debug.Log("AnalyzerManager: All parts are correct");
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("AnalyzerManager: Not all parts are correct");
-    //    }
-    //}
 
     public void InsertSubstanceBall()
     {
@@ -92,10 +75,11 @@ public class AnalyzerManager : MonoBehaviour
 
     public void StartAnalyzer()
     {
-        if (_allCorrect & _substanceBallInserted)
+        //if (_allCorrect & _substanceBallInserted)
+        if (_allCorrect)
         {
             Debug.Log("Level completed.");
-            SubstanceAnalyzedEvent.Invoke();
+            //SubstanceAnalyzedEvent.Invoke();
         }
         else
         {

@@ -7,27 +7,43 @@ public class MachinePartDisplay : MonoBehaviour
 {
     public SecurityElement SecurityElement; //actually a machine part, but this ScriptableObject works for both
     public MachinePartEntry MachinePartEntry;
+    public AnalyzerManager AnalyzerManager;
+    public GameObject LaboratoryPanel;
 
     private Button _partButton;
     private Image _statusKnob;
+    private bool _wasInitialized = false;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _partButton = this.GetComponent<Button>();
+        _statusKnob = this.GetComponent<Image>();
         _partButton.onClick.AddListener(ShowDetails);
 
-        _statusKnob = this.GetComponent<Image>();
+        AnalyzerManager.SubscribeCheckedAllParts(UpdateKnobColor);
+        _wasInitialized = true;
+    }
+
+    private void Start()
+    {
+        //The laboratory panel is active in the beginning so all status knobs can subscribe to AnalyzerManager, is deactivated again afterwards
+        //if (LaboratoryPanel.activeInHierarchy)
+        //{
+        //    LaboratoryPanel.SetActive(false);
+        //    Debug.Log("LaboratoryPanel was set to inactive");
+        //}
     }
 
     public void ShowDetails()
     {
-        if (SecurityElement.IsActive)
-        {
-            // TODO: Status knob color! Seems to be null right now
-            _statusKnob.color = new Color32(0, 255, 0, 100);
-            Debug.Log("Changed knob color");
-        }
         MachinePartEntry.SetEntry(SecurityElement.ElementName, SecurityElement.Status, SecurityElement.InfoText);
+    }
+
+    private void UpdateKnobColor()
+    {
+        if(SecurityElement.IsActive)
+        {
+            _statusKnob.color = new Color32(0, 255, 0, 255);
+        }
     }
 }

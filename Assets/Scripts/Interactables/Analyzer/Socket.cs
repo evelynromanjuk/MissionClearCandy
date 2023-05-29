@@ -33,33 +33,13 @@ public class Socket : MonoBehaviour
         {
             Debug.Log("Inserted Object is Null");
         }
-        //else
-        //{
-        //    if(MachinePartReference.transform.name == insertedPart.transform.name)
-        //    {
-        //        partIsCorrect = true;
-        //        Debug.Log("Correct part.");
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("Incorrect part.");
-        //    }
-        //}
-
 
         if ((insertedPart != null) && (MachinePartReference.transform.name == insertedPart.transform.name))
         {
             partIsCorrect = true;
-            Debug.Log("Correct part.");
         }
-        else
-        {
-            Debug.Log("Incorrect part.");
-        }
-
         MachinePartReference.GetComponent<MachinePart>().UpdateMachinePart(partIsCorrect);
 
         return partIsCorrect;
-        //AnalyzerManager.CheckAllSockets();
     }
 }
