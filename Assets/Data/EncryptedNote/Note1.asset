@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc03039bd704af4a8d6285e45b82476, type: 3}
-  m_Name: Neodymium
+  m_Script: {fileID: 11500000, guid: c104c47e94648f84e9f5a02ed5288ab7, type: 3}
+  m_Name: Note1
   m_EditorClassIdentifier: 
-  objectType: chemical element
-  name: Neodymium
-  periodicSymbol: Nd
-  ordinalNumber: 40
+  objectType: note
+  description: note with encrypted symbols
+  info1: calcium - 14
+  info2: neodymium - 40
+  info3: yttrium - 26
