@@ -9,7 +9,7 @@ public class CodeLockManager : MonoBehaviour
     public CodeLock Lock2;
     public CodeLock Lock3;
     public CodeLock Lock4;
-    public XRGrabInteractable LockerDoor;
+    public XRSimpleInteractable LockerDoor;
 
     private List<CodeLock> _codeLocks = new List<CodeLock>();
     private bool _allCorrect;
@@ -36,6 +36,20 @@ public class CodeLockManager : MonoBehaviour
         {
             LockerDoor.enabled = true;
             Debug.Log("all correct");
+
+            if(this.gameObject.GetComponent<OpenCloseFurniture>())
+            {
+                this.gameObject.GetComponent<OpenCloseFurniture>().SetActive();
+                //StartCoroutine(DropLock());
+            }
         }
+    }
+
+    //enables gravity to let the lock fall, doesn't affect the wheels, which have own Rigidbody components
+    IEnumerator DropLock()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        this.gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 }

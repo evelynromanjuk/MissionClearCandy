@@ -16,14 +16,17 @@ public class HoverGlow : MonoBehaviour
     public void ShowGlow()
     {
         Material[] matArray = rend.materials;
-        matArray[1] = GlowMaterial;
+        int lastPosition = matArray.Length-1;
+        Debug.Log("Last Position in Array: " + lastPosition);
+        matArray[lastPosition] = GlowMaterial;
         rend.materials = matArray;
     }
 
     public void HideGlow()
     {
         Material[] matArray = rend.materials;
-        matArray[1] = null;
+        int lastPosition = matArray.Length - 1;
+        matArray[lastPosition] = null;
         rend.materials = matArray;
     }
 }

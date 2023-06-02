@@ -6,13 +6,15 @@ public class CodeLock : MonoBehaviour
 {
     public int GoalNumber;
 
-
+    private Transform _transform;
     private int _currentNumber;
     private bool _reachedGoal;
 
     // Start is called before the first frame update
     void Start()
     {
+        _transform = this.gameObject.transform;
+
         _currentNumber = 1;
         if(GoalNumber == 1)
         {
@@ -32,6 +34,9 @@ public class CodeLock : MonoBehaviour
             _currentNumber = 0;
         }
         Debug.Log(this + " number: " + _currentNumber);
+
+        _transform.Rotate(36.0f, 0.0f, 0.0f, Space.Self);
+
         CompareValues();
     }
 
