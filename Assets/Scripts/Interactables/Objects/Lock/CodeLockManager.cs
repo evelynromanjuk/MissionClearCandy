@@ -40,16 +40,8 @@ public class CodeLockManager : MonoBehaviour
             if(this.gameObject.GetComponent<OpenCloseFurniture>())
             {
                 this.gameObject.GetComponent<OpenCloseFurniture>().SetActive();
-                //StartCoroutine(DropLock());
+                AudioManager.Instance.Play("LockOpened");
             }
         }
-    }
-
-    //enables gravity to let the lock fall, doesn't affect the wheels, which have own Rigidbody components
-    IEnumerator DropLock()
-    {
-        yield return new WaitForSeconds(0.5f);
-
-        this.gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 }

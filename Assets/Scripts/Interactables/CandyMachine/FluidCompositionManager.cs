@@ -23,7 +23,6 @@ public class FluidCompositionManager : MonoBehaviour
     public void AddFluidToList(Fluid fluid)
     {
         _fluids.Add(fluid);
-        Debug.Log("Added Fluid: " + fluid.FluidName);
     }
 
     public bool AddFluid(Fluid fluid, float percentage)
@@ -73,7 +72,6 @@ public class FluidCompositionManager : MonoBehaviour
             else
             {
                 compositionCorrect = true;
-                Debug.Log("Every color reached goal");
             }
         }
 
