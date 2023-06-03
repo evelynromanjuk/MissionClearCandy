@@ -22,12 +22,14 @@ public class PlayerInteract : MonoBehaviour
     Action<string> PasswordEntered;
     Action<string, bool> PipeActivated;
     Action<bool> DoorActivated;
+    Action<bool> AnalyzerActivated;
 
     private ScannableObject _currentScannableObj;
     private IInteractable _currentInteractableObj;
     private TMP_InputField _currentInputField;
 
     private bool _doorButtonFocused = false;
+    private bool _analyzerFocused = false;
 
 
     void Start()
@@ -44,8 +46,8 @@ public class PlayerInteract : MonoBehaviour
         _inputManager.onFoot.KeyboardInput.performed += OnKeyboardEnter;
         _inputManager.onFoot.ActivatePipe.started += OnActivatePipe;
         _inputManager.onFoot.ActivatePipe.canceled += OnDeactivatePipe;
-        _inputManager.onFoot.InteractDoor.started += OnActivateDoor;
-        _inputManager.onFoot.InteractDoor.canceled += OnDeactivateDoor;
+        _inputManager.onFoot.HoldInteract.started += OnActivateDoor;
+        _inputManager.onFoot.HoldInteract.canceled += OnDeactivateDoor;
     }
 
     void Update()
@@ -77,12 +79,19 @@ public class PlayerInteract : MonoBehaviour
             //_currentInputField.interactable = true; //could be added later if "interactable" should be set automatically with raycast
 
             DoorButton DoorButton = hitInfo.collider.GetComponent<DoorButton>();
-
             if (DoorButton != null & !_doorButtonFocused)
             {
                 _doorButtonFocused = true;
                 _inputManager.SwitchInteract(true);
             }
+
+            AnalyzerConnection AnalyzerConnection = hitInfo.collider.GetComponent<AnalyzerConnection>();
+            if (AnalyzerConnection != null & !_doorButtonFocused)
+            {
+                _analyzerFocused = true;
+                _inputManager.SwitchInteract(true);
+            }
+
 
         }
         else
@@ -96,6 +105,12 @@ public class PlayerInteract : MonoBehaviour
             if (_doorButtonFocused)
             {
                 _doorButtonFocused = false;
+                _inputManager.SwitchInteract(false);
+            }
+
+            if (_analyzerFocused)
+            {
+                _analyzerFocused = false;
                 _inputManager.SwitchInteract(false);
             }
         }
@@ -174,14 +189,32 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnActivateDoor(InputAction.CallbackContext obj)
     {
-        DoorActivated.Invoke(true);
-        Debug.Log("Door was activated");
+        if(_doorButtonFocused)
+        {
+            DoorActivated.Invoke(true);
+            Debug.Log("Door was activated");
+        }
+        if(_analyzerFocused)
+        {
+            AnalyzerActivated.Invoke(true);
+            Debug.Log("Analyzer was activated");
+        }
+
     }
 
     private void OnDeactivateDoor(InputAction.CallbackContext obj)
     {
-        DoorActivated.Invoke(false);
-        Debug.Log("Door was deactivated");
+        if(_doorButtonFocused)
+        {
+            DoorActivated.Invoke(false);
+            Debug.Log("Door was deactivated");
+        }
+        if(_analyzerFocused)
+        {
+            AnalyzerActivated.Invoke(false);
+            Debug.Log("Analyzer was deactivated");
+        }
+
     }
 
     //EVENT SUBSCRIPTIONS
@@ -213,5 +246,10 @@ public class PlayerInteract : MonoBehaviour
     public void SubscribeDoorActivated(Action<bool> method)
     {
         DoorActivated += method;
+    }
+
+    public void SubscribeAnalyzerActivated(Action<bool> method)
+    {
+        AnalyzerActivated += method;
     }
 }

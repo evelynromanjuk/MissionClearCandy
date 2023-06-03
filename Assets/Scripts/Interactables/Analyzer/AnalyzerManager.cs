@@ -5,37 +5,40 @@ using System;
 
 public class AnalyzerManager : MonoBehaviour
 {
+    public PlayerInteract PlayerInteract;
     // TODO: if not needed, remove machine part list
-    List<MachinePart> MachineParts = new List<MachinePart>();
+    //List<MachinePart> MachineParts = new List<MachinePart>();
     List<Socket> Sockets = new List<Socket>();
 
     static Action CheckedAllParts;
     Action SubstanceAnalyzedEvent;
 
-    private bool _allCorrect;
     private bool _substanceBallInserted;
+
+    private bool _isActivatable = false;
+    private bool _isActive = false;
+    private bool _allCorrect;
 
     void Start()
     {
         _allCorrect = false;
         _substanceBallInserted = false;
+
+        if(_isActivatable)
+        {
+            PlayerInteract.SubscribeAnalyzerActivated(ActivateAnalyzer);
+        }
     }
 
-    public void SubscribeSubstanceAnalyzedEvent(Action method)
+    public void InitializeAnalyzer(bool isActivatable)
     {
-        SubstanceAnalyzedEvent += method;
+        _isActivatable = isActivatable;
     }
 
-    public void SubscribeCheckedAllParts(Action method)
-    {
-        CheckedAllParts += method;
-        Debug.Log("Someone subscribed");
-    }
-
-    public void AddToPartList(MachinePart part)
-    {
-        MachineParts.Add(part);
-    }
+    //public void AddToPartList(MachinePart part)
+    //{
+    //    MachineParts.Add(part);
+    //}
 
     public void AddToSocketList(Socket socket)
     {
@@ -54,6 +57,7 @@ public class AnalyzerManager : MonoBehaviour
                 isCorrect = false;
             }
         }
+
         _allCorrect = isCorrect;
         if (_allCorrect)
         {
@@ -73,19 +77,38 @@ public class AnalyzerManager : MonoBehaviour
 
     }
 
+    public void ActivateAnalyzer(bool isActivated)
+    {
+        _isActive = isActivated;
+    }
+
     public void StartAnalyzer()
     {
         //if (_allCorrect & _substanceBallInserted)
-        if (_allCorrect)
+        //if (_allCorrect)
+        if(true)
         {
-            Debug.Log("Level completed.");
-            //SubstanceAnalyzedEvent.Invoke();
+            if(!_isActivatable || (_isActivatable & _isActive))
+            {
+                Debug.Log("Level completed.");
+                //SubstanceAnalyzedEvent.Invoke();
+            }
         }
         else
         {
             Debug.Log("Failed: Substance Ball inserted = " + _substanceBallInserted + ", all parts correct= " + _allCorrect);
 
         }
+    }
+
+    public void SubscribeSubstanceAnalyzedEvent(Action method)
+    {
+        SubstanceAnalyzedEvent += method;
+    }
+
+    public void SubscribeCheckedAllParts(Action method)
+    {
+        CheckedAllParts += method;
     }
 
 }

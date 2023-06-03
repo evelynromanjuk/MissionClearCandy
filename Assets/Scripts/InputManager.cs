@@ -40,13 +40,13 @@ public class InputManager : MonoBehaviour
     private void OnEnable()
     {
         onFoot.Interact.Enable();
-        onFoot.InteractDoor.Disable();
+        onFoot.HoldInteract.Disable();
     }
 
     private void OnDisable()
     {
         onFoot.Interact.Disable();
-        onFoot.InteractDoor.Enable();
+        onFoot.HoldInteract.Enable();
     }
 
 

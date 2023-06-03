@@ -69,7 +69,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "InteractDoor",
+                    "name": "HoldInteract",
                     "type": "Button",
                     "id": "1a7c2f8e-1961-479c-ba85-3af297bf050d",
                     "expectedControlType": "Button",
@@ -372,7 +372,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "InteractDoor",
+                    "action": "HoldInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

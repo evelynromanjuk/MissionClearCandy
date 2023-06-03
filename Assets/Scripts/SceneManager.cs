@@ -18,6 +18,7 @@ public class SceneManager : MonoBehaviour
     public Button AnalyzerStartButton2D;
     public XRSimpleInteractable AnalyzerStartButton3D;
     public GameObject Frame_Lab_Analyzer;
+    public AnalyzerManager AnalyzerManager;
 
 
     private bool _isRobotScene = false;
@@ -66,6 +67,7 @@ public class SceneManager : MonoBehaviour
                 _doorActivatable = true;
                 _usesRobotTip = true;
                 Pipe.SetHackerKeyUse();
+                AnalyzerManager.InitializeAnalyzer(true);
                 Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _scannerIsVertical);
                 break;
 
