@@ -13,6 +13,7 @@ public class AnalyzerManager : MonoBehaviour
     static Action CheckedAllParts;
     Action SubstanceAnalyzedEvent;
 
+    private bool _isRobotScene;
     private bool _substanceBallInserted;
 
     private bool _isActivatable = false;
@@ -30,8 +31,9 @@ public class AnalyzerManager : MonoBehaviour
         }
     }
 
-    public void InitializeAnalyzer(bool isActivatable)
+    public void InitializeAnalyzer(bool isRobotScene, bool isActivatable)
     {
+        _isRobotScene = isRobotScene;
         _isActivatable = isActivatable;
     }
 
@@ -67,7 +69,11 @@ public class AnalyzerManager : MonoBehaviour
         {
             Debug.Log("AnalyzerManager: Not all parts are correct");
         }
-        CheckedAllParts.Invoke();
+        if(!_isRobotScene)
+        {
+            CheckedAllParts.Invoke();
+        }
+        
     }
 
     public void InsertSubstanceBall()
@@ -85,8 +91,7 @@ public class AnalyzerManager : MonoBehaviour
     public void StartAnalyzer()
     {
         //if (_allCorrect & _substanceBallInserted)
-        //if (_allCorrect)
-        if(true)
+        if(_allCorrect & _substanceBallInserted)
         {
             if(!_isActivatable || (_isActivatable & _isActive))
             {

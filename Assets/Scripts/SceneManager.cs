@@ -67,7 +67,6 @@ public class SceneManager : MonoBehaviour
                 _doorActivatable = true;
                 _usesRobotTip = true;
                 Pipe.SetHackerKeyUse();
-                AnalyzerManager.InitializeAnalyzer(true);
                 Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _scannerIsVertical);
                 break;
 
@@ -82,6 +81,7 @@ public class SceneManager : MonoBehaviour
         FrameFillMachineLab.SetRobotTip(_usesRobotTip);
         FrameFillMachineLab.Initialize(_isRobotScene);
         SecurityManager.Initizalize(_isRobotScene);
+        AnalyzerManager.InitializeAnalyzer(_isRobotScene, true);
 
         //FrameFillMachineManager --> isRobotScene
     }

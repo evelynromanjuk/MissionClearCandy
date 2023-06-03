@@ -14,7 +14,7 @@ public class Alarm : MonoBehaviour
     public Image AlarmIcon;
 
     private bool _alarmIsRunning;
-    private float _alarmTimeRemaining = 10f;
+    private float _alarmTimeRemaining = 120f;
 
     private bool _emergencyIsRunning;
     private float _emergencyTimeRemaining = 15f;
@@ -58,7 +58,7 @@ public class Alarm : MonoBehaviour
 
         AlarmIcon.gameObject.SetActive(false);
 
-        _alarmTimeRemaining = 10f;
+        _alarmTimeRemaining = 120f;
         _alarmIsRunning = true;
 
         _emergencyTimeRemaining = 15f;
