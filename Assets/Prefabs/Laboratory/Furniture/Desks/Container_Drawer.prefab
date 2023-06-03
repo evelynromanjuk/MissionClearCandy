@@ -259,10 +259,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 436216275012347867, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: ClosingSoundName
+      value: DrawerClosed
+      objectReference: {fileID: 0}
+    - target: {fileID: 436216275012347867, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: OpeningSoundName
+      value: DrawerOpened
+      objectReference: {fileID: 0}
     - target: {fileID: 1060034735664290816, guid: 27ae85b21f4ca944fa15f768d3dd0169,
         type: 3}
       propertyPath: m_Name
       value: Drawer_Handle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7063433817433102783, guid: 29ea5e174e5cfbd428527db42fbc79ec,
+        type: 3}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: DrawerOpened
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116341133476650724, guid: 27ae85b21f4ca944fa15f768d3dd0169,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ae85b21f4ca944fa15f768d3dd0169, type: 3}

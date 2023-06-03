@@ -2217,6 +2217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableObject: {fileID: 4936982286786436122}
   isOpen: 0
+  OpeningSoundName: LockOpened
+  ClosingSoundName: LockOpened
 --- !u!136 &3469287837746779412
 CapsuleCollider:
   m_ObjectHideFlags: 0
