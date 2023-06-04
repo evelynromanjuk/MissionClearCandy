@@ -13,6 +13,9 @@ public class MachinePartDisplay : MonoBehaviour
     private Button _partButton;
     private Image _statusKnob;
 
+    private Color32 _green = new Color32(0, 255, 0, 255);
+    private Color32 _red = new Color32(255, 0, 0, 255);
+
     void Awake()
     {
         _partButton = this.GetComponent<Button>();
@@ -32,7 +35,11 @@ public class MachinePartDisplay : MonoBehaviour
     {
         if(SecurityElement.IsActive)
         {
-            _statusKnob.color = new Color32(0, 255, 0, 255);
+            _statusKnob.color = _green;
+        }
+        else
+        {
+            _statusKnob.color = _red;
         }
     }
 }

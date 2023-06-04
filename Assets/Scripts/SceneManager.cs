@@ -25,6 +25,7 @@ public class SceneManager : MonoBehaviour
     private bool _scannerIsVertical = false;
     private bool _doorActivatable = false;
     private bool _doorOpenable = true;
+    private bool _analyzerActivatable = false;
     private bool _usesRobotTip = false;
 
     [SerializeField]
@@ -66,6 +67,7 @@ public class SceneManager : MonoBehaviour
                 _scannerIsVertical = true;
                 _doorActivatable = true;
                 _usesRobotTip = true;
+                _analyzerActivatable = true;
                 Pipe.SetHackerKeyUse();
                 Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _scannerIsVertical);
                 break;
@@ -81,7 +83,7 @@ public class SceneManager : MonoBehaviour
         FrameFillMachineLab.SetRobotTip(_usesRobotTip);
         FrameFillMachineLab.Initialize(_isRobotScene);
         SecurityManager.Initizalize(_isRobotScene);
-        AnalyzerManager.InitializeAnalyzer(_isRobotScene, true);
+        AnalyzerManager.InitializeAnalyzer(_isRobotScene, _analyzerActivatable);
 
         //FrameFillMachineManager --> isRobotScene
     }
