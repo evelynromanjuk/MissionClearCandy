@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0bf57be595fd8746a48b01cdd961c73, type: 3}
-  m_Name: note1
+  m_Name: elements-list
   m_EditorClassIdentifier: 
-  Title: note (1)
-  Image: {fileID: 21300000, guid: 6d815b8a61d587041ba0c107bfdbb674, type: 3}
+  Title: elements-list-v3
+  Image: {fileID: 21300000, guid: e82478e1f6810b942aa95f8c1298229f, type: 3}
+  AspectRatio: 1.0095497

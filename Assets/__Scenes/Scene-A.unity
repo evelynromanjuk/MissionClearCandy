@@ -923,6 +923,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1605643214658219875, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605643214658219875, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605643214658219875, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605643214658219875, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -962,6 +982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas_Hacker2D
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776094794278165000, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2367293307585124948, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
@@ -1147,6 +1172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486817951977528417, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00018310547
       objectReference: {fileID: 0}
     - target: {fileID: 7700600697780313790, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}

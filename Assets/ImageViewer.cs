@@ -9,12 +9,18 @@ public class ImageViewer : MonoBehaviour
     public TMP_Text Title;
     public Image Image;
 
-    //public TMP_Text NewTitle;
-    //public Image NewImage;
+    private AspectRatioFitter _aspectRatioFitter;
+
+    private void Awake()
+    {
+        _aspectRatioFitter = Image.gameObject.GetComponent<AspectRatioFitter>();
+    }
 
     public void SetImage(FileImage fileImage)
     {
         Title.text = fileImage.Title;
         Image.sprite = fileImage.Image;
+
+        _aspectRatioFitter.aspectRatio = fileImage.AspectRatio;
     }
 }
