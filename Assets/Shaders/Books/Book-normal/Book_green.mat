@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Book3
+  m_Name: Book_green
   m_Shader: {fileID: -6465566751694194690, guid: 38a6e8251a1219e4b8287534cdfa089a,
     type: 3}
   m_ValidKeywords: []
@@ -42,8 +42,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.71028525, b: 0.2216981, a: 0}
-    - _PageColor: {r: 0.95283014, g: 0.9100335, b: 0.7326006, a: 0}
+    - _BaseColor: {r: 0.2763068, g: 0.6886792, b: 0.13968495, a: 0}
+    - _PageColor: {r: 1, g: 0.9647059, b: 0.92156863, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9110756625220702477
 MonoBehaviour:

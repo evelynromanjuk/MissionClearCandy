@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0ab768d4c36743a4f20c173c10baf, type: 3}
+  m_Name: Riddle1
+  m_EditorClassIdentifier: 
+  senderAdress: lila.kim@candylab.com
+  receiverAdress: marshall.mallow@candylab.com
+  subject: A riddle for you!
+  date: 13.02.2022
+  content: Hey Marshall. I got the perfect riddle for you!! >>I'm a sweet delight,
+    loved by many. Soft and chewy, not too uncanny. With flavors diverse, in a rainbow
+    array, A bite-sized treat to brighten your day.<< What is it?? Lila

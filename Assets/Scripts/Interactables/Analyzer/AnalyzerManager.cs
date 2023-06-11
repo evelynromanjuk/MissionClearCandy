@@ -96,7 +96,7 @@ public class AnalyzerManager : MonoBehaviour
             if(!_isActivatable || (_isActivatable & _isActive))
             {
                 Debug.Log("Level completed.");
-                //SubstanceAnalyzedEvent.Invoke();
+                SubstanceAnalyzedEvent.Invoke();
             }
         }
         else
