@@ -460,6 +460,8 @@ MonoBehaviour:
   Lever: {fileID: 0}
   AnalyzerStartButton2D: {fileID: 0}
   AnalyzerStartButton3D: {fileID: 0}
+  AnalyzerActivateButton2D: {fileID: 0}
+  AnalyzerCheckButton2D: {fileID: 0}
   Frame_Lab_Analyzer: {fileID: 0}
   AnalyzerManager: {fileID: 1897471522}
   type: 3
@@ -4615,6 +4617,11 @@ PrefabInstance:
     - target: {fileID: 4080747028471083880, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216097454875310106, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4858045875564038647, guid: fbc84ac0d91dccd46bd74480d1700510,
