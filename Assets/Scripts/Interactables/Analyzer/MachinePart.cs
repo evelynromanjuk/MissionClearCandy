@@ -5,11 +5,9 @@ using UnityEngine;
 public class MachinePart : MonoBehaviour
 {
     public SecurityElement _machinePart;
-    public AnalyzerManager AnalyzerManager;
 
     private void Start()
     {
-        //AnalyzerManager.AddToPartList(this);
     }
 
     public void UpdateMachinePart(bool isActive)

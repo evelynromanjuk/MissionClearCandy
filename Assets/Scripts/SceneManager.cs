@@ -17,6 +17,8 @@ public class SceneManager : MonoBehaviour
     public Lever Lever;
     public Button AnalyzerStartButton2D;
     public XRSimpleInteractable AnalyzerStartButton3D;
+    public Button AnalyzerActivateButton2D;
+    public Button AnalyzerCheckButton2D;
     public GameObject Frame_Lab_Analyzer;
     public AnalyzerManager AnalyzerManager;
 
@@ -48,6 +50,9 @@ public class SceneManager : MonoBehaviour
                 _doorActivatable = true;
                 FrameFillMachinePC.Initialize(_isRobotScene);
                 AnalyzerStartButton2D.interactable = false;
+                AnalyzerCheckButton2D.interactable = false;
+                AnalyzerActivateButton2D.gameObject.SetActive(true);
+                _analyzerActivatable = true;
                 break;
 
             case Type.VersionB:

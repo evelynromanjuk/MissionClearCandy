@@ -472,19 +472,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9113410285968714109}
-        m_TargetAssemblyTypeName: CheckSocket, Assembly-CSharp
-        m_MethodName: CheckPart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1069,19 +1057,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7204652093945149351}
-        m_TargetAssemblyTypeName: CheckSocket, Assembly-CSharp
-        m_MethodName: CheckPart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1615,6 +1591,8 @@ GameObject:
   - component: {fileID: 4125461328351340041}
   - component: {fileID: 5807383347730205580}
   - component: {fileID: 8552035108920705068}
+  - component: {fileID: 6909076534417212149}
+  - component: {fileID: 4574159183854572246}
   m_Layer: 0
   m_Name: SubstanceBallSocket
   m_TagString: Untagged
@@ -1730,19 +1708,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7599763331790741528}
-        m_TargetAssemblyTypeName: AnalyzerManager, Assembly-CSharp
-        m_MethodName: InsertSubstanceBall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1764,6 +1730,34 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &6909076534417212149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319573606416483165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b432782585d804e8099f18b358708a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MachinePartReference: {fileID: 625573840144558999, guid: 9a77b78004510d14e9799fa2c5b64c48,
+    type: 3}
+  AnalyzerManager: {fileID: 7599763331790741528}
+--- !u!114 &4574159183854572246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319573606416483165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f93a4cadc262f4d8789f5ced048c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanData: {fileID: 11400000, guid: f5536c8d02deec542a2c5364e9c50246, type: 2}
 --- !u!1 &2691741712546785903
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,19 +4090,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7508433590239396740}
-        m_TargetAssemblyTypeName: CheckSocket, Assembly-CSharp
-        m_MethodName: CheckPart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -4610,19 +4592,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7645294647251155424}
-        m_TargetAssemblyTypeName: CheckSocket, Assembly-CSharp
-        m_MethodName: CheckPart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -8882,19 +8852,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4124900448190508176}
-        m_TargetAssemblyTypeName: CheckSocket, Assembly-CSharp
-        m_MethodName: CheckPart
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -9294,7 +9252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _machinePart: {fileID: 11400000, guid: 7bc7d5d32b363fd4c80232b651c90de2, type: 2}
-  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &98547283755914137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13033,7 +12990,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _machinePart: {fileID: 11400000, guid: c77131a114836ed4eaa540b5040e11a5, type: 2}
-  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &4178123529556762873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13282,7 +13238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _machinePart: {fileID: 11400000, guid: 2996e1869cb22bc45a38f107a362352a, type: 2}
-  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!4 &4499399818704307986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f1f0733fbbe4b544894835b12b5a842,
@@ -13521,7 +13476,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _machinePart: {fileID: 11400000, guid: 78aec75ca6f74a64bb374d3e48d2fefb, type: 2}
-  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!4 &4237641457248397531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 321b11cb6b8dee240b82bd6a2fd6f952,
@@ -15020,7 +14974,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _machinePart: {fileID: 11400000, guid: 09fb1a2c1cfaa7f4da101769a220742d, type: 2}
-  AnalyzerManager: {fileID: 7599763331790741528}
 --- !u!1001 &6375058339821421637
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class AnalyzerManager : MonoBehaviour
     Action SubstanceAnalyzedEvent;
 
     private bool _isRobotScene;
-    private bool _substanceBallInserted;
 
     private bool _isActivatable = false;
     private bool _isActive = false;
@@ -23,7 +22,6 @@ public class AnalyzerManager : MonoBehaviour
     void Start()
     {
         _allCorrect = false;
-        _substanceBallInserted = false;
 
         if(_isActivatable)
         {
@@ -79,22 +77,16 @@ public class AnalyzerManager : MonoBehaviour
         }
     }
 
-    public void InsertSubstanceBall()
-    {
-        _substanceBallInserted = true;
-        Debug.Log("Ball inserted.");
-
-    }
-
     public void ActivateAnalyzer(bool isActivated)
     {
         _isActive = isActivated;
+        Debug.Log("Analyzer activated? " + _isActive);
     }
 
     public void StartAnalyzer()
     {
         //if (_allCorrect & _substanceBallInserted)
-        if(_allCorrect & _substanceBallInserted)
+        if(_allCorrect)
         {
             if(!_isActivatable || (_isActivatable & _isActive))
             {
@@ -104,7 +96,7 @@ public class AnalyzerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Failed: Substance Ball inserted = " + _substanceBallInserted + ", all parts correct= " + _allCorrect);
+            Debug.Log("Failed: all parts correct= " + _allCorrect);
 
         }
     }

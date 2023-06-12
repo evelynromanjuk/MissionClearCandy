@@ -25,14 +25,14 @@ public class Socket : MonoBehaviour
 
         insertedPart = _socket.GetOldestInteractableSelected();
 
-        if (MachinePartReference == null)
-        {
-            Debug.Log("Reference Object is Null");
-        }
-        if (insertedPart == null)
-        {
-            Debug.Log("Inserted Object is Null");
-        }
+        //if (MachinePartReference == null)
+        //{
+        //    Debug.Log("Reference Object is Null");
+        //}
+        //if (insertedPart == null)
+        //{
+        //    Debug.Log("Inserted Object is Null");
+        //}
 
         if ((insertedPart != null) && (MachinePartReference.transform.name == insertedPart.transform.name))
         {

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7023726010388885409}
   - component: {fileID: 3356318473847000}
   - component: {fileID: 3404426120948050101}
+  - component: {fileID: 5317856772349475264}
   m_Layer: 0
   m_Name: SubstanceBall
   m_TagString: Untagged
@@ -230,3 +231,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5317856772349475264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625573840144558999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd13c3f87b3d1164cbbc7f16cda6e404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _machinePart: {fileID: 11400000, guid: aebd7e7d7964b3a4b921094c07f41bd4, type: 2}
