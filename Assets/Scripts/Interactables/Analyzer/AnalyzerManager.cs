@@ -35,6 +35,9 @@ public class AnalyzerManager : MonoBehaviour
     {
         _isRobotScene = isRobotScene;
         _isActivatable = isActivatable;
+
+        Debug.Log("Is robot scene? = " + _isRobotScene);
+        Debug.Log("Is activatable? = " + _isActivatable);
     }
 
     //public void AddToPartList(MachinePart part)
@@ -50,30 +53,30 @@ public class AnalyzerManager : MonoBehaviour
     //for all machine parts, "isActive" will be updated
     public void CheckAllParts()
     {
-        bool isCorrect = true;
-
-        foreach(var socket in Sockets)
+        if(!_isActivatable || (_isActivatable & _isActive))
         {
-            if(!socket.CheckPart()) //if one part is inactive
+            bool isCorrect = true;
+
+            foreach (var socket in Sockets)
             {
-                isCorrect = false;
+                if (!socket.CheckPart()) //if one part is inactive
+                {
+                    isCorrect = false;
+                }
+            }
+
+            _allCorrect = isCorrect;
+
+            if(_allCorrect)
+            {
+                Debug.Log("All parts are correct");
+            }
+
+            if (!_isRobotScene)
+            {
+                CheckedAllParts.Invoke();
             }
         }
-
-        _allCorrect = isCorrect;
-        if (_allCorrect)
-        {
-            Debug.Log("AnalyzerManager: All parts are correct");
-        }
-        else
-        {
-            Debug.Log("AnalyzerManager: Not all parts are correct");
-        }
-        if(!_isRobotScene)
-        {
-            CheckedAllParts.Invoke();
-        }
-        
     }
 
     public void InsertSubstanceBall()
