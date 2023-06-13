@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class FluidCompositionManager : MonoBehaviour
 {
-    //public FrameFillMachine FrameFillMachine;
-
     private static List<Fluid> _fluids = new List<Fluid>();
-    //Action<float> FluidAmountChanged;
     Action<Fluid> FluidAmountChanged;
     static Action<List<Fluid>> FluidListReady;
     Action CompositionCorrectEvent;

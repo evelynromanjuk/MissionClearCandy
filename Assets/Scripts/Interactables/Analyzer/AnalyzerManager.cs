@@ -23,7 +23,7 @@ public class AnalyzerManager : MonoBehaviour
     {
         _allCorrect = false;
 
-        if(_isActivatable)
+        if(_isActivatable & _isRobotScene)
         {
             PlayerInteract.SubscribeAnalyzerActivated(ActivateAnalyzer);
         }

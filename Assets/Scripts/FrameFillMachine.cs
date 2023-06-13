@@ -18,16 +18,7 @@ public class FrameFillMachine : MonoBehaviour
     private List<Fluid> _fluids = new List<Fluid>();
     private bool _usesTip;
 
-    private void Awake()
-    {
-        //FluidCompositionManager.SubscribeFluidAmountChanged(UpdateFluidData);
-        //FluidCompositionManager.SubscribeFluidListReady(PasteFluidData);
-        //FluidCompositionManager.SubscribeCompositionCorrectEvent(ShowSuccessMessage);
-
-        Debug.Log("FrameFillMachine subscribed to FluidComposition Manager methods");
-    }
-
-    public void Initialize(bool IsRobotScene) //add to SceneManager
+    public void Initialize(bool IsRobotScene)
     {
         EmptyButton.SubscribeMachineEmptied(UpdateFluidData);
         FluidCompositionManager.SubscribeFluidAmountChanged(UpdateFluidData);
@@ -52,7 +43,6 @@ public class FrameFillMachine : MonoBehaviour
 
     public void PasteFluidData(List<Fluid> fluids)
     {
-        Debug.Log("FRAME-FILLMACHINE: Paste Fluid Data");
         _fluids = fluids;
         foreach (var fluid in fluids)
         {

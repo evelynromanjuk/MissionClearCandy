@@ -39,7 +39,7 @@ public class KeypadManager : MonoBehaviour
         _passwordFrameActive = false;
         _recipeCodeActive = false;
 
-        _correctRecipeCode = "143126";
+        _correctRecipeCode = "144026";
     }
 
     //EVENT SUBSCRIPTIONS
@@ -113,7 +113,7 @@ public class KeypadManager : MonoBehaviour
         if (code == _correctRecipeCode)
         {
             isCorrect = true;
-            Debug.Log("MACHINE IS WORKING :-)");
+            Debug.Log("MACHINE IS WORKING");
         }
         else
         {
