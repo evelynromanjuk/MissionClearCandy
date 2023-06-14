@@ -22,6 +22,7 @@ public class SceneManager : MonoBehaviour
     public AnalyzerManager AnalyzerManager;
     public CMScreenManager CMScreenManager;
     public TankControl TankControl;
+    public Valve Valve;
 
 
     private bool _isRobotScene = false;
@@ -64,6 +65,7 @@ public class SceneManager : MonoBehaviour
                 AnalyzerStartButton3D.enabled = false;
                 CMScreenManager.Initialize(true);
                 TankControl.Initialize(true); //_codeIsExternal == true, because hacker enters it
+                Valve.Initialize(true);
                 break;
 
             case Type.VersionC:

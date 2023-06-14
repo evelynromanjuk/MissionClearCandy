@@ -5,9 +5,11 @@ using UnityEngine;
 public class Valve : MonoBehaviour, IInteractable
 {
     public KeypadManager KeypadManager;
+    public RecipeSearch RecipeSearch;
 
     private Pipe _pipe;
     private bool _isInteractable;
+    private static bool _codeIsExternal = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +21,20 @@ public class Valve : MonoBehaviour, IInteractable
         }
 
         _isInteractable = false;
-        KeypadManager.SubscribeCorrectRecipeEntered(ChangeInteractableStatus);
+        
+        if(_codeIsExternal)
+        {
+            RecipeSearch.SubscribeCorrectCodeEntered(ChangeInteractableStatus);
+        }
+        else
+        {
+            KeypadManager.SubscribeCorrectRecipeEntered(ChangeInteractableStatus);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Initialize(bool isVersionB)
     {
-        
+        _codeIsExternal = isVersionB;
     }
 
     public void Interact()
@@ -42,5 +51,10 @@ public class Valve : MonoBehaviour, IInteractable
         {
             _isInteractable = true;
         }
+    }
+
+    void ChangeInteractableStatus()
+    {
+        _isInteractable = true;
     }
 }
