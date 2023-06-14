@@ -42,7 +42,11 @@ public class CMScreen : MonoBehaviour
     public void OpenFillMachineFrame()
     {
         _frameEnterRecipeCode.SetActive(false);
-        _frameWaitForData.SetActive(false);
+        if(_frameWaitForData != null)
+        {
+            _frameWaitForData.SetActive(false);
+        }
+        
         _frameFillMachine.SetActive(true);
     }
 
