@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &41496706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6105276705487429694, guid: b9be32178fd1b3c4d94bc931143942d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 153324829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7882e3689d00934caf6c0e794333d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &153324829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,6 +764,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9be32178fd1b3c4d94bc931143942d4, type: 3}
+--- !u!1 &334494858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7892649657173334887, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &374463763 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8113536556018853651, guid: fbc84ac0d91dccd46bd74480d1700510,
@@ -1375,6 +1393,8 @@ MonoBehaviour:
   AnalyzerCheckButton2D: {fileID: 0}
   Frame_Lab_Analyzer: {fileID: 1163382381}
   AnalyzerManager: {fileID: 1288840768}
+  CMScreenManager: {fileID: 2079880062}
+  TankControl: {fileID: 2063788920}
   type: 1
 --- !u!4 &1645122117
 Transform:
@@ -1832,6 +1852,11 @@ PrefabInstance:
       propertyPath: EmptyButton
       value: 
       objectReference: {fileID: 1841676105}
+    - target: {fileID: 4730340264753839020, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: _frameWaitForData
+      value: 
+      objectReference: {fileID: 334494858}
     - target: {fileID: 4858045875564038647, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: FluidCompositionManager
@@ -1847,6 +1872,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7746017729421341352, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: RecipeSearch
+      value: 
+      objectReference: {fileID: 41496706}
     - target: {fileID: 7812665360831258118, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_IsActive
@@ -2092,6 +2122,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6634312075306830287, guid: 9db5212f1affa6f408da3b01f8a5e4b9, type: 3}
+--- !u!114 &2063788920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5301781559615044346, guid: b9be32178fd1b3c4d94bc931143942d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 153324829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2f2e56333eaca4594ed4955d0668ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2079880062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7746017729421341352, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc671755666c0d49b35fb4b5996b6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2101197442 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8560845065294828645, guid: fbc84ac0d91dccd46bd74480d1700510,

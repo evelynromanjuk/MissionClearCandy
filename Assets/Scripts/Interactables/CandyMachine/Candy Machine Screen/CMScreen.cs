@@ -8,6 +8,7 @@ public class CMScreen : MonoBehaviour
     [SerializeField] private GameObject _frameSignIn;
     [SerializeField] private GameObject _frameEnterPassword;
     [SerializeField] private GameObject _frameEnterRecipeCode;
+    [SerializeField] private GameObject _frameWaitForData;
     [SerializeField] private GameObject _frameFillMachine;
     [SerializeField] private ScreenEmployeeData _screenEmployeeData;
     [SerializeField] private ScreenRecipeData _screenRecipeData;
@@ -32,9 +33,16 @@ public class CMScreen : MonoBehaviour
         _frameEnterRecipeCode.SetActive(true);
     }
 
+    public void OpenWaitForDataFrame()
+    {
+        _frameEnterPassword.SetActive(false);
+        _frameWaitForData.SetActive(true);
+    }
+
     public void OpenFillMachineFrame()
     {
         _frameEnterRecipeCode.SetActive(false);
+        _frameWaitForData.SetActive(false);
         _frameFillMachine.SetActive(true);
     }
 

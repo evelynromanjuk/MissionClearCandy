@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SceneManager : MonoBehaviour
 {
-    //public bool IsRobotScene;
     public FluidEntry FluidEntry;
     public SubstanceMachine SubstanceMachine;
     public FrameFillMachine FrameFillMachineLab;
@@ -21,6 +20,8 @@ public class SceneManager : MonoBehaviour
     public Button AnalyzerCheckButton2D;
     public GameObject Frame_Lab_Analyzer;
     public AnalyzerManager AnalyzerManager;
+    public CMScreenManager CMScreenManager;
+    public TankControl TankControl;
 
 
     private bool _isRobotScene = false;
@@ -53,6 +54,7 @@ public class SceneManager : MonoBehaviour
                 AnalyzerCheckButton2D.interactable = false;
                 AnalyzerActivateButton2D.gameObject.SetActive(true);
                 _analyzerActivatable = true;
+                TankControl.Initialize(false);//_codeIsExternal == false, because hacker does not enter it
                 break;
 
             case Type.VersionB:
@@ -60,6 +62,8 @@ public class SceneManager : MonoBehaviour
                 FrameFillMachinePC.Initialize(_isRobotScene);
                 Lever.DeactivateSimpleInteractable();
                 AnalyzerStartButton3D.enabled = false;
+                CMScreenManager.Initialize(true);
+                TankControl.Initialize(true); //_codeIsExternal == true, because hacker enters it
                 break;
 
             case Type.VersionC:

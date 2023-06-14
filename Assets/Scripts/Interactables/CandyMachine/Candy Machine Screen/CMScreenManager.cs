@@ -7,6 +7,9 @@ public class CMScreenManager : MonoBehaviour
     public Scanner Scanner;
     public CMScreen CMScreen;
     public KeypadManager KeypadManager;
+    public RecipeSearch RecipeSearch;
+
+    private bool _codeIsExternal = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,16 @@ public class CMScreenManager : MonoBehaviour
         KeypadManager.SubscribeCorrectPasswordEntered(OnPasswordEntered);
         KeypadManager.SubscribeCorrectRecipeEntered(OnCodeEntered);
         KeypadManager.SubscribeUserInputChanged(OnInputChanged);
+
+        if(_codeIsExternal)
+        {
+            RecipeSearch.SubscribeCorrectCodeEntered(OnCodeEnteredExternally);
+        }
+    }
+
+    public void Initialize(bool isVersionB)
+    {
+        _codeIsExternal = isVersionB;
     }
 
     public void SetScanner(Scanner newScanner)
@@ -46,7 +59,14 @@ public class CMScreenManager : MonoBehaviour
         }
         else
         {
-            CMScreen.OpenRecipeCodeFrame();
+            if(_codeIsExternal)
+            {
+                CMScreen.OpenWaitForDataFrame();
+            }
+            else
+            {
+                CMScreen.OpenRecipeCodeFrame();
+            }
             KeypadManager.PasswordFrameActive(false);
             KeypadManager.RecipeCodeFrameActive(true);
         }
@@ -62,6 +82,11 @@ public class CMScreenManager : MonoBehaviour
         {
             CMScreen.OpenFillMachineFrame();
         }
+    }
+
+    void OnCodeEnteredExternally()
+    {
+        CMScreen.OpenFillMachineFrame();
     }
 
     void OnInputChanged(string value, bool isPassword)

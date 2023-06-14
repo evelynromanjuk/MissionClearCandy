@@ -570,6 +570,8 @@ MonoBehaviour:
   AnalyzerCheckButton2D: {fileID: 77518015}
   Frame_Lab_Analyzer: {fileID: 1195279292}
   AnalyzerManager: {fileID: 1841676104}
+  CMScreenManager: {fileID: 0}
+  TankControl: {fileID: 2367293308291209836}
   type: 0
 --- !u!4 &1645122117
 Transform:
@@ -1857,6 +1859,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2367293308291209836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5301781559615044346, guid: b9be32178fd1b3c4d94bc931143942d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2367293308291209834}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2f2e56333eaca4594ed4955d0668ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4305701486497399118 stripped

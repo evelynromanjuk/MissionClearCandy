@@ -9,9 +9,22 @@ public class TankControl : MonoBehaviour
     public TMP_Text DefaultText;
     public KeypadManager KeypadManager;
 
+    private bool _codeIsExternal;
+
     void Start()
     {
-        KeypadManager.SubscribeCorrectRecipeEntered(ShowFluidList);
+        //code is "external" if hacker enters it
+        //if agent enters the recipe code, tank control subscribes to the KeypadManager
+        if(!_codeIsExternal)
+        {
+            KeypadManager.SubscribeCorrectRecipeEntered(ShowFluidList);
+        }
+        
+    }
+
+    public void Initialize(bool isVersionB)
+    {
+        _codeIsExternal = isVersionB;
     }
 
     private void ShowFluidList(bool isCorrect)
