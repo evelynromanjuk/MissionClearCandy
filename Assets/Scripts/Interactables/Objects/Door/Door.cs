@@ -39,6 +39,7 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
+        Debug.Log("Trying to open door");
         if(_isOpenable & _substanceCreated)
         {
             if (!_isActivatable || (_isActivatable & _isActive))
@@ -59,6 +60,18 @@ public class Door : MonoBehaviour
             {
                 Debug.Log("Door cannot be opened.");
 
+            }
+        }
+        if(!_isOpenable) //...not openable by agent, but by hacker in Version B
+        {
+            if (!_isOpen)
+            {
+                _doorAnimator.Play("Open", 0, 0.0f);
+                _isOpen = true;
+            }
+            else
+            {
+                Debug.Log("Door is already open.");
             }
         }
     }
