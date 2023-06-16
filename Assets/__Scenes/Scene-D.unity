@@ -468,6 +468,7 @@ MonoBehaviour:
   TankControl: {fileID: 0}
   Valve: {fileID: 0}
   EmptyButton: {fileID: 0}
+  PlayerInteract: {fileID: 1414546166}
   type: 3
 --- !u!1001 &180616087
 PrefabInstance:

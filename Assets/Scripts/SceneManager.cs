@@ -24,6 +24,7 @@ public class SceneManager : MonoBehaviour
     public TankControl TankControl;
     public Valve Valve;
     public EmptyButton EmptyButton;
+    public PlayerInteract PlayerInteract;
 
 
     private bool _isRobotScene = false;
@@ -82,6 +83,7 @@ public class SceneManager : MonoBehaviour
                 _usesRobotTip = true;
                 _analyzerActivatable = true;
                 Pipe.SetHackerKeyUse();
+                PlayerInteract.Initialize(true);
                 Debug.Log("Is Version D! _isRobotScene = " + _isRobotScene + ", _isVertical = " + _scannerIsVertical);
                 break;
 

@@ -30,6 +30,7 @@ public class PlayerInteract : MonoBehaviour
 
     private bool _doorButtonFocused = false;
     private bool _analyzerFocused = false;
+    private bool _isVersionD = false;
 
 
     void Start()
@@ -48,6 +49,11 @@ public class PlayerInteract : MonoBehaviour
         _inputManager.onFoot.ActivatePipe.canceled += OnDeactivatePipe;
         _inputManager.onFoot.HoldInteract.started += OnActivateDoor;
         _inputManager.onFoot.HoldInteract.canceled += OnDeactivateDoor;
+    }
+
+    public void Initialize(bool isVersionD)
+    {
+        _isVersionD = isVersionD;
     }
 
     void Update()
@@ -150,41 +156,53 @@ public class PlayerInteract : MonoBehaviour
     //EVENT: keyboard key pressed, handles depending on key
     private void OnKeyboardEnter(InputAction.CallbackContext obj)
     {
-        if (_currentInputField != null && _currentInputField.interactable == true)
+        if(_isVersionD)
         {
-            string keyValue = obj.control.name;
-            
-            if(keyValue.Equals("enter"))
+            if (_currentInputField != null && _currentInputField.interactable == true)
             {
-                _currentInputField.interactable = false;
-                PasswordEntered.Invoke(_currentInputField.text);
+                string keyValue = obj.control.name;
+
+                if (keyValue.Equals("enter"))
+                {
+                    _currentInputField.interactable = false;
+                    PasswordEntered.Invoke(_currentInputField.text);
+                }
+                else if (keyValue.Equals("backspace"))
+                {
+                    _currentInputField.text = _currentInputField.text.Remove(_currentInputField.text.Length - 1);
+                }
+                else
+                {
+                    _currentInputField.text += keyValue;
+                }
+                //Debug.Log("Pressed: " + keyValue);
             }
-            else if(keyValue.Equals("backspace"))
-            {
-                _currentInputField.text = _currentInputField.text.Remove(_currentInputField.text.Length - 1);
-            }
-            else
-            {
-                _currentInputField.text += keyValue;
-            }
-            //Debug.Log("Pressed: " + keyValue);
         }
+      
     }
 
     private void OnActivatePipe(InputAction.CallbackContext obj)
     {
-        string keyValue = obj.control.name;
-        //PipeActivated(keyValue, true);
-        PipeActivated.Invoke(keyValue, true);
-        Debug.Log("Hacker pressed Key: " + keyValue);
+        if(_isVersionD)
+        {
+            string keyValue = obj.control.name;
+            //PipeActivated(keyValue, true);
+            PipeActivated.Invoke(keyValue, true);
+            Debug.Log("Hacker pressed Key: " + keyValue);
+        }
+       
     }
 
     private void OnDeactivatePipe(InputAction.CallbackContext obj)
     {
-        string keyValue = obj.control.name;
-        //PipeActivated(keyValue, false);
-        PipeActivated.Invoke(keyValue, false);
-        Debug.Log("Hacker released Key: " + keyValue);
+        if(_isVersionD)
+        {
+            string keyValue = obj.control.name;
+            //PipeActivated(keyValue, false);
+            PipeActivated.Invoke(keyValue, false);
+            Debug.Log("Hacker released Key: " + keyValue);
+        }
+        
     }
 
     private void OnActivateDoor(InputAction.CallbackContext obj)
