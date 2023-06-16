@@ -19,6 +19,7 @@ public class ScreenEmployeeData : MonoBehaviour
         WrongPassword.gameObject.SetActive(true);
     }
 
+
     public void UpdateUserInput(string value)
     {
         EnterPassword.text = value;

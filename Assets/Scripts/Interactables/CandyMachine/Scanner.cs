@@ -12,12 +12,6 @@ public class Scanner : MonoBehaviour
     //private int _countbefore;
     //private static int _subscribercount;
 
-
-    //private void Awake()
-    //{
-    //    _subscribercount = 0;
-    //}
-
     //EVENT SUBSCRIPTIONS
     public void SubscribeCardScanned(Action<EmployeeCard> method)
     {
@@ -46,16 +40,12 @@ public class Scanner : MonoBehaviour
             return;
         }
 
-        //Debug.Log("Collision with Employee Card detected");
-        //Debug.Log("Employee Name: " + card.GetEmployeeName());
-        //Debug.Log("Employee Password: " + card.GetPassword());
-        //Debug.Log("Is valid: " + card.GetCardValidity());
+        //if (card.GetCardValidity())
+        //{
+        //    CardScanned?.Invoke(card);
+        //}
 
-        if (card.GetCardValidity())
-        {
-            CardScanned?.Invoke(card);
-        }
-        
+        CardScanned?.Invoke(card);
     }
 
     private void OnCollisionExit(Collision collision)
@@ -67,7 +57,6 @@ public class Scanner : MonoBehaviour
     private void OnApplicationQuit()
     {
         Debug.Log(this.gameObject.name);
-       // _subscribercount = 0;
         Destroy(this.gameObject);
     }
 

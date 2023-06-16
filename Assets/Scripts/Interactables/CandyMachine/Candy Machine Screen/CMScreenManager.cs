@@ -10,6 +10,7 @@ public class CMScreenManager : MonoBehaviour
     public RecipeSearch RecipeSearch;
 
     private bool _codeIsExternal = false;
+    private bool _loggedIn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -40,15 +41,33 @@ public class CMScreenManager : MonoBehaviour
 
     void OnScan(EmployeeCard card)
     {
-        string employeeName = card.GetEmployeeName();
-        string employeePassword = card.GetPassword();
-        CMScreen.OpenSignInFrame(employeeName, employeePassword);
-        KeypadManager.PasswordFrameActive(true);
+        if(!_loggedIn)
+        {
+            Debug.Log("Card validity: " + card.GetCardValidity());
+            if(card.GetCardValidity() == false)
+            {
+                CMScreen.OpenCardInvalidFrame();
+                Debug.Log("Card Invalid!");
+            }
+            else
+            {
+                string employeeName = card.GetEmployeeName();
+                string employeePassword = card.GetPassword();
+                CMScreen.OpenSignInFrame(employeeName, employeePassword);
+                KeypadManager.PasswordFrameActive(true);
+            }
+            
+        }
+        
     }
 
     void OnCardRemoved()
     {
-        CMScreen.OpenDefaultFrame();
+        if(!_loggedIn)
+        {
+            CMScreen.OpenDefaultFrame();
+        }
+        
     }
 
     void OnPasswordEntered(bool passwordCorrect)
@@ -69,6 +88,8 @@ public class CMScreenManager : MonoBehaviour
             }
             KeypadManager.PasswordFrameActive(false);
             KeypadManager.RecipeCodeFrameActive(true);
+
+            _loggedIn = true;
         }
     }
 

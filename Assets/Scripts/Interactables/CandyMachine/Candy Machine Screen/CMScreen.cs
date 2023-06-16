@@ -6,6 +6,7 @@ using UnityEngine;
 public class CMScreen : MonoBehaviour
 {
     [SerializeField] private GameObject _frameSignIn;
+    [SerializeField] private GameObject _frameCardInvalid;
     [SerializeField] private GameObject _frameEnterPassword;
     [SerializeField] private GameObject _frameEnterRecipeCode;
     [SerializeField] private GameObject _frameWaitForData;
@@ -15,8 +16,22 @@ public class CMScreen : MonoBehaviour
 
     public void OpenDefaultFrame()
     {
-        _frameEnterPassword.SetActive(false);
+        if(_frameEnterPassword.activeInHierarchy == true)
+        {
+            _frameEnterPassword.SetActive(false);
+        }
+        if(_frameCardInvalid.activeInHierarchy == true)
+        {
+            _frameCardInvalid.SetActive(false);
+        }
+        
         _frameSignIn.SetActive(true);
+    }
+
+    public void OpenCardInvalidFrame()
+    {
+        _frameSignIn.SetActive(false);
+        _frameCardInvalid.SetActive(true);
     }
 
     public void OpenSignInFrame(string name, string password)

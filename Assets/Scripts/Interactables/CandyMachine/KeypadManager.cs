@@ -95,6 +95,7 @@ public class KeypadManager : MonoBehaviour
         {
             isCorrect = true;
             _isPasswordValue = false; //set to false because recipe code is next
+            _currentKeypadValue = "";
             Debug.Log("WELCOME TO CANDY MACHINE APP");
         }
         else
@@ -103,7 +104,7 @@ public class KeypadManager : MonoBehaviour
         }
 
         CorrectPasswordEntered.Invoke(isCorrect);
-        _currentKeypadValue = "";
+        
     }
 
     private void CheckRecipeCode(string code)
@@ -113,6 +114,7 @@ public class KeypadManager : MonoBehaviour
         if (code == _correctRecipeCode)
         {
             isCorrect = true;
+            _currentKeypadValue = "";
             Debug.Log("MACHINE IS WORKING");
         }
         else
@@ -121,7 +123,7 @@ public class KeypadManager : MonoBehaviour
         }
 
         CorrectRecipeEntered.Invoke(isCorrect);
-        _currentKeypadValue = "";
+        //_currentKeypadValue = "";
     }
 
     public void PasswordFrameActive(bool isActive)
@@ -148,7 +150,8 @@ public class KeypadManager : MonoBehaviour
 
     public void ResetKeypadValues()
     {
-        _currentKeypadValue = "";
+        _currentKeypadValue = _currentKeypadValue.Remove(_currentKeypadValue.Length - 1);
+        //_currentKeypadValue = "";
         UserInputChanged.Invoke(_currentKeypadValue, _isPasswordValue);
     }
 }
