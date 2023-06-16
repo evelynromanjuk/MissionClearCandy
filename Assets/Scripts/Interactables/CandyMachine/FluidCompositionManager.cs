@@ -103,4 +103,9 @@ public class FluidCompositionManager : MonoBehaviour
     {
         CompositionCorrectEvent += method;
     }
+
+    public void TestEvent()
+    {
+        CompositionCorrectEvent.Invoke();
+    }
 }
