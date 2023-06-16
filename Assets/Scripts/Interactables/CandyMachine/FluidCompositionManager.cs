@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class FluidCompositionManager : MonoBehaviour
 {
+    public EmptyButton EmptyButton;
+
     private static List<Fluid> _fluids = new List<Fluid>();
+
     Action<Fluid> FluidAmountChanged;
     static Action<List<Fluid>> FluidListReady;
     Action CompositionCorrectEvent;
@@ -15,6 +18,7 @@ public class FluidCompositionManager : MonoBehaviour
     void Start()
     {
         FluidListReady.Invoke(_fluids);
+        EmptyButton.SubscribeMachineEmptied(ResetTotalPercentage);
     }
 
     public void AddFluidToList(Fluid fluid)
@@ -78,6 +82,11 @@ public class FluidCompositionManager : MonoBehaviour
             CompositionCorrectEvent.Invoke(); //Activates lever
         }
 
+    }
+
+    private void ResetTotalPercentage(Fluid fluid)
+    {
+        totalPercentage = 0;
     }
 
     public void SubscribeFluidListReady(Action<List<Fluid>> method)

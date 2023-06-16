@@ -1620,6 +1620,7 @@ MonoBehaviour:
   CMScreenManager: {fileID: 2079880062}
   TankControl: {fileID: 2063788920}
   Valve: {fileID: 1133566097}
+  EmptyButton: {fileID: 1841676105}
   type: 1
 --- !u!4 &1645122117
 Transform:
@@ -2107,6 +2108,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7655962925694007824, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7746017729421341352, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: RecipeSearch
@@ -2122,6 +2128,11 @@ PrefabInstance:
       propertyPath: SecurityElementDisplay
       value: 
       objectReference: {fileID: 1201061909}
+    - target: {fileID: 8113536555693659249, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: RecipeSearch
+      value: 
+      objectReference: {fileID: 41496706}
     - target: {fileID: 8113536555693659249, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: FrameFillMachine

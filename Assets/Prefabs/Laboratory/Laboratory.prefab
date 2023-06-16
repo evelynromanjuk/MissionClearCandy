@@ -6801,6 +6801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b9d334ab5a7ad46a703ef9b53386d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EmptyButton: {fileID: 8113536555693659249}
 --- !u!1 &8113536556182902683
 GameObject:
   m_ObjectHideFlags: 0
@@ -16667,6 +16668,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubstanceMachine
       objectReference: {fileID: 0}
+    - target: {fileID: 1963378021467469551, guid: 59fedcb5136ce394588cc570eb007abb,
+        type: 3}
+      propertyPath: KeypadManager
+      value: 
+      objectReference: {fileID: 8113536556489894756}
     - target: {fileID: 2018342898480698671, guid: 59fedcb5136ce394588cc570eb007abb,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -18462,6 +18468,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
+--- !u!64 &1947159521482829273
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310522531146592978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!64 &3464989925211353986
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18580,20 +18600,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KeypadManager: {fileID: 8113536556489894756}
   RecipeSearch: {fileID: 0}
---- !u!64 &1947159521482829273
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310522531146592978}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3222399876758667050, guid: 088a9bb17e0ea6548abf4e0a1bb00b51, type: 3}
 --- !u!4 &8580390830757440049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 088a9bb17e0ea6548abf4e0a1bb00b51,
