@@ -652,6 +652,11 @@ PrefabInstance:
       propertyPath: AnalyzerManager
       value: 
       objectReference: {fileID: 1288840768}
+    - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: FluidCompositionManager
+      value: 
+      objectReference: {fileID: 374463763}
     - target: {fileID: 4634447641502175660, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchorMax.y

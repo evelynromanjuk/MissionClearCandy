@@ -573,6 +573,7 @@ MonoBehaviour:
   CMScreenManager: {fileID: 0}
   TankControl: {fileID: 2367293308291209836}
   Valve: {fileID: 0}
+  EmptyButton: {fileID: 0}
   type: 0
 --- !u!4 &1645122117
 Transform:
@@ -1161,7 +1162,7 @@ PrefabInstance:
     - target: {fileID: 2402412066704316064, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -42.35
+      value: -42.350006
       objectReference: {fileID: 0}
     - target: {fileID: 2551505173957280880, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
@@ -1311,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 3562372313424895684, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -42.35
+      value: -42.350006
       objectReference: {fileID: 0}
     - target: {fileID: 3760371354868829794, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
@@ -1368,6 +1369,11 @@ PrefabInstance:
       propertyPath: AnalyzerManager
       value: 
       objectReference: {fileID: 1841676104}
+    - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: FluidCompositionManager
+      value: 
+      objectReference: {fileID: 374463763}
     - target: {fileID: 4634447641502175660, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchorMax.y

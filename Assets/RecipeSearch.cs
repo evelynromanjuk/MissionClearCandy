@@ -9,9 +9,8 @@ public class RecipeSearch : MonoBehaviour
 {
     public TMP_InputField InputField;
     public FrameFillMachine FrameFillMachine2D;
+    public LogConsole LogConsole;
     public TMP_Text DefaultText;
-    public TMP_Text WarningCode;
-    public TMP_Text WarningText;
 
     Action CorrectCodeEntered;
 
@@ -19,6 +18,8 @@ public class RecipeSearch : MonoBehaviour
     private string _correctCode;
 
     private int _subscriberCount;
+    private string _warningCode = "WARNING! ERROR_2410";
+    private string _warningText = ">>>Incorrect code. Recipe not found.";
 
     public void SubscribeCorrectCodeEntered(Action method)
     {
@@ -47,8 +48,7 @@ public class RecipeSearch : MonoBehaviour
         }
         else
         {
-            WarningCode.text = "WARNING! ERROR_2410";
-            WarningText.text = ">>>Incorrect code. Recipe not found.";
+            LogConsole.ChangeLogText(_warningCode, _warningText);
         }
     }
 
