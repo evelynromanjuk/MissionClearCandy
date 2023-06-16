@@ -11,20 +11,29 @@ public class TankControl : MonoBehaviour
 
     private bool _codeIsExternal;
 
-    void Start()
-    {
-        //code is "external" if hacker enters it
-        //if agent enters the recipe code, tank control subscribes to the KeypadManager
-        if(!_codeIsExternal)
-        {
-            KeypadManager.SubscribeCorrectRecipeEntered(ShowFluidList);
-        }
+    //void Start()
+    //{
+    //    //code is "external" if hacker enters it
+    //    //if agent enters the recipe code, tank control subscribes to the KeypadManager
+    //    if(!_codeIsExternal)
+    //    {
+    //        KeypadManager.SubscribeCorrectRecipeEntered(ShowFluidList);
+           
+    //    }
         
-    }
+    //}
 
     public void Initialize(bool isVersionB)
     {
         _codeIsExternal = isVersionB;
+
+        //code is "external" if hacker enters it (Version B)
+        //if agent enters the recipe code, tank control subscribes to the KeypadManager (Version A)
+        if (!_codeIsExternal)
+        {
+            KeypadManager.SubscribeCorrectRecipeEntered(ShowFluidList);
+            Debug.Log("Tank Control subscribed to keypad manager");
+        }
     }
 
     private void ShowFluidList(bool isCorrect)
@@ -34,5 +43,7 @@ public class TankControl : MonoBehaviour
             FrameFillMachine2D.gameObject.SetActive(true);
             DefaultText.gameObject.SetActive(false);
         }
+
+        Debug.Log("Tank control -- Was recipe code correct? " + isCorrect);
     }
 }

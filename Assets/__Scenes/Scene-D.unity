@@ -467,6 +467,7 @@ MonoBehaviour:
   CMScreenManager: {fileID: 0}
   TankControl: {fileID: 0}
   Valve: {fileID: 0}
+  EmptyButton: {fileID: 0}
   type: 3
 --- !u!1001 &180616087
 PrefabInstance:
@@ -5079,6 +5080,11 @@ PrefabInstance:
     - target: {fileID: 6030307716517874110, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225843046912031258, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6383305508375760744, guid: fbc84ac0d91dccd46bd74480d1700510,
