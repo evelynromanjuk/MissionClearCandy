@@ -11521,8 +11521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 150.333, y: -25}
+  m_SizeDelta: {x: 300.667, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3341548931014431302
 CanvasRenderer:
@@ -11552,7 +11552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select a system
+  m_text: Select a system to inspect.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13142,6 +13142,7 @@ GameObject:
   - component: {fileID: 3220542812022049036}
   - component: {fileID: 124164951029395789}
   - component: {fileID: 4276040401355812675}
+  - component: {fileID: 2976587967850991185}
   m_Layer: 5
   m_Name: Eject
   m_TagString: Untagged
@@ -13264,6 +13265,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2976587967850991185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118281744135251960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bdbd949a65e8948a89d0df1d91b7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FluidCompositionManager: {fileID: 0}
+  _isInteractable: 1
 --- !u!1 &4164594704458353091
 GameObject:
   m_ObjectHideFlags: 0
@@ -22778,6 +22793,8 @@ MonoBehaviour:
   WarningCodeField: {fileID: 3972937381342709214}
   WarningTextField: {fileID: 7397878849958884678}
   FluidCompositionManager: {fileID: 0}
+  Lever: {fileID: 0}
+  EmptyButton: {fileID: 0}
 --- !u!1 &7813241258537049167
 GameObject:
   m_ObjectHideFlags: 0

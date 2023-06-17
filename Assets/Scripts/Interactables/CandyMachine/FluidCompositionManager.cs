@@ -12,6 +12,7 @@ public class FluidCompositionManager : MonoBehaviour
     Action<Fluid> FluidAmountChanged;
     static Action<List<Fluid>> FluidListReady;
     Action CompositionCorrectEvent;
+    Action GoalExceeded;
 
     private float totalPercentage = 0;
 
@@ -47,8 +48,8 @@ public class FluidCompositionManager : MonoBehaviour
             }
             if (fluid.CurrentPercentage > fluid.GoalPercentage)
             {
-                Debug.Log("Percentage goal was crossed.");
                 fluid.ReachedGoal = false;
+                GoalExceeded.Invoke();
             }
         }
         else
@@ -102,6 +103,11 @@ public class FluidCompositionManager : MonoBehaviour
     public void SubscribeCompositionCorrectEvent(Action method)
     {
         CompositionCorrectEvent += method;
+    }
+
+    public void SubscribeGoalExceeded(Action method)
+    {
+        GoalExceeded += method;
     }
 
     public void TestEvent()

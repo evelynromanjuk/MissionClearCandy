@@ -620,6 +620,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1814119435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7664768216443175866, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a12262aee6eafb44b7196b5d4f1a2e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1841676103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 7655962925694007824, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7812665360831258118, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
@@ -1259,6 +1271,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2976587967850991185, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: _isInteractable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976587967850991185, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: FluidCompositionManager
+      value: 
+      objectReference: {fileID: 374463763}
     - target: {fileID: 3254584482490759762, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1414,6 +1436,16 @@ PrefabInstance:
       propertyPath: AnalyzerManager
       value: 
       objectReference: {fileID: 1841676104}
+    - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: Lever
+      value: 
+      objectReference: {fileID: 1814119435}
+    - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: EmptyButton
+      value: 
+      objectReference: {fileID: 1169284585}
     - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: FluidCompositionManager

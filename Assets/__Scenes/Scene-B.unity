@@ -487,6 +487,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2976587967850991185, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: _isInteractable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976587967850991185, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: FluidCompositionManager
+      value: 
+      objectReference: {fileID: 374463763}
     - target: {fileID: 3254584482490759762, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -629,6 +639,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4276040401355812675, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276040401355812675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276040401355812675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1841676104}
@@ -657,6 +677,16 @@ PrefabInstance:
       propertyPath: AnalyzerManager
       value: 
       objectReference: {fileID: 1288840768}
+    - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: Lever
+      value: 
+      objectReference: {fileID: 1841676104}
+    - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: EmptyButton
+      value: 
+      objectReference: {fileID: 1841676105}
     - target: {fileID: 4504649049875690675, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: FluidCompositionManager
@@ -767,6 +797,11 @@ PrefabInstance:
       propertyPath: AnalyzerManager
       value: 
       objectReference: {fileID: 1288840768}
+    - target: {fileID: 6105276705487429694, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: KeypadManager
+      value: 
+      objectReference: {fileID: 367909513}
     - target: {fileID: 6894081737106022908, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -957,6 +992,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8914211619517074197, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9136459776321248371, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -980,6 +1020,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1841676103}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &367909513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8113536556489894756, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c3933ecd2281642a120e35240f3ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &374463763 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8113536556018853651, guid: fbc84ac0d91dccd46bd74480d1700510,

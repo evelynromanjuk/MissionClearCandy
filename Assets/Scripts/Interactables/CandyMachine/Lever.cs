@@ -12,6 +12,7 @@ public class Lever : MonoBehaviour, IInteractable
 
     private XRSimpleInteractable simpleInteractable;
     private bool _isInteractable = true; //is false in Version B, because only hacker can eject substance
+    private bool _substanceCreated = false;
 
     private void Awake()
     {
@@ -34,17 +35,24 @@ public class Lever : MonoBehaviour, IInteractable
         {
             simpleInteractable.enabled = true;
         }
+        _substanceCreated = true;
     }
 
     public void PullLever()
     {
-        //play lever animation
-        SpawnBall.Spawn();
-        simpleInteractable.enabled = false;
+        if(_substanceCreated)
+        {
+            //TO DO: play lever animation
+            SpawnBall.Spawn();
+            simpleInteractable.enabled = false;
 
-        //Invoke event to activate door
-        SubstanceEjected.Invoke();
-
+            //Invoke event to activate door
+            SubstanceEjected.Invoke();
+        }
+        else
+        {
+            Debug.Log("Lever cannot be pulled. Substance not created yet.");
+        }
     }
 
     public void Interact()

@@ -7,6 +7,7 @@ using System;
 
 public class RecipeSearch : MonoBehaviour
 {
+    public KeypadManager KeypadManager;
     public TMP_InputField InputField;
     public FrameFillMachine FrameFillMachine2D;
     public LogConsole LogConsole;
@@ -16,10 +17,12 @@ public class RecipeSearch : MonoBehaviour
 
     [SerializeField]
     private string _correctCode;
-
     private int _subscriberCount;
-    private string _warningCode = "WARNING! ERROR_2410";
-    private string _warningText = ">>>Incorrect code. Recipe not found.";
+
+    private void Start()
+    {
+        KeypadManager.SubscribeCorrectPasswordEntered(EnableButton);
+    }
 
     public void SubscribeCorrectCodeEntered(Action method)
     {
@@ -43,12 +46,22 @@ public class RecipeSearch : MonoBehaviour
 
             if(_subscriberCount > 0)
             {
+                Debug.Log("Recipe Search: Correct code entered");
                 CorrectCodeEntered.Invoke();
             }
+            LogConsole.ChangeLogText("SUCCESS", ">>>Recipe code: 144026 found.");
         }
         else
         {
-            LogConsole.ChangeLogText(_warningCode, _warningText);
+            LogConsole.ChangeLogText("WARNING! ERROR_2410", ">>>Incorrect code. Recipe not found.");
+        }
+    }
+
+    private void EnableButton(bool isCorrect)
+    {
+        if (this.gameObject.GetComponent<Button>() & isCorrect)
+        {
+            this.gameObject.GetComponent<Button>().interactable = true;
         }
     }
 

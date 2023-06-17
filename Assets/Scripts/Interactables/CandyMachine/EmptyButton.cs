@@ -18,16 +18,15 @@ public class EmptyButton : MonoBehaviour, IInteractable
     private void Start()
     {
         KeypadManager.SubscribeCorrectRecipeEntered(EnableEmptyButton);
-        if(_codeIsExternal)
-        {
-            RecipeSearch.SubscribeCorrectCodeEntered(EnableEmptyButton);
-        }
-
     }
 
     public void Initialize(bool isVersionB)
     {
         _codeIsExternal = isVersionB; //code is external meaning that the hacker is entering the recipe code, which is the case in Version B
+        if (_codeIsExternal)
+        {
+            RecipeSearch.SubscribeCorrectCodeEntered(EnableEmptyButton);
+        }
     }
 
     public void SubscribeMachineEmptied(Action<Fluid> method)

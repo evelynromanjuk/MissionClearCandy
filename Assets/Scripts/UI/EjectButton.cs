@@ -7,6 +7,8 @@ public class EjectButton : MonoBehaviour
 {
     public FluidCompositionManager FluidCompositionManager;
 
+    public bool _isInteractable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,10 @@ public class EjectButton : MonoBehaviour
     // Update is called once per frame
     void OnSubstanceEjected()
     {
-        this.gameObject.GetComponent<Button>().interactable = true;
+        if(_isInteractable)
+        {
+            this.gameObject.GetComponent<Button>().interactable = true;
+        }
+        
     }
 }
