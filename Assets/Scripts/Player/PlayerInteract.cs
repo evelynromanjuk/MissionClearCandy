@@ -102,6 +102,10 @@ public class PlayerInteract : MonoBehaviour
         }
         else
         {
+            if(_currentScannableObj != null)
+            {
+                _currentScannableObj = null;
+            }
             if (_currentInputField != null)
             {
                 _currentInputField.interactable = false;

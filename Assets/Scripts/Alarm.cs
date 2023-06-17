@@ -19,10 +19,11 @@ public class Alarm : MonoBehaviour
     private bool _emergencyIsRunning;
     private float _emergencyTimeRemaining = 15f;
 
-    void Start()
+    public void InitializeAlarm()
     {
         _alarmIsRunning = true;
         _emergencyIsRunning = false;
+        Debug.Log("COUNTDOWN STARTS");
     }
 
     private void Update()
