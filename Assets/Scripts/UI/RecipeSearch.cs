@@ -19,7 +19,12 @@ public class RecipeSearch : MonoBehaviour
     private string _correctCode;
     private int _subscriberCount;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    KeypadManager.SubscribeCorrectPasswordEntered(EnableButton);
+    //}
+
+    public void Initialize()
     {
         KeypadManager.SubscribeCorrectPasswordEntered(EnableButton);
     }

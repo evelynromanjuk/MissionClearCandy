@@ -1704,6 +1704,7 @@ MonoBehaviour:
   Lever: {fileID: 1841676104}
   AnalyzerStartButton2D: {fileID: 0}
   AnalyzerStartButton3D: {fileID: 874255743}
+  AnalyzerCheckButton3D: {fileID: 1656351208}
   AnalyzerActivateButton2D: {fileID: 0}
   AnalyzerCheckButton2D: {fileID: 0}
   Frame_Lab_Analyzer: {fileID: 1163382381}
@@ -1713,6 +1714,7 @@ MonoBehaviour:
   Valve: {fileID: 1133566097}
   EmptyButton: {fileID: 1841676105}
   PlayerInteract: {fileID: 0}
+  RecipeSearch: {fileID: 41496706}
   type: 1
 --- !u!4 &1645122117
 Transform:
@@ -1729,6 +1731,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656351208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782053456338026617, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1676749666
 MonoBehaviour:
   m_ObjectHideFlags: 0

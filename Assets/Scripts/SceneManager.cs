@@ -16,6 +16,7 @@ public class SceneManager : MonoBehaviour
     public Lever Lever;
     public Button AnalyzerStartButton2D;
     public XRSimpleInteractable AnalyzerStartButton3D;
+    public XRSimpleInteractable AnalyzerCheckButton3D;
     public Button AnalyzerActivateButton2D;
     public Button AnalyzerCheckButton2D;
     public GameObject Frame_Lab_Analyzer;
@@ -25,6 +26,7 @@ public class SceneManager : MonoBehaviour
     public Valve Valve;
     public EmptyButton EmptyButton;
     public PlayerInteract PlayerInteract;
+    public RecipeSearch RecipeSearch;
 
 
     private bool _isRobotScene = false;
@@ -60,6 +62,7 @@ public class SceneManager : MonoBehaviour
                 AnalyzerActivateButton2D.gameObject.SetActive(true);
                 _analyzerActivatable = true;
                 TankControl.Initialize(false);//_codeIsExternal == false, because hacker does not enter it
+                RecipeSearch.Initialize();
                 break;
 
             case Type.VersionB:
@@ -68,10 +71,12 @@ public class SceneManager : MonoBehaviour
                 FrameFillMachinePC.Initialize(_isRobotScene);
                 Lever.DeactivateSimpleInteractable();
                 AnalyzerStartButton3D.enabled = false;
+                AnalyzerCheckButton3D.enabled = false;
                 CMScreenManager.Initialize(true);
                 TankControl.Initialize(true); //_codeIsExternal == true, because hacker enters it
                 Valve.Initialize(true);
                 EmptyButton.Initialize(true);
+                RecipeSearch.Initialize();
                 break;
 
             case Type.VersionC:
