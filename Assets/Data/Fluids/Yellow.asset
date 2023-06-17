@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Yellow
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 83ccdc9ac5e951843aaa0adf65614009, type: 2}
-  FluidName: YELLOW_C1B3
+  FluidName: YELLOW_C13
   Key: y
   CurrentPercentage: 0
   GoalPercentage: 8
