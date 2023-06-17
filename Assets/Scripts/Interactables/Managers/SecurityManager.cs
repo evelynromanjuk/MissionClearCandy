@@ -10,26 +10,44 @@ public class SecurityManager : MonoBehaviour
     public SecurityElement Door2;
 
     public Lever Lever;
+    public Door Door;
     public SecurityElementDisplay SecurityElementDisplay;
 
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    KeypadManager.SubscribeCorrectPasswordEntered(ActivateDoor2);
-    //}
+    private bool _doorExternallyOpened;
 
-    public void Initizalize(bool isRobotScene)
+    public void Initizalize(bool isRobotScene, bool isVersionB)
     {
         if(!isRobotScene)
         {
             Lever.SubscribeSubstanceEjected(ActivateDoor2);
+            if(isVersionB)
+            {
+                _doorExternallyOpened = isVersionB; //hacker opens the door via app
+            }
         }
     }
 
    void ActivateDoor2()
     {
-        Door2.SetActive(true);
-        SecurityElementDisplay.ShowDetails();
+        Debug.Log("Security Manager: ACtivate Door");
+        Door2.SetConnection(true);
+        //Door.ActivateDoor(true);
+        SecurityElementDisplay.ChangeKnobColor();
         SecurityElementDisplay.ActivateLockButton();
+    }
+
+    public void OpenDoor2()
+    {
+        Debug.Log("Security Manager: Open Door");
+        Door2.SetLocked(false);
+        Door.ActivateDoor(true);
+        SecurityElementDisplay.ShowDetails();
+        if(_doorExternallyOpened)
+        {
+            Door.OpenDoorHacker();
+        }
+        
+
+
     }
 }

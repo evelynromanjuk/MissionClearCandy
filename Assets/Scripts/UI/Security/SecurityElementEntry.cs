@@ -18,6 +18,8 @@ public class SecurityElementEntry : MonoBehaviour
         Status.text = ElementStatus;
         Info.text = ElementInfo;
 
+        Debug.Log(ElementName + ", " + ElementStatus + ", " + ElementInfo);
+
         if(ElementName.Contains("Door"))
         {
             LockButton.gameObject.SetActive(true);

@@ -1086,9 +1086,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1359533790}
+      objectReference: {fileID: 1159591705}
+    - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SecurityManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1668958384818036857, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchorMax.y

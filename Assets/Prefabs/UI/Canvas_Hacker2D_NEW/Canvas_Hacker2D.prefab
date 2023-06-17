@@ -10023,7 +10023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3542463152663915334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22681,6 +22681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WarningCodeField: {fileID: 3972937381342709214}
   WarningTextField: {fileID: 7397878849958884678}
+  FluidCompositionManager: {fileID: 0}
 --- !u!1 &7813241258537049167
 GameObject:
   m_ObjectHideFlags: 0

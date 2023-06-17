@@ -567,6 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door2: {fileID: 11400000, guid: 31cc4ede399ce524281107e2ca652255, type: 2}
   Lever: {fileID: 7664768216443175866}
+  Door: {fileID: 4010536752095395162}
   SecurityElementDisplay: {fileID: 0}
 --- !u!1 &734226030354858207
 GameObject:

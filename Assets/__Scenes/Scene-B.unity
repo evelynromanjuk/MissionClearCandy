@@ -381,11 +381,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1359533790}
+      objectReference: {fileID: 1159591705}
     - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenDoor
+      value: OpenDoor2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607911937933962142, guid: b9be32178fd1b3c4d94bc931143942d4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SecurityManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1776094794278165000, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
@@ -430,7 +435,7 @@ PrefabInstance:
     - target: {fileID: 2402412066704316064, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -42.35
+      value: -42.350006
       objectReference: {fileID: 0}
     - target: {fileID: 2551505173957280880, guid: b9be32178fd1b3c4d94bc931143942d4,
         type: 3}

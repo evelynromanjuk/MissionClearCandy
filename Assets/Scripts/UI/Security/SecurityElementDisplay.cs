@@ -10,6 +10,8 @@ public class SecurityElementDisplay : MonoBehaviour
 
     private Button _elementButton;
     private Image _statusKnob;
+    private Color32 _green = new Color32(0, 255, 0, 255);
+    private Color32 _red = new Color32(255, 0, 0, 255);
 
 
     // Start is called before the first frame update
@@ -18,23 +20,29 @@ public class SecurityElementDisplay : MonoBehaviour
         _elementButton = this.GetComponent<Button>();
         _elementButton.onClick.AddListener(ShowDetails);
 
-
         _statusKnob = this.GetComponent<Image>();
+    }
+
+    public void ChangeKnobColor()
+    {
         if(_statusKnob == null)
         {
-            Debug.Log("statusknob is null");
+            _statusKnob = this.GetComponent<Image>();
         }
+        
+        if (SecurityElement.IsConnected)
+        {
+            _statusKnob.color = _green;
+        }
+        else
+        {
+            _statusKnob.color = _red;
+        }
+        //SecurityElementEntry.SetEntry(SecurityElement.ElementName, SecurityElement.Status, SecurityElement.InfoText);
     }
 
     public void ShowDetails()
     {
-        Debug.Log("RoomControl Button clicked");
-        if(SecurityElement.IsActive)
-        {
-            // TODO: Status knob color! Seems to be null right now
-            //_statusKnob.color = new Color32(0, 255, 0, 100);
-            Debug.Log("Changed knob color");
-        }
         SecurityElementEntry.SetEntry(SecurityElement.ElementName, SecurityElement.Status, SecurityElement.InfoText);
     }
 

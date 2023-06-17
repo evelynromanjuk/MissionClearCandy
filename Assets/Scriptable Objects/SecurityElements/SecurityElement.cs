@@ -14,10 +14,14 @@ public class SecurityElement : ScriptableObject
     private string _status;
     private string _infoText;
     private bool _isActive;
+    private bool _isConnected; //connection restored when substance ejected
+    private bool _isLocked;
 
     private void OnEnable()
     {
         _isActive = false;
+        _isConnected = false;
+        _isLocked = true;
         _status = _inactiveStatus;
         _infoText = _inactiveInfoText;
     }
@@ -25,12 +29,52 @@ public class SecurityElement : ScriptableObject
     public void SetActive(bool IsNowActive)
     {
         _isActive = IsNowActive;
-        ChangeInfoText();
+        ChangeInfoTextMachine();
     }
 
-    void ChangeInfoText()
+    public void SetConnection(bool isConnected)
     {
-        if(_isActive)
+        _isConnected = isConnected;
+        Debug.Log("Is Connected? " + _isConnected);
+        ChangeInfoTextSecurity();
+    }
+
+    public void SetLocked (bool isLocked)
+    {
+        _isLocked = isLocked;
+        Debug.Log("IsLocked? " + _isLocked);
+        ChangeInfoTextSecurity();
+    }
+
+    void ChangeInfoTextSecurity()
+    {
+        //Door connection
+        if(_isConnected)
+        {
+            _infoText = _activeInfoText;
+            Debug.Log("Set Info Text to active: " + _infoText);
+        }
+        else
+        {
+            _infoText = _inactiveInfoText;
+            Debug.Log("Set Info Text to inactive: " + _infoText);
+        }
+
+        //Door locked
+        if (_isLocked)
+        {
+            _status = _inactiveStatus;
+        }
+        else
+        {
+            _status = _activeStatus;
+        }
+    }
+
+    void ChangeInfoTextMachine()
+    {
+        //Machine part status
+        if (_isActive)
         {
             _infoText = _activeInfoText;
             _status = _activeStatus;
@@ -50,6 +94,16 @@ public class SecurityElement : ScriptableObject
     public bool IsActive
     {
         get { return _isActive;  }
+    }
+
+    public bool IsConnected
+    {
+        get { return _isConnected; }
+    }
+
+    public bool IsLocked
+    {
+        get { return _isLocked; }
     }
 
     public string Status

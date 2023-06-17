@@ -10,7 +10,7 @@ public class Door : MonoBehaviour
 
     private bool _substanceCreated = false;
     private bool _isActivatable;
-    private bool _isOpenable;
+    private bool _isOpenable; //false for Version B, in regards to the agent
 
     private bool _isActive = false;
     private bool _isOpen = false;
@@ -30,6 +30,8 @@ public class Door : MonoBehaviour
         _isRobotScene = isRobotScene;
         _isActivatable = isActivatable;
         _isOpenable = isOpenable;
+
+        Debug.Log("DOOR: IsRobotScene = " + _isRobotScene + ", IsActivatable = " + _isActivatable + ", IsOpenable = " + _isOpenable);
     }
 
     private void SetDoorInteractable()
@@ -62,18 +64,24 @@ public class Door : MonoBehaviour
 
             }
         }
-        if(!_isOpenable) //...not openable by agent, but by hacker in Version B
+    }
+
+    public void OpenDoorHacker() //only for Version B, entirely remotely
+    {
+        if(_substanceCreated)
         {
             if (!_isOpen)
             {
                 _doorAnimator.Play("Open", 0, 0.0f);
                 _isOpen = true;
+                Debug.Log("Door was opened");
             }
             else
             {
                 Debug.Log("Door is already open.");
             }
         }
+
     }
 
     public void ActivateDoor(bool isActivated)
@@ -82,12 +90,4 @@ public class Door : MonoBehaviour
         Debug.Log("Is it activated? : " + _isActive + ", " + isActivated);
     }
 
-    public void OpenDoorHacker()
-    {
-        if(_substanceCreated)
-        {
-            _doorAnimator.Play("Open", 0, 0.0f);
-            _isOpen = true;
-        }
-    }
 }

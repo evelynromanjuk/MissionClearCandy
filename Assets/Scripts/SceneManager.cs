@@ -34,6 +34,8 @@ public class SceneManager : MonoBehaviour
     private bool _analyzerActivatable = false;
     private bool _usesRobotTip = false;
 
+    private bool _isVersionB = false;
+
     [SerializeField]
     Type type = new Type();
 
@@ -62,6 +64,7 @@ public class SceneManager : MonoBehaviour
 
             case Type.VersionB:
                 _doorOpenable = false;
+                _isVersionB = true;
                 FrameFillMachinePC.Initialize(_isRobotScene);
                 Lever.DeactivateSimpleInteractable();
                 AnalyzerStartButton3D.enabled = false;
@@ -97,7 +100,7 @@ public class SceneManager : MonoBehaviour
         Door.InitializeDoor(_isRobotScene, _doorActivatable, _doorOpenable);
         FrameFillMachineLab.SetRobotTip(_usesRobotTip);
         FrameFillMachineLab.Initialize(_isRobotScene);
-        SecurityManager.Initizalize(_isRobotScene);
+        SecurityManager.Initizalize(_isRobotScene, _isVersionB);
         AnalyzerManager.InitializeAnalyzer(_isRobotScene, _analyzerActivatable);
 
         //FrameFillMachineManager --> isRobotScene
