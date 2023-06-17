@@ -10,9 +10,13 @@ public class AppPasswordCheck : MonoBehaviour
     public GameObject ApplicationFrame;
     public GameObject LoginFrame;
     public TMP_Text ErrorMessage;
+    public Alarm Alarm;
 
     [SerializeField]
     private string _password;
+
+    [SerializeField]
+    private bool _isHacker3000Login = false;
 
     public void CheckPassword()
     {
@@ -22,11 +26,18 @@ public class AppPasswordCheck : MonoBehaviour
         {
             LoginFrame.SetActive(false);
             ApplicationFrame.SetActive(true);
+
+            if (_isHacker3000Login)
+            {
+                Alarm.InitializeAlarm();
+            }
         }
         else
         {
             ErrorMessage.gameObject.SetActive(true);
         }
+
+
     }
 
 }

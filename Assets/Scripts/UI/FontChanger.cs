@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class FontChanger : MonoBehaviour
 {
+    [SerializeField]
+    private bool ButtonHoverReversed;
+
     private TMP_Text buttonText;
-
-    private Color textColorHover = new Color(0f, 0f, 0f, 1.0f);
-
-    private Color defaultColor;
+    private Color textColorHover = new Color32(0, 0, 0, 255);
+    private Color defaultColor = new Color32(8, 255, 0, 255);
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,6 @@ public class FontChanger : MonoBehaviour
         if (this.gameObject.transform.childCount > 0 && this.gameObject.transform.GetChild(0) != null)
         {
             buttonText = this.gameObject.transform.GetChild(0).GetComponent<TMP_Text>();
-            defaultColor = buttonText.color;
         }
     }
 
@@ -36,6 +36,22 @@ public class FontChanger : MonoBehaviour
     }
 
     public void changeTextColorOnMouseExit()
+    {
+        if (this.gameObject.GetComponent<Button>().interactable == true)
+        {
+            buttonText.color = defaultColor;
+        }
+    }
+
+    private void ChangeFontBlack()
+    {
+        if (this.gameObject.GetComponent<Button>().interactable == true)
+        {
+            buttonText.color = textColorHover;
+        }
+    }
+
+    private void ChangeFontGreen()
     {
         if (this.gameObject.GetComponent<Button>().interactable == true)
         {
