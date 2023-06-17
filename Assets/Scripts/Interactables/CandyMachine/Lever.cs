@@ -38,16 +38,19 @@ public class Lever : MonoBehaviour, IInteractable
         _substanceCreated = true;
     }
 
+    //TO DO: play lever animation
     public void PullLever()
     {
         if(_substanceCreated)
         {
-            //TO DO: play lever animation
-            SpawnBall.Spawn();
-            simpleInteractable.enabled = false;
+            if(FluidCompositionManager.CheckSubstanceAmount())
+            {
+                SpawnBall.Spawn();
 
-            //Invoke event to activate door
-            SubstanceEjected.Invoke();
+                //Invoke event to activate door
+                SubstanceEjected.Invoke();
+            }
+
         }
         else
         {

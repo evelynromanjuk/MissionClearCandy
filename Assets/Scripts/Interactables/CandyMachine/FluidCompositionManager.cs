@@ -85,6 +85,26 @@ public class FluidCompositionManager : MonoBehaviour
 
     }
 
+    //every time the lever is pulled, a substance ball is created and the tank empties with each pull
+    //returns bool if there is enough to create a ball
+    public bool CheckSubstanceAmount()
+    {
+        bool enoughSubstance = false;
+        int substancePerBall = 20;
+        if((totalPercentage - substancePerBall) >= 0)
+        {
+            enoughSubstance = true;
+            Debug.Log("A ball can be produced. Current percentage: " + totalPercentage);
+            totalPercentage -= 20;
+        }
+        else
+        {
+            enoughSubstance = false;
+            Debug.Log("There is not enough substance to produce a ball. Current percentage: " + totalPercentage);
+        }
+        return enoughSubstance;
+    }
+
     private void ResetTotalPercentage(Fluid fluid)
     {
         totalPercentage = 0;
@@ -112,6 +132,7 @@ public class FluidCompositionManager : MonoBehaviour
 
     public void TestEvent()
     {
+        totalPercentage = 100f;
         CompositionCorrectEvent.Invoke();
     }
 }
