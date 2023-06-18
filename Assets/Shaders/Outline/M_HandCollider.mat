@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_TestShader
+  m_Name: M_HandCollider
   m_Shader: {fileID: -6465566751694194690, guid: a75e31fc6d1286b49b8bd2b1cf71a725,
     type: 3}
   m_ValidKeywords: []
@@ -39,9 +39,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BlendHeight: -58.94
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _Smoothness: 0
+    m_Colors:
+    - _Color1: {r: 0, g: 1, b: 0.33120084, a: 0}
+    - _Color2: {r: 0, g: 1, b: 0.96431965, a: 0.05490196}
   m_BuildTextureStacks: []
 --- !u!114 &7851756218392395354
 MonoBehaviour:
