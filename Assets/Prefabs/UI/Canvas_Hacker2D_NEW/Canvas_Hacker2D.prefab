@@ -7152,7 +7152,7 @@ MonoBehaviour:
   ApplicationFrame: {fileID: 8092764467173085870}
   LoginFrame: {fileID: 8889213600268642573}
   ErrorMessage: {fileID: 1910731790180441525}
-  Alarm: {fileID: 0}
+  Alarm: {fileID: 6226584792965334117}
   _password: wunka64
   _isHacker3000Login: 1
 --- !u!114 &4828073264529647564

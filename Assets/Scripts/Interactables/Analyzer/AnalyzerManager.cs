@@ -62,15 +62,20 @@ public class AnalyzerManager : MonoBehaviour
                 {
                     isCorrect = false;
                     Debug.Log("Not all parts are correct");
+                    AudioManager.Instance.Play("ButtonPushFailed");
                 }
             }
 
             _allCorrect = isCorrect;
-
             if(_allCorrect)
             {
+                AudioManager.Instance.Play("EngineRunning");
+            }
+
+            if(_isRobotScene && _allCorrect)
+            {
                 Debug.Log("All parts are correct");
-                CheckedCorrect(_allCorrect);
+                CheckedCorrect.Invoke(_allCorrect);
             }
 
             if (!_isRobotScene)
@@ -95,11 +100,14 @@ public class AnalyzerManager : MonoBehaviour
             {
                 Debug.Log("Level completed.");
                 SubstanceAnalyzedEvent.Invoke();
+                AudioManager.Instance.Stop("EngineRunning");
+                AudioManager.Instance.Play("AnalyzerStart");
             }
         }
         else
         {
             Debug.Log("Failed: all parts correct= " + _allCorrect);
+            AudioManager.Instance.Play("ButtonPushFailed");
 
         }
     }

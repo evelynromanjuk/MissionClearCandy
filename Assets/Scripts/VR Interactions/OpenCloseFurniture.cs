@@ -7,6 +7,9 @@ public class OpenCloseFurniture : MonoBehaviour
     //[SerializeField] private Animator _interactableObject = null;
     private Animator _interactableObject;
 
+    [SerializeField]
+    private Animator _backupAnimator;
+
     public bool isOpen = false;
     public string OpeningSoundName;
     public string ClosingSoundName;
@@ -24,6 +27,10 @@ public class OpenCloseFurniture : MonoBehaviour
         }
 
         _interactableObject = GetComponent<Animator>();
+        if(_interactableObject == null)
+        {
+            _interactableObject = _backupAnimator;
+        }
     }
 
     public void SetActive()

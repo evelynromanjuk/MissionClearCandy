@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3768372824768561601}
   - component: {fileID: 5769921532673962046}
   - component: {fileID: 6167655981930340867}
-  - component: {fileID: 3051321277443539223}
+  - component: {fileID: 8522289752442201777}
   m_Layer: 0
   m_Name: Wall_Door_L
   m_TagString: Untagged
@@ -118,7 +118,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &3051321277443539223
+--- !u!95 &8522289752442201777
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ Animator:
   m_GameObject: {fileID: 357628805212919186}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 05a55e0ed5e7c004587d054caacc9ee6, type: 2}
+  m_Controller: {fileID: 9100000, guid: cda723933fe649b46883a0531f9176e9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -410,10 +410,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a404c78926e8e5342866e4c108426c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactableObject: {fileID: 3051321277443539223}
+  _backupAnimator: {fileID: 8522289752442201777}
   isOpen: 0
-  OpeningSoundName: 
-  ClosingSoundName: 
+  OpeningSoundName: none
+  ClosingSoundName: none
 --- !u!54 &5294341350472924934
 Rigidbody:
   m_ObjectHideFlags: 0
