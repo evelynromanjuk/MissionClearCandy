@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 5123000287054159919}
-  mouseSensitivity: 10
+  mouseSensitivity: 3
 --- !u!114 &5123000287775727580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5123000287775727583}
-  speed: 1
+  speed: 1.5
   gravity: -9.81
   jumpHeight: 0.2
 --- !u!114 &5123000287775727578
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c740f93f634fd4bb01be02c1b53471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 3
+  _distance: 1
   _mask:
     serializedVersion: 2
     m_Bits: 256
