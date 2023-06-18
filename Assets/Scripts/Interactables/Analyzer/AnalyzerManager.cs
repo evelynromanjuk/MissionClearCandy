@@ -12,6 +12,7 @@ public class AnalyzerManager : MonoBehaviour
 
     static Action CheckedAllParts;
     Action SubstanceAnalyzedEvent;
+    Action<bool> CheckedCorrect;
 
     private bool _isRobotScene;
 
@@ -60,6 +61,7 @@ public class AnalyzerManager : MonoBehaviour
                 if (!socket.CheckPart()) //if one part is inactive
                 {
                     isCorrect = false;
+                    Debug.Log("Not all parts are correct");
                 }
             }
 
@@ -68,6 +70,7 @@ public class AnalyzerManager : MonoBehaviour
             if(_allCorrect)
             {
                 Debug.Log("All parts are correct");
+                CheckedCorrect(_allCorrect);
             }
 
             if (!_isRobotScene)
@@ -109,6 +112,11 @@ public class AnalyzerManager : MonoBehaviour
     public void SubscribeCheckedAllParts(Action method)
     {
         CheckedAllParts += method;
+    }
+
+    public void SubscribeCheckedCorrect(Action<bool> method)
+    {
+        CheckedCorrect += method;
     }
 
 }

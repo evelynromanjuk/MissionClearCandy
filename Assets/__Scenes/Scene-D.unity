@@ -4163,17 +4163,17 @@ PrefabInstance:
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.499
+      value: -9.236
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.929
+      value: 0.985
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.498
+      value: 0.107
       objectReference: {fileID: 0}
     - target: {fileID: 5123000287775727582, guid: d1a5c658604c60f45a3bd3edf09bdb57,
         type: 3}
@@ -5275,6 +5275,11 @@ PrefabInstance:
       propertyPath: PlayerInteract
       value: 
       objectReference: {fileID: 1414546166}
+    - target: {fileID: 1811752433423343015, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1877380562720178072, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_AnchorMax.y

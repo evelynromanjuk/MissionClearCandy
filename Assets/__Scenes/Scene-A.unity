@@ -723,6 +723,11 @@ PrefabInstance:
       propertyPath: EmptyButton
       value: 
       objectReference: {fileID: 1169284585}
+    - target: {fileID: 4073474279142210842, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4858045875564038647, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: FluidCompositionManager

@@ -2361,6 +2361,11 @@ PrefabInstance:
       propertyPath: EmptyButton
       value: 
       objectReference: {fileID: 1841676105}
+    - target: {fileID: 4073474279142210842, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4730340264753839020, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: _frameWaitForData
