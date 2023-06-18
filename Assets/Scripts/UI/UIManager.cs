@@ -7,7 +7,9 @@ using System;
 public class UIManager : MonoBehaviour
 {
     public PlayerInteract Player;
+    public PlayerLook PlayerLook;
     public FrameScanInfo FrameScanInfo;
+    public GameObject FrameBackMenu;
 
     Action<bool> ScanInfoInstantiatedEvent;
 
@@ -26,7 +28,18 @@ public class UIManager : MonoBehaviour
     private void OnReturn()
     {
         if (!FrameScanInfo) return;
-        FrameScanInfo.gameObject.SetActive(false);
+
+        if(FrameScanInfo.gameObject.activeInHierarchy == false)
+        {
+            ShowCursor(true);
+            FrameBackMenu.gameObject.SetActive(true);
+            PlayerLook.EnableLook(false);
+        }
+        else
+        {
+            FrameScanInfo.gameObject.SetActive(false);
+        }
+        
     }
 
     private void OnScan(string[,] _scanData)
@@ -35,4 +48,19 @@ public class UIManager : MonoBehaviour
         FrameScanInfo.PasteScanData(_scanData);
         FrameScanInfo.gameObject.SetActive(true);
     }
+
+    public void ShowCursor(bool isVisible)
+    {
+        if(isVisible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
 }
+
