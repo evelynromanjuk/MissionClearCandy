@@ -10,6 +10,7 @@ public class FluidCompositionManager : MonoBehaviour
     private static List<Fluid> _fluids = new List<Fluid>();
 
     Action<Fluid> FluidAmountChanged;
+    Action<float> TankFillChanged;
     static Action<List<Fluid>> FluidListReady;
     Action CompositionCorrectEvent;
     Action GoalExceeded;
@@ -39,6 +40,7 @@ public class FluidCompositionManager : MonoBehaviour
             totalPercentage += percentage;
             //FrameFillMachine.UpdateFluidData(fluid);
             FluidAmountChanged.Invoke(fluid);
+            TankFillChanged.Invoke(totalPercentage);
 
             if (fluid.CurrentPercentage == fluid.GoalPercentage)
             {
@@ -128,6 +130,11 @@ public class FluidCompositionManager : MonoBehaviour
     public void SubscribeGoalExceeded(Action method)
     {
         GoalExceeded += method;
+    }
+
+    public void SubscribeTankFillChanged(Action<float> method)
+    {
+        TankFillChanged += method;
     }
 
     public void TestEvent()
