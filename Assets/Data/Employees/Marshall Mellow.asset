@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Marshall Mellow
   m_EditorClassIdentifier: 
   objectType: employee ID card
-  name: Marshall Mellow
+  name: Marshall Mallow
   position: Equipment Engineer
   id: 99442
   birthday: 05.06.1985

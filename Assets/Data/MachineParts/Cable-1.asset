@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44bffca44a0c5d2429ee16b46fd072be, type: 3}
-  m_Name: Cable1
+  m_Name: Cable-1
   m_EditorClassIdentifier: 
-  _name: Cable1
+  _name: A long, lemon-colored part
   _activeStatus: Active
   _inactiveStatus: Inactive
   _activeInfoText: Machine part is working properly.

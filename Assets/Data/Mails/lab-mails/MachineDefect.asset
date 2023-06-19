@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0ab768d4c36743a4f20c173c10baf, type: 3}
   m_Name: MachineDefect
   m_EditorClassIdentifier: 
-  senderAdress: marshall.mellow@candylab.com
+  senderAdress: marshall.mallow@candylab.com
   receiverAdress: DL_ALL@candylab.com
   subject: Candy Machine Defect
   date: 10.02.2022
@@ -23,4 +23,4 @@ MonoBehaviour:
     repair the machine as quickly as possible. In the meantime, please exercise caution
     when operating the candy machine to ensure safety. We will keep you updated on
     the status of the machine and the timeline for repairs. Thank you for your cooperation.
-    Best regards, Marshall Mellow \u2013 Equipment Engineer"
+    Best regards, Marshall Mallow \u2013 Equipment Engineer"

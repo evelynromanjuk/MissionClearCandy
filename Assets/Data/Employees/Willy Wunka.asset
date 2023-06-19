@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df47da007b98ac4982228cf551a4588, type: 3}
-  m_Name: Willy Wonka
+  m_Name: Willy Wunka
   m_EditorClassIdentifier: 
   objectType: employee ID card
-  name: Willy Wonka
+  name: Willy Wunka
   position: CEO
   id: 00001
   birthday: 30.06.1979

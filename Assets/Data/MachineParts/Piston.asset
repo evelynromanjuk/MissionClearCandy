@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bffca44a0c5d2429ee16b46fd072be, type: 3}
   m_Name: Piston
   m_EditorClassIdentifier: 
-  _name: Piston
+  _name: A round-ish, mechanical part
   _activeStatus: Active
   _inactiveStatus: Inactive
   _activeInfoText: Machine part is working properly.
