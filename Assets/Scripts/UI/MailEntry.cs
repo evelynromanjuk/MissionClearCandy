@@ -18,7 +18,7 @@ public class MailEntry : MonoBehaviour
         Date.text = date;
         Sender.text = sender;
         Receiver.text = receiver;
-        ContentMail.text = mail;
+        ContentMail.text = mail.Replace("\\n", "\n");
 
         this.gameObject.SetActive(true);
     }

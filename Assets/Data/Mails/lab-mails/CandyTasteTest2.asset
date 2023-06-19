@@ -16,7 +16,7 @@ MonoBehaviour:
   receiverAdress: lila.kim@candylab.com
   subject: 'Re: Candy Taste Test'
   date: 26.01.2022
-  content: "Lila, you weren\u2019t kidding \u2013 this candy is amazing! I think
+  content: "Lila, you weren\u2019t kidding \u2013 this candy is amazing!\\nI think
     we need to get a production line up and running ASAP. I can already see it flying
-    off the shelves. Thanks for sharing your candy genius with me. I owe you one!
-    Best, Mark"
+    off the shelves.\\n\\nThanks for sharing your candy genius with me. I owe you
+    one!\\n\\nBest, Mark"

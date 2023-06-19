@@ -20,9 +20,9 @@ public class AppPasswordCheck : MonoBehaviour
 
     public void CheckPassword()
     {
-        string userInput = InputField.text;
+        string userInput = InputField.text.ToUpper();
 
-        if(userInput.Equals(_password))
+        if(userInput.Equals(_password.ToUpper()))
         {
             LoginFrame.SetActive(false);
             ApplicationFrame.SetActive(true);

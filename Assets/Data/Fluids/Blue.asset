@@ -16,5 +16,5 @@ MonoBehaviour:
   FluidName: BLUE_7C32A
   Key: b
   CurrentPercentage: 0
-  GoalPercentage: 12
+  GoalPercentage: 18
   ReachedGoal: 0

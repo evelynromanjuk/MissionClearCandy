@@ -16,6 +16,6 @@ MonoBehaviour:
   receiverAdress: DL_Lab@candylab.com
   subject: 'Re: New Recipe'
   date: 08.02.2022
-  content: Hello all, as discussed in the last meeting, I have set the new recipe
+  content: Hello all,\nas discussed in the last meeting, I have set the new recipe
     code. You are all informed about the new procedure. You can find the corresponding
-    file on you personal machine. If you have any questions, message me. Harold.
+    file on you personal machine.\nIf you have any questions, message me.\n\nHarold.

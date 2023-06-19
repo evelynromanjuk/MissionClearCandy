@@ -16,8 +16,8 @@ MonoBehaviour:
   receiverAdress: mark.rodriguez@candylab.com
   subject: Candy Taste Test
   date: 25.01.2022
-  content: "Hey Mark, you know how we\u2019re always taste-testing new candy flavors?
+  content: "Hey Mark,\\nyou know how we\u2019re always taste-testing new candy flavors?
     Well, I think I\u2019ve found the ultimate winner \u2013 a marshall-mellow (get
-    it??)- peanut butter swirl that\u2019s out of this world! You have to try it!!
-    I left a few samples on your desk, let me know what you think. And don\u2019t
-    worry, I won\u2019t tell anyone if you sneak a few more ;-) Best, Lila"
+    it??)- peanut butter swirl that\u2019s out of this world! You have to try it!!\\nI
+    left a few samples on your desk, let me know what you think. And don\u2019t worry,
+    I won\u2019t tell anyone if you sneak a few more ;-)\\n\\nBest, Lila"

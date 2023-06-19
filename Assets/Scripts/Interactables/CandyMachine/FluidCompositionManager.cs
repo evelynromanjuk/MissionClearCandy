@@ -34,7 +34,7 @@ public class FluidCompositionManager : MonoBehaviour
         string agentKey = fluid.Key;
 
         // TODO: Change back to 100%
-        if ((totalPercentage + percentage) <= 35) //if tank will not be 100% full
+        if ((totalPercentage + percentage) <= 100) //if tank will not be 100% full
         {
             fluid.CurrentPercentage += percentage;
             totalPercentage += percentage;
@@ -110,6 +110,7 @@ public class FluidCompositionManager : MonoBehaviour
     private void ResetTotalPercentage(Fluid fluid)
     {
         totalPercentage = 0;
+        TankFillChanged.Invoke(totalPercentage);
     }
 
     public void SubscribeFluidListReady(Action<List<Fluid>> method)

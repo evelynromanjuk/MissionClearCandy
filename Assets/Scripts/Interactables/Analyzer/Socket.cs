@@ -34,7 +34,7 @@ public class Socket : MonoBehaviour
         //    Debug.Log("Inserted Object is Null");
         //}
 
-        if ((insertedPart != null) && (MachinePartReference.transform.name == insertedPart.transform.name))
+        if ((insertedPart != null) && (MachinePartReference.transform.name == insertedPart.transform.name.Replace("(Clone)", "")))
         {
             partIsCorrect = true;
         }

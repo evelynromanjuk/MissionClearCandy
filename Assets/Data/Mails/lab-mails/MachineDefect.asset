@@ -16,11 +16,11 @@ MonoBehaviour:
   receiverAdress: DL_ALL@candylab.com
   subject: Candy Machine Defect
   date: 10.02.2022
-  content: "Dear Team, the candy machine is currently experiencing a defect in its
-    automatic filling system and will need to be operated manually until it is resolved.
-    This may cause some delays in production, so please be patient as we work to
-    resolve the issue. Our technicians are working to identify the root cause and
-    repair the machine as quickly as possible. In the meantime, please exercise caution
-    when operating the candy machine to ensure safety. We will keep you updated on
-    the status of the machine and the timeline for repairs. Thank you for your cooperation.
-    Best regards, Marshall Mallow \u2013 Equipment Engineer"
+  content: "Dear Team,\\nthe candy machine is currently experiencing a defect in
+    its automatic filling system and will need to be operated manually until it is
+    resolved. This may cause some delays in production, so please be patient as we
+    work to resolve the issue. Our technicians are working to identify the root cause
+    and repair the machine as quickly as possible. In the meantime, please exercise
+    caution when operating the candy machine to ensure safety.\\nWe will keep you
+    updated on the status of the machine and the timeline for repairs. Thank you
+    for your cooperation.\\n\\nBest regards, Marshall Mallow \u2013 Equipment Engineer"

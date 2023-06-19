@@ -16,5 +16,5 @@ MonoBehaviour:
   FluidName: PURPLE_P2
   Key: p
   CurrentPercentage: 0
-  GoalPercentage: 8
+  GoalPercentage: 21
   ReachedGoal: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
   receiverAdress: marshall.mallow@candylab.com
   subject: A riddle for you!
   date: 13.02.2022
-  content: Hey Marshall. I got the perfect riddle for you!! >>I'm a sweet delight,
-    loved by many. Soft and chewy, not too uncanny. With flavors diverse, in a rainbow
-    array, A bite-sized treat to brighten your day.<< What is it?? Lila
+  content: "Hey Marshall, I got the perfect riddle for you!!\\n\\nI\u2019m a sweet
+    delight, loved by many\\nSoft and chewy, not too uncanny.\\nWith flavors diverse,
+    in a rainbow array\\nA bite-sized treat to brighten your day.\\n\\nWhat is it??
+    - Lila"

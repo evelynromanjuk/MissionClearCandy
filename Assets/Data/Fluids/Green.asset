@@ -16,5 +16,5 @@ MonoBehaviour:
   FluidName: GREEN_2A57C
   Key: g
   CurrentPercentage: 0
-  GoalPercentage: 5
+  GoalPercentage: 24
   ReachedGoal: 0
