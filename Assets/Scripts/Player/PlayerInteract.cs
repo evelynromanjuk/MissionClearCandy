@@ -193,7 +193,12 @@ public class PlayerInteract : MonoBehaviour
         if(_isVersionD)
         {
             string keyValue = obj.control.name;
-            //PipeActivated(keyValue, true);
+
+            if(keyValue.Equals("z"))
+            {
+                keyValue = "y";
+            }
+
             PipeActivated.Invoke(keyValue, true);
             Debug.Log("Hacker pressed Key: " + keyValue);
         }
@@ -205,6 +210,12 @@ public class PlayerInteract : MonoBehaviour
         if(_isVersionD)
         {
             string keyValue = obj.control.name;
+
+            if (keyValue.Equals("z"))
+            {
+                keyValue = "y";
+            }
+
             //PipeActivated(keyValue, false);
             PipeActivated.Invoke(keyValue, false);
             Debug.Log("Hacker released Key: " + keyValue);
