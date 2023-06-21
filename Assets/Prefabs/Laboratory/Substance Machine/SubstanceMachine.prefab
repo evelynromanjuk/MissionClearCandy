@@ -1943,9 +1943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ccd42904d98604abfb514099a3f0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalScanner: {fileID: 268870786058661921, guid: 3a1bc4365da943c47b61bdf8f3904331,
+  HorizontalScanner: {fileID: 3699459090287938060, guid: 92476f9213aa7ab4ca8ed2728960ea71,
     type: 3}
-  VerticalScanner: {fileID: 1079594811378143247, guid: 43bb4c79907608b4c8744b071040b9c1,
+  VerticalScanner: {fileID: 331978359247185293, guid: 7c1f6d8d06b05db49834eccb93c8af30,
     type: 3}
   Parent: {fileID: 2068815332282325026}
   KeypadManager: {fileID: 0}
