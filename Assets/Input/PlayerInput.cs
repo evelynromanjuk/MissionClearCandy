@@ -98,6 +98,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnvironmentScan"",
+                    ""type"": ""Button"",
+                    ""id"": ""64ac5b01-c676-4b68-96e9-c35d4e3036b1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -357,7 +366,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0574a09b-30ab-4dba-bcdf-3be546c53569"",
-                    ""path"": ""<Keyboard>/z"",
+                    ""path"": ""<Keyboard>/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -397,6 +406,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""HoldInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8914bcc5-3837-417f-9917-a7d096a4a110"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EnvironmentScan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -413,6 +433,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_KeyboardInput = m_OnFoot.FindAction("KeyboardInput", throwIfNotFound: true);
         m_OnFoot_ActivatePipe = m_OnFoot.FindAction("ActivatePipe", throwIfNotFound: true);
         m_OnFoot_HoldInteract = m_OnFoot.FindAction("HoldInteract", throwIfNotFound: true);
+        m_OnFoot_EnvironmentScan = m_OnFoot.FindAction("EnvironmentScan", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -480,6 +501,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_KeyboardInput;
     private readonly InputAction m_OnFoot_ActivatePipe;
     private readonly InputAction m_OnFoot_HoldInteract;
+    private readonly InputAction m_OnFoot_EnvironmentScan;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -492,6 +514,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @KeyboardInput => m_Wrapper.m_OnFoot_KeyboardInput;
         public InputAction @ActivatePipe => m_Wrapper.m_OnFoot_ActivatePipe;
         public InputAction @HoldInteract => m_Wrapper.m_OnFoot_HoldInteract;
+        public InputAction @EnvironmentScan => m_Wrapper.m_OnFoot_EnvironmentScan;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -525,6 +548,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @HoldInteract.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnHoldInteract;
                 @HoldInteract.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnHoldInteract;
                 @HoldInteract.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnHoldInteract;
+                @EnvironmentScan.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnEnvironmentScan;
+                @EnvironmentScan.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnEnvironmentScan;
+                @EnvironmentScan.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnEnvironmentScan;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -553,6 +579,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @HoldInteract.started += instance.OnHoldInteract;
                 @HoldInteract.performed += instance.OnHoldInteract;
                 @HoldInteract.canceled += instance.OnHoldInteract;
+                @EnvironmentScan.started += instance.OnEnvironmentScan;
+                @EnvironmentScan.performed += instance.OnEnvironmentScan;
+                @EnvironmentScan.canceled += instance.OnEnvironmentScan;
             }
         }
     }
@@ -567,5 +596,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnKeyboardInput(InputAction.CallbackContext context);
         void OnActivatePipe(InputAction.CallbackContext context);
         void OnHoldInteract(InputAction.CallbackContext context);
+        void OnEnvironmentScan(InputAction.CallbackContext context);
     }
 }

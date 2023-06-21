@@ -23,6 +23,7 @@ public class PlayerInteract : MonoBehaviour
     Action<string, bool> PipeActivated;
     Action<bool> DoorActivated;
     Action<bool> AnalyzerActivated;
+    Action<bool> EnvironmentScanned;
 
     private ScannableObject _currentScannableObj;
     private IInteractable _currentInteractableObj;
@@ -49,6 +50,8 @@ public class PlayerInteract : MonoBehaviour
         _inputManager.onFoot.ActivatePipe.canceled += OnDeactivatePipe;
         _inputManager.onFoot.HoldInteract.started += OnActivateDoor;
         _inputManager.onFoot.HoldInteract.canceled += OnDeactivateDoor;
+        _inputManager.onFoot.EnvironmentScan.started += OnScanEnvironmentStart;
+        _inputManager.onFoot.EnvironmentScan.canceled += OnScanEnvironmentStop;
     }
 
     public void Initialize(bool isVersionD)
@@ -239,6 +242,18 @@ public class PlayerInteract : MonoBehaviour
 
     }
 
+    private void OnScanEnvironmentStart(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Scan Environment Start");
+        EnvironmentScanned.Invoke(true);
+    }
+
+    private void OnScanEnvironmentStop(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Scan Environment Stop");
+        EnvironmentScanned.Invoke(false);
+    }
+
     //EVENT SUBSCRIPTIONS
     public void SubscribeObjectScanned(Action<string[,]> method)
     {
@@ -273,5 +288,10 @@ public class PlayerInteract : MonoBehaviour
     public void SubscribeAnalyzerActivated(Action<bool> method)
     {
         AnalyzerActivated += method;
+    }
+
+    public void SubscribeEnvironmentScanned(Action<bool> method)
+    {
+        EnvironmentScanned += method;
     }
 }

@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EnvironmentScan",
+                    "type": "Button",
+                    "id": "64ac5b01-c676-4b68-96e9-c35d4e3036b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -335,7 +344,7 @@
                 {
                     "name": "",
                     "id": "0574a09b-30ab-4dba-bcdf-3be546c53569",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -373,6 +382,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "HoldInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8914bcc5-3837-417f-9917-a7d096a4a110",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnvironmentScan",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

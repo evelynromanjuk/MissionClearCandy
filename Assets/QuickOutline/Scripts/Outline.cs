@@ -79,11 +79,15 @@ public class Outline : MonoBehaviour {
   private Material outlineFillMaterial;
 
   private bool needsUpdate;
+  private bool isHackerActivated;
+    private int LayerHackerOutline;
+
 
   void Awake() {
 
     // Cache renderers
     renderers = GetComponentsInChildren<Renderer>();
+    
 
     // Instantiate outline materials
     outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
@@ -97,20 +101,45 @@ public class Outline : MonoBehaviour {
 
     // Apply material properties immediately
     needsUpdate = true;
+
+        LayerHackerOutline = LayerMask.NameToLayer("HackerView");
   }
 
-  void OnEnable() {
-    foreach (var renderer in renderers) {
+    void OnEnable()
+    {
+        foreach (var renderer in renderers)
+        {
+            var materials = renderer.sharedMaterials.ToList(); ;
+            if (isHackerActivated & (gameObject.layer == LayerHackerOutline))
+            {
+                    // Append outline shaders
+                    //materials = renderer.sharedMaterials.ToList();
 
-      // Append outline shaders
-      var materials = renderer.sharedMaterials.ToList();
+                    materials.Add(outlineMaskMaterial);
+                    materials.Add(outlineFillMaterial);
 
-      materials.Add(outlineMaskMaterial);
-      materials.Add(outlineFillMaterial);
+                    renderer.materials = materials.ToArray();
+            }
+            else
+            {
+                // Append outline shaders
+                //materials = renderer.sharedMaterials.ToList();
 
-      renderer.materials = materials.ToArray();
-    }
-  }
+                materials.Add(outlineMaskMaterial);
+                materials.Add(outlineFillMaterial);
+
+                renderer.materials = materials.ToArray();
+            }
+
+            // Append outline shaders
+            //var materials = renderer.sharedMaterials.ToList();
+
+            //materials.Add(outlineMaskMaterial);
+            //materials.Add(outlineFillMaterial);
+
+            //renderer.materials = materials.ToArray();
+        }
+     }
 
   void OnValidate() {
 
@@ -306,4 +335,9 @@ public class Outline : MonoBehaviour {
         break;
     }
   }
+
+    public void SetHackerActivated(bool isActivated)
+    {
+        isHackerActivated = isActivated;
+    }
 }
