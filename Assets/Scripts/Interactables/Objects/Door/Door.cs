@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     public PlayerInteract PlayerInteract;
     public Animator _doorAnimator = null;
     public Lever Lever;
+    public DoorButton DoorButton;
 
     private bool _substanceCreated = false;
     private bool _isActivatable;
@@ -37,6 +38,7 @@ public class Door : MonoBehaviour
     private void SetDoorInteractable()
     {
         _substanceCreated = true;
+        DoorButton.SetButtonRed();
     }
 
     public void OpenDoor()

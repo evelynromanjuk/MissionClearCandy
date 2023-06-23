@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class DoorButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Material LightRed ;
+    public Material LightGreen;
+
+    private MeshRenderer _renderer;
+    private Material _currentMaterial;
+
+    private void Start()
     {
-        
+        _renderer = GetComponent<MeshRenderer>();
+        _currentMaterial = _renderer.material;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void SetButtonRed()
     {
-        
+        _renderer.material = LightRed;
     }
 }
