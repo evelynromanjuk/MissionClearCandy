@@ -237,8 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backupAnimator: {fileID: 0}
   isOpen: 0
-  OpeningSoundName: 
-  ClosingSoundName: 
+  OpeningSoundName: DrawerOpened
+  ClosingSoundName: DrawerClosed
 --- !u!54 &1502412303178932723
 Rigidbody:
   m_ObjectHideFlags: 0

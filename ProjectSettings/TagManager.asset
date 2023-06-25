@@ -16,8 +16,8 @@ TagManager:
   - RobotScannable
   - HackerView
   - AgentView
-  - 
-  - 
+  - IgnoreCollisions
+  - VRInteractors
   - 
   - 
   - 

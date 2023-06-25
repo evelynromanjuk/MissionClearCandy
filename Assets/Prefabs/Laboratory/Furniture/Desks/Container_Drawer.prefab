@@ -259,16 +259,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 436216275012347867, guid: 27ae85b21f4ca944fa15f768d3dd0169,
-        type: 3}
-      propertyPath: ClosingSoundName
-      value: DrawerClosed
-      objectReference: {fileID: 0}
-    - target: {fileID: 436216275012347867, guid: 27ae85b21f4ca944fa15f768d3dd0169,
-        type: 3}
-      propertyPath: OpeningSoundName
-      value: DrawerOpened
-      objectReference: {fileID: 0}
     - target: {fileID: 1060034735664290816, guid: 27ae85b21f4ca944fa15f768d3dd0169,
         type: 3}
       propertyPath: m_Name
