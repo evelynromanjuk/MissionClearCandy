@@ -17,6 +17,7 @@ public class PlayerInteract : MonoBehaviour
     private string[,] _scanData;
 
     Action<string[,]> ObjectScannedEvent;
+    Action SocketScannedEvent;
     Action<bool> InfoFrameClosedEvent;
     Action OnReturn;
     Action<string> PasswordEntered;
@@ -137,7 +138,12 @@ public class PlayerInteract : MonoBehaviour
             if (_currentScannableObj.Scan() != null) //if scan data exists, invoke event and send data
             {
                 _scanData = _currentScannableObj.Scan();
+
                 ObjectScannedEvent.Invoke(_scanData);
+                if(_currentScannableObj.GetComponent<Socket>() != null)
+                {
+                    SocketScannedEvent.Invoke();
+                }
             }
         }
 
@@ -300,5 +306,10 @@ public class PlayerInteract : MonoBehaviour
     public void SubscribeEnvironmentScanned(Action<bool> method)
     {
         EnvironmentScanned += method;
+    }
+
+    public void SubscribeSocketScanned(Action method)
+    {
+        SocketScannedEvent += method;
     }
 }

@@ -1162,9 +1162,10 @@ MonoBehaviour:
     CONNECTION: STABLE
 
 
-    INTERACT: E
+    SCAN/INTERACT: E
 
-    MENU: ESC'
+    MENU:
+    ESC'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b7e7672632efae43906ddf44a713aa7, type: 2}
   m_sharedMaterial: {fileID: 4638173845504893408, guid: 2b7e7672632efae43906ddf44a713aa7,

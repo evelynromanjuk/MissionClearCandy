@@ -13,7 +13,7 @@ public class MachinePart : MonoBehaviour
     {
         if (PlayerInteract != null)
         {
-            PlayerInteract.SubscribeObjectScanned(SetIsScanned);
+            PlayerInteract.SubscribeSocketScanned(SetIsScanned);
             PlayerInteract.SubscribeEnvironmentScanned(ShowOutline);
         }
     }
@@ -46,7 +46,7 @@ public class MachinePart : MonoBehaviour
         }
     }
 
-    void SetIsScanned(string[,] data)
+    void SetIsScanned()
     {
         _isScanned = true;
     }

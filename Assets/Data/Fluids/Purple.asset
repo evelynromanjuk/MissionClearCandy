@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: a5b43622bb360264f9603ff21c42f572, type: 2}
-  FluidName: PURPLE_P2
+  FluidName: P-URPLE_8
   Key: p
-  CurrentPercentage: 0
+  CurrentPercentage: 16
   GoalPercentage: 21
   ReachedGoal: 0

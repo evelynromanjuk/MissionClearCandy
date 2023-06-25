@@ -117,18 +117,6 @@ public class Pipe : MonoBehaviour
             }
         }
 
-
-        //if (_pipeOpen)
-        //{
-        //    Debug.Log("Pipe was closed");
-        //    ClosePipe();
-
-        //}
-        //else
-        //{
-        //    Debug.Log("Pipe was opened");
-        //    OpenPipe();
-        //}
     }
 
     void OpenPipe()
@@ -152,5 +140,38 @@ public class Pipe : MonoBehaviour
             CancelInvoke("IncreaseFluidAmount");
         }
     }
+
+    //void Scale()
+    //{
+    //    int blendShapeIndex;
+    //    float blendShapeWeight;
+
+    //    if (_pipeOpen)
+    //    {
+    //        blendShapeIndex = 0;
+    //    }
+    //    else
+    //    {
+    //        blendShapeIndex = 1;
+    //    }
+
+    //    //blendShapeWeight = GetComponent<SkinnedMeshRenderer>().GetBlendShapeWeight(blendShapeIndex);
+    //    blendShapeWeight = SkinnedMeshRenderer.GetBlendShapeWeight(blendShapeIndex);
+
+    //    if (blendShapeWeight > 100.0f)
+    //    {
+    //        CancelInvoke("Scale");
+    //        _size = 0;
+    //        if (!_pipeOpen)
+    //        {
+    //            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(0, 0);
+    //            GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(1, 0);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(blendShapeIndex, _size++);
+    //    }
+    //}
 }
 

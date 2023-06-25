@@ -16,7 +16,7 @@ public class RobotHUD : MonoBehaviour
     private void Start()
     {
         PlayerInteract = GetComponent<PlayerInteract>();
-        PlayerInteract.SubscribeObjectScanned(ShowNewInfo);
+        PlayerInteract.SubscribeSocketScanned(ShowNewInfo);
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class RobotHUD : MonoBehaviour
         promptText.text = scannedObjectName;
     }
 
-    void ShowNewInfo(string[,] data)
+    void ShowNewInfo()
     {
         if(!_newInfoShown)
         {
