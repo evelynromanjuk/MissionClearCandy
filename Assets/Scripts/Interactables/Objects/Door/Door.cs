@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Door : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Door : MonoBehaviour
     private bool _isActive = false;
     private bool _isOpen = false;
     private bool _isRobotScene;
+
+    Action<bool> DoorActiveEvent;
 
     private void Start()
     {
@@ -35,10 +38,19 @@ public class Door : MonoBehaviour
         Debug.Log("DOOR: IsRobotScene = " + _isRobotScene + ", IsActivatable = " + _isActivatable + ", IsOpenable = " + _isOpenable);
     }
 
-    private void SetDoorInteractable()
+    private void SetDoorInteractable() //called when lever pulled or eject button pressed
     {
         _substanceCreated = true;
-        DoorButton.SetButtonRed();
+
+        if(!_isActivatable & _isOpenable) //Version C
+        {
+            DoorButton.SetButtonGreen(true);
+        }
+        else
+        {
+            DoorButton.SetButtonRed();
+        }
+        
     }
 
     public void OpenDoor()
@@ -90,6 +102,17 @@ public class Door : MonoBehaviour
     {
         _isActive = isActivated;
         Debug.Log("Is it activated? : " + _isActive + ", " + isActivated);
+
+        if(_substanceCreated)
+        {
+            DoorActiveEvent.Invoke(_isActive);
+        }
+        
+    }
+
+    public void SubscribeDoorActiveEvent(Action<bool> method)
+    {
+        DoorActiveEvent += method;
     }
 
 }

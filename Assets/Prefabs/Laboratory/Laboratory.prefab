@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightRed: {fileID: 2100000, guid: 851fd17169b36444f9ff046d8ab355a4, type: 2}
   LightGreen: {fileID: 2100000, guid: 327eb2f5f3088984a95e52b5780d5d78, type: 2}
+  Door: {fileID: 4010536752095395162}
 --- !u!1 &351321380939655849
 GameObject:
   m_ObjectHideFlags: 0
@@ -8181,7 +8182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7394202293935330078
 Transform:
   m_ObjectHideFlags: 0
@@ -34760,6 +34761,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.046212643, y: 0.12721595, z: 0.16308554}
   m_Center: {x: -0.039029974, y: 0.20894049, z: 0}
+--- !u!114 &8694263556334215743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410166919051492671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff97e697bc52ffc4695d3292a888a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightRed: {fileID: 0}
+  LightGreen: {fileID: 0}
+  Door: {fileID: 0}
 --- !u!1001 &5716500341502298482
 PrefabInstance:
   m_ObjectHideFlags: 0
