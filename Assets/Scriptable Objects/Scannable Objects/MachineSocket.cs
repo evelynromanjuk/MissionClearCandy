@@ -18,6 +18,10 @@ public class MachineSocket : ScannableData
         {
             _socketData = new string[,] { { "objectType", objectType }, { "description", MachinePart.name }, { "status", MachinePart.Status } };
         }
+        else
+        {
+            _socketData = new string[,] { { "objectType", objectType }, { "description", MachinePart.name }, { "status", MachinePart.Status } };
+        }
     }
 
     public override void Reset()

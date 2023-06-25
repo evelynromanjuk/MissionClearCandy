@@ -6,8 +6,6 @@ using System;
 public class AnalyzerManager : MonoBehaviour
 {
     public PlayerInteract PlayerInteract;
-    // TODO: if not needed, remove machine part list
-    //List<MachinePart> MachineParts = new List<MachinePart>();
     List<Socket> Sockets = new List<Socket>();
 
     static Action CheckedAllParts;
@@ -39,10 +37,6 @@ public class AnalyzerManager : MonoBehaviour
         Debug.Log("Is activatable? = " + _isActivatable);
     }
 
-    //public void AddToPartList(MachinePart part)
-    //{
-    //    MachineParts.Add(part);
-    //}
 
     public void AddToSocketList(Socket socket)
     {

@@ -39,6 +39,7 @@ public class Socket : MonoBehaviour
             partIsCorrect = true;
         }
         MachinePartReference.GetComponent<MachinePart>().UpdateMachinePart(partIsCorrect);
+        GetComponent<ScannableObject>().UpdateDataArray();
 
         return partIsCorrect;
     }

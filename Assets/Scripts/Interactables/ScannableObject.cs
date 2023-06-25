@@ -41,4 +41,12 @@ public class ScannableObject : MonoBehaviour
             return null;
         }
     }
+
+    public void UpdateDataArray()
+    {
+        _scanData.CreateArray();
+        _dataArray = _scanData.GetScanData;
+
+    }
+
 }

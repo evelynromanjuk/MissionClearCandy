@@ -243,25 +243,21 @@ public class PlayerInteract : MonoBehaviour
         if(_doorButtonFocused)
         {
             DoorActivated.Invoke(false);
-            Debug.Log("Door was deactivated");
         }
         if(_analyzerFocused)
         {
             AnalyzerActivated.Invoke(false);
-            Debug.Log("Analyzer was deactivated");
         }
 
     }
 
     private void OnScanEnvironmentStart(InputAction.CallbackContext obj)
     {
-        Debug.Log("Scan Environment Start");
         EnvironmentScanned.Invoke(true);
     }
 
     private void OnScanEnvironmentStop(InputAction.CallbackContext obj)
     {
-        Debug.Log("Scan Environment Stop");
         EnvironmentScanned.Invoke(false);
     }
 
