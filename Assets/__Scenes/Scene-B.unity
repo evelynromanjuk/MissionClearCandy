@@ -1631,18 +1631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &899984960 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6904513679327482649, guid: fbc84ac0d91dccd46bd74480d1700510,
-    type: 3}
-  m_PrefabInstance: {fileID: 1841676103}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &902189762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,18 +1707,6 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
---- !u!114 &1133566097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8391269439924062069, guid: fbc84ac0d91dccd46bd74480d1700510,
-    type: 3}
-  m_PrefabInstance: {fileID: 1841676103}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08c4fca357d538429020700e244fd54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1159591705 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7892533351700902670, guid: fbc84ac0d91dccd46bd74480d1700510,
@@ -2144,7 +2120,7 @@ MonoBehaviour:
   AnalyzerManager: {fileID: 1288840768}
   CMScreenManager: {fileID: 2079880062}
   TankControl: {fileID: 2063788920}
-  Valve: {fileID: 1133566097}
+  Valve: {fileID: 1841676107}
   EmptyButton: {fileID: 1841676105}
   PlayerInteract: {fileID: 0}
   RecipeSearch: {fileID: 41496706}
@@ -2647,6 +2623,11 @@ PrefabInstance:
       propertyPath: RecipeSearch
       value: 
       objectReference: {fileID: 41496706}
+    - target: {fileID: 5693935395045666625, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: RecipeSearch
+      value: 
+      objectReference: {fileID: 41496706}
     - target: {fileID: 5922384644496162077, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_IsActive
@@ -2655,7 +2636,12 @@ PrefabInstance:
     - target: {fileID: 6904513679327482649, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632005854382597307, guid: fbc84ac0d91dccd46bd74480d1700510,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7655962925694007824, guid: fbc84ac0d91dccd46bd74480d1700510,
         type: 3}
@@ -2731,6 +2717,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac29b4c597a7dd4f862cfe0a3204187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1841676106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7632005854382597307, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1841676107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5006885796802383668, guid: fbc84ac0d91dccd46bd74480d1700510,
+    type: 3}
+  m_PrefabInstance: {fileID: 1841676103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08c4fca357d538429020700e244fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1876256462 stripped
@@ -3071,7 +3081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147825344527}
   m_LocalRotation: {x: -0, y: 0.98979956, z: -0.14246711, w: 0}
-  m_LocalPosition: {x: -2.636, y: 1.155, z: -5.966}
+  m_LocalPosition: {x: -2.164, y: 1.155, z: -5.966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3145,7 +3155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1711813854824636890
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3254,7 +3264,7 @@ MonoBehaviour:
   Lock2: {fileID: 1173033086}
   Lock3: {fileID: 1676749667}
   Lock4: {fileID: 1742298699}
-  LockerDoor: {fileID: 899984960}
+  LockerDoor: {fileID: 1841676106}
 --- !u!114 &3469287837746779410
 MonoBehaviour:
   m_ObjectHideFlags: 0

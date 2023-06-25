@@ -14,7 +14,7 @@ public class Valve : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {
-        Pipe parentPipe = transform.parent.gameObject.GetComponent<Pipe>();
+        Pipe parentPipe = GetComponentInParent<Pipe>();
         if(parentPipe)
         {
             _pipe = parentPipe;
@@ -42,6 +42,7 @@ public class Valve : MonoBehaviour, IInteractable
         if(_isInteractable)
         {
             _pipe.OpenClosePipe();
+            GetComponent<OpenCloseFurniture>().SetActive();
         }
     }
 
