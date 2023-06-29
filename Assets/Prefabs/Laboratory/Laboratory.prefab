@@ -733,6 +733,7 @@ GameObject:
   - component: {fileID: 4043370601563908990}
   - component: {fileID: 4454254232931094718}
   - component: {fileID: 5936066266740131704}
+  - component: {fileID: 5430306192847003803}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -814,10 +815,26 @@ SphereCollider:
   m_GameObject: {fileID: 617907602817089582}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5430306192847003803
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617907602817089582}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &646138829668977094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,7 +3276,7 @@ GameObject:
   - component: {fileID: 4099881523285698313}
   - component: {fileID: 2069318151512529310}
   - component: {fileID: 3564810223175905483}
-  - component: {fileID: 7281486298478091491}
+  - component: {fileID: 4785861074839354871}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -3332,8 +3349,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7281486298478091491
-MeshCollider:
+--- !u!65 &4785861074839354871
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3342,10 +3359,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 2, z: 10.000001}
+  m_Center: {x: 0.0000009536743, y: 0, z: 0}
 --- !u!1 &1749033921872890770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5094,7 +5110,7 @@ GameObject:
   - component: {fileID: 6707188181125576242}
   - component: {fileID: 6391609910293335492}
   - component: {fileID: 2110505104017432840}
-  - component: {fileID: 690799676627030782}
+  - component: {fileID: 204562106117876570}
   m_Layer: 0
   m_Name: door_glass
   m_TagString: Untagged
@@ -5110,7 +5126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2721750754429186538}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.197, z: 0}
+  m_LocalPosition: {x: 0, y: 0.197, z: 0.42}
   m_LocalScale: {x: 0.15147, y: 0.15147, z: 0.15147}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5167,8 +5183,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &690799676627030782
-MeshCollider:
+--- !u!65 &204562106117876570
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5177,10 +5193,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 9.999999, y: 2, z: 10.000002}
+  m_Center: {x: 0.0000009536743, y: 0, z: 0}
 --- !u!1 &2777058253645222171
 GameObject:
   m_ObjectHideFlags: 0
@@ -23705,6 +23720,19 @@ MonoBehaviour:
   _doorAnimator: {fileID: 1304978637763689225}
   Lever: {fileID: 7664768216443175866}
   DoorButton: {fileID: 8741454109205635501}
+--- !u!65 &4996903350682003316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602022986368194516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000002, y: 2.1000001, z: 2.0000005}
+  m_Center: {x: 0, y: 0.05000007, z: 0}
 --- !u!1001 &345579258600590672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49635,6 +49663,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b340604e3c47bc46aeeda2fffc0d82c, type: 3}
+--- !u!1 &8164543814925347504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9b340604e3c47bc46aeeda2fffc0d82c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9047485938282911713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &611862389922427038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164543814925347504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999999, y: 2.1000001, z: 2}
+  m_Center: {x: 0, y: 0.05000007, z: 0}
 --- !u!4 &8792603151011983370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b340604e3c47bc46aeeda2fffc0d82c,
